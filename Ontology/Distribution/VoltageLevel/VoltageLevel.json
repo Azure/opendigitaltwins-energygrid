@@ -1,0 +1,37 @@
+{
+	"@id": "dtmi:company:Basic:VoltageLevel;1",
+	"@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+	"displayName": "voltageLevel",
+	"description": "Voltage level is required for all the assets in the network",
+	"contents": [
+		{
+            "@type": "Property",
+            "name": "Name",
+            "displayName": "Name",
+            "description": "The name of the voltage level.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "NominalVoltage",
+            "displayName": "NominalVoltage",
+            "description": "The nominal voltage of assets",
+            "writable": true,
+            "schema": "integer"
+        },
+        {
+            "@type": "Relationship",
+            "name": "voltageLevel",
+            "displayName": "voltageLevel",
+            "description": "shows the voltage level ."          
+         },         
+         {
+            "@type": "Relationship",
+            "name": "MemberOf_Substation",
+            "displayName": "MemberOf_Substation",
+            "description": "shows relationship to substation"          
+         }
+    ]
+}
