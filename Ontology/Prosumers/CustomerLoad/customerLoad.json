@@ -1,0 +1,28 @@
+{
+  "@id": "dtmi:company:Basic:CustomerLoad;1",
+  "@type": "Interface",
+  "displayName": "CustomerLoad",
+  "contents": [    
+     {
+        "@type": "Property",
+        "name": "name",
+        "schema": "float"
+      },
+
+    {
+      "@type": "Property",
+      "name": "powerFactor",
+      "schema": "float"
+    },
+     
+    {
+        "@type": "Relationship",
+        "name": "MemberOf_EquipmentContainer",
+        "displayName": "substation connection",
+        "description": "ConnectivityNode - substation.",
+        "target": "dtmi:company:Basic:VoltageLevel;1"
+     }     
+    
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
