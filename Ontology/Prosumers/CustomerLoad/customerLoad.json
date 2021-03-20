@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:company:Basic:CustomerLoad;1",
+  "@id": "dtmi:igitaltwins:ngsi_ld:cim:energy:CustomerLoad;1",
   "@type": "Interface",
   "displayName": "CustomerLoad",
   "contents": [    
