@@ -1,0 +1,37 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Bay;1",
+    "@type": "Interface",
+    "displayName": "Bay",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry.  A bay typically represents a physical grouping related to modularization of equipment.",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Name",
+            "description": "Property. Bay name. For example, Bay_01",
+            "schema": "string",
+            "writable": true
+        },        
+        {
+            "@type": "Relationship",
+            "name": "Location",
+            "displayName": "Location",
+            "description": "Bay location",
+            "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"                    
+        },
+        {
+            "@type": "Relationship",
+            "name": "Voltage_Level",
+            "displayName": "Voltage_Level",
+            "description": "The associated voltage level of the Bay",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"
+        },       
+        {
+            "@type": "Relationship",
+            "name": "MemberOf_Substation",
+            "displayName": "MemberOf_Substation",
+            "description": "The member of a substation.",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"
+        }      
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}
