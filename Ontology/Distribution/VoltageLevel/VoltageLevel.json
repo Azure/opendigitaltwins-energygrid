@@ -1,15 +1,14 @@
 {
-	"@id": "dtmi:company:Basic:VoltageLevel;1",
-	"@type": "Interface",
-    "@context": "dtmi:dtdl:context;2",
-	"displayName": "voltageLevel",
-	"description": "Voltage level is required for all the assets in the network",
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1",
+	"@type": "Interface",   
+	"displayName": "VoltageLevel",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Almost all objects on the network should be contained within a Voltagelevel",
 	"contents": [
 		{
             "@type": "Property",
             "name": "Name",
             "displayName": "Name",
-            "description": "The name of the voltage level.",
+            "description": "The name of the voltage level. For example, VL_01",
             "writable": true,
             "schema": "string"
         },
@@ -23,15 +22,11 @@
         },
         {
             "@type": "Relationship",
-            "name": "voltageLevel",
-            "displayName": "voltageLevel",
-            "description": "shows the voltage level ."          
-         },         
-         {
-            "@type": "Relationship",
             "name": "MemberOf_Substation",
             "displayName": "MemberOf_Substation",
-            "description": "shows relationship to substation"          
-         }
-    ]
+            "description": "Shows a relationship to a substation",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"
+        }  
+    ],
+    "@context": "dtmi:dtdl:context;2"
 }
