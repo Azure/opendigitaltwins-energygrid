@@ -1,6 +1,6 @@
 ## Switch
 
-IEC 61968-13 supports the following kinds of Switch devices:
+A generic device designed to close, or open, or both, one or more electric circuits. All switches are two terminal devices including grounding switches. IEC 61968-13 supports the following kinds of Switch devices:
 
 - **Breaker** able to interrupt fault currents greater than normal load currents.
 
