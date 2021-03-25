@@ -1,5 +1,4 @@
 ## PowerTransformer
 
-The associations for PowerTransformer containment are:
-    Substation -> PowerTransformer -> TransformerWinding
+The associations for PowerTransformer containment are: Substation -> PowerTransformer -> TransformerWinding
 
