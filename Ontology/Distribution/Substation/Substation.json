@@ -1,0 +1,60 @@
+ {
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1",
+	"@type": "Interface",
+	"displayName": "Substation",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics.",
+	"contents": [
+		{
+            "@type": "Property",
+            "name": "Name",
+            "displayName": "Name",
+            "description": "The name of the substation.",
+            "writable": true,
+            "schema": "string"
+        },     
+        {
+            "@type": "Property",
+            "name": "substationType",
+            "displayName": "Substation Type",
+            "description": "The type of substations.",
+            "schema": {
+                "@type": "Enum",  
+                "valueSchema": "string", 
+                "enumValues": [
+                    {
+                        "name": "MV_MV_substation",
+                        "displayName": "MV/MV substation",
+                        "enumValue": "MVMV"  
+                    },
+                    {
+                        "name": "MV_LV_substation",
+                        "displayName": "MV/LV substation",
+                        "enumValue": "MVLV"  
+                    },
+                    {
+                        "name": "LV_LV_substation",
+                        "displayName": "LV/LV substation",
+                        "enumValue": "LVLV"  
+                    }
+                ]
+            }
+          },       
+        {
+            "@type": "Property",
+            "name": "Capacity",
+            "displayName": "Capacity",
+            "description": "The Capacity of the substation.",
+            "writable": true,
+            "schema": "double"
+        },
+        {
+            "@type": "Relationship",
+            "name": "Location",
+            "displayName": "Location",
+            "description": "The location of the substation",
+            "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"                    
+        }       
+    ],
+    "@context": "dtmi:dtdl:context;2"
+
+}
