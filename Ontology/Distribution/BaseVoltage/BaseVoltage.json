@@ -1,0 +1,25 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1",
+	"@type": "Interface",   
+	"displayName": "BaseVoltage",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Defines a system base voltage which is referenced.",
+	"contents": [
+		{
+            "@type": "Property",
+            "name": "Name",
+            "displayName": "Name",
+            "description": "The name of the base voltage. For example, Basevoltage_01",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "NominalVoltage",
+            "displayName": "NominalVoltage",
+            "description": "The nominal voltage of assets",
+            "writable": true,
+            "schema": "double"
+        }                        
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

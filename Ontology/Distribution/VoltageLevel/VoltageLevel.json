@@ -26,6 +26,13 @@
             "displayName": "MemberOf_Substation",
             "description": "Shows a relationship to a substation",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"
+        },
+        {
+            "@type": "Relationship",
+            "name": "Related_BaseVoltage",
+            "displayName": "Related_BaseVoltage",
+            "description": "Relation to the associated BaseVoltage, the voltage levels is having this base voltage",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1"
         }  
     ],
     "@context": "dtmi:dtdl:context;2"
