@@ -1,0 +1,51 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:GmlPosition;1",
+        "@type": "Interface",
+        "displayName": "GmlPosition",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Gml position is to deifne the absolute position of an assets",
+        "contents": [
+                        {
+                            "@type": "Property",
+                            "name": "id",
+                            "displayName": "id",
+                            "description": "gml id",
+                            "writable": true,
+                            "schema": "string"
+                        },
+                        {
+                            "@type": "Property",
+                            "name": "locationName",
+                            "displayName": "locationName",
+                            "description": "location Name",
+                            "writable": true,
+                            "schema": "string"
+                         },
+                        {
+                            "@type": "Property",
+                            "name": "xPosition",
+                            "displayName": "xPosition",
+                            "description": "The gml xPosition of the location .",
+                            "writable": true,
+                            "schema": "double"
+                        },
+                        {
+                            "@type": "Property",
+                            "name": "yPosition",
+                            "displayName": "yPosition",
+                            "description": "The gml yPosition of the location .",
+                            "writable": true,
+                            "schema": "double"
+                        },             
+                        
+                        {
+                            "@type": "Property",
+                            "name": "SequenceNumber",
+                            "displayName": "SequenceNumber",
+                            "description": "The SequenceNumber is use for line segments.",
+                            "writable": true,
+                            "schema": "integer"
+                        }                  
+         
+        ],
+        "@context": "dtmi:dtdl:context;2"
+    }

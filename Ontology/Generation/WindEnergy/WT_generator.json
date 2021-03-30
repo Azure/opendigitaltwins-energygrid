@@ -1,0 +1,79 @@
+{
+	"@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Generator;1",
+	"@type": "Interface",
+	"displayName": "Generator",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Generator system",
+	"contents": [
+		{
+            "@type": "Property",
+            "name": "id",
+            "displayName": "id",
+            "description": "The unique id of the generator.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "ModelNumber",
+            "displayName": "ModelNumber",
+            "description": "The model number of the generator.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "generatingVoltage",
+            "description": "The generating voltage.",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "generatingPower",
+            "description": "The generator power.",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GeneratorCableTemp",
+            "description": "The generator Cable temperature.",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GeneratorFanMotorRpm",
+            "schema": "double"
+        },
+
+        {
+            "@type": "Telemetry",
+            "name": "GeneratorRpm",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GeneratorWaterTemp",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GeneratorWaterOutPressure",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "WindingL1Inv1Temp",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "WindingL2Inv1Temp",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "WindingL3Inv1Temp",
+            "schema": "double"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

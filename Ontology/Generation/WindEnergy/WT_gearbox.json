@@ -1,0 +1,52 @@
+{
+	"@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Gearbox;1",
+	"@type": "Interface",
+	"displayName": "Gear box",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models:Gear box system",
+	"contents": [
+		{
+            "@type": "Property",
+            "name": "id",
+            "displayName": "id",
+            "description": "The unique id of the gearbox.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "ModelNumber",
+            "displayName": "ModelNumber",
+            "description": "The ModelNumber of the gearbox.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GearInjNozzleTemp",
+            "description": "The nozzle temperature.",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GearPump2Rpm",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GearLubricationPressure",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GearOilPressure",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "GearOilTanklevel",
+            "schema": "double"
+        }    
+     
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}
