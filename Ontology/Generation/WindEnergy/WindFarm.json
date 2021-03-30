@@ -1,15 +1,14 @@
  {
-  "@id": "dtmi:digitaltwins:Basic:WindFarm;1",
-	"@type": "Interface",
-	"@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindFarm;1",
+    "@type": "Interface",	
 	"displayName": "WindFarm",
-	"description": "WindFarm",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: A group of wind turbines that feed electricity into the electricity grid via electrical substation(s).",
 	"contents": [
 		{
             "@type": "Property",
             "name": "Name",
             "displayName": "Name",
-            "description": "The name of the WindFarm.",
+            "description": "The name of the wind farm.",
             "writable": true,
             "schema": "string"
         },     
@@ -18,7 +17,7 @@
             "@type": "Property",
             "name": "InstalledCapacity",
             "displayName": "Installed Capacity",
-            "description": "The Capacity of the WindFarm.",
+            "description": "The total installed capacity of the wind farm.",
             "writable": true,
             "schema": "double"
         },       
@@ -26,9 +25,9 @@
             "@type": "Property",
             "name": "totaltower",
             "displayName": "Total number of tower(s)",
-            "description": "The tower in the Wind farm.",
+            "description": "The tower in the wind farm.",
             "writable": true,
-            "schema": "double"
+            "schema": "integer"
         },
 
         {
@@ -44,9 +43,10 @@
             "name": "location",
             "displayName": "location",
             "description": "The location of the WindFarm",
-            "target": "dtmi:company:Basic:GmlPositon;1"                     
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"              
         }     
        
-    ]
+    ],
+    "@context": "dtmi:dtdl:context;2"
 
 }
