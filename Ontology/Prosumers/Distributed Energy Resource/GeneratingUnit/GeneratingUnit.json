@@ -1,0 +1,57 @@
+{
+  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1",
+  "@type": "Interface",
+  "displayName": "GeneratingUnit",
+  "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models:A single or set of synchronous machines for converting mechanical power into alternating-current power. For example, individual machines within a set may be defined for scheduling purposes while a single control signal is derived for the set. In this case there would be a GeneratingUnit for each member of the set and an additional GeneratingUnit corresponding to the set.",
+
+  "contents": [   
+    
+        {
+          "@type": "Property",
+          "name": "GeneratingUnitID",
+          "description": "The ID/name of the GeneratingUnit.",
+          "writable": true,
+          "schema": "string"
+         },
+
+         {
+          "@type": "Property",
+          "name": "initialMW",
+          "description": "Default initial active power  which is used to store a powerflow result for the initial active power for this unit in this network configuration. Default: 0.0",
+          "writable": true,
+          "schema": "double"
+         },   
+
+         {
+          "@type": "Property",
+          "name": "maxOperatingMW",
+          "description": "This is the maximum operating active power limit the dispatcher can enter for this unit. Default: 0.0",
+          "writable": true,
+          "schema": "double"
+         },   
+
+         {
+          "@type": "Property",
+          "name": "startupCost",
+          "description": "The initial startup cost incurred for each start of the GeneratingUnit. Default: 0.0",
+          "writable": true,
+          "schema": "double"
+         },   
+
+         {
+          "@type": "Property",
+          "name": "totalEfficiency",
+          "description": "The efficiency of the unit in converting the fuel into electrical energy. Default: 0.0",
+          "writable": true,
+          "schema": "double"
+         },   
+
+         {
+          "@type": "Relationship",
+          "name": "MemberOf_EquipmentContainer",
+          "description": "A GeneratingUnit --> EquipmentContainer --> Substation",
+          "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"                    
+         } 
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

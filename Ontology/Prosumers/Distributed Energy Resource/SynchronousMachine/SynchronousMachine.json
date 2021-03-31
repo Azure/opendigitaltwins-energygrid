@@ -1,0 +1,63 @@
+{
+  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachine ;1",
+  "@type": "Interface",
+  "displayName": "SynchronousMachine",
+  "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models:An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.",
+
+  "contents": [   
+    
+        {
+          "@type": "Property",
+          "name": "SynchronousMachineID",
+          "description": "The ID/name of the SynchronousMachine.",
+          "writable": true,
+          "schema": "string"
+         },
+
+         {
+          "@type": "Property",
+          "name": "maxQ",
+          "description": "Maximum reactive power limit. This is the maximum (nameplate) limit for the unit. Default: 0.0",
+          "writable": true,
+          "schema": "double"
+         },  
+         
+         {
+            "@type": "Property",
+            "name": "minQ",
+            "description": "Minimum reactive power limit for the unit. Default: 0.0",
+            "writable": true,
+            "schema": "double"
+           },    
+
+         {
+          "@type": "Property",
+          "name": "r",
+          "description": "Equivalent resistance (RG) of generator. RG is considered for the calculation of all currents, except for the calculation of the peak current ip. Used for short circuit data exchange according to IEC 60909 Default: 0.0",
+          "writable": true,
+          "schema": "double"
+         },   
+
+         {
+          "@type": "Property",
+          "name": "voltageRegulationRange",
+          "description": "Range of generator voltage regulation (PG in the IEC 60909-0) used for calculation of the impedance correction factor KG defined in IEC 60909-0 This attribute is used to describe the operating voltage of the generating unit. Default: 0.0",
+          "writable": true,
+          "schema": "double"
+         },            
+         {
+            "@type": "Relationship",
+            "name": "MemberOf_GeneratingUnit",
+            "description": "A SynchronousMachine --> MemberOf_GeneratingUnit",
+            "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"                
+          },
+
+         {
+          "@type": "Relationship",
+          "name": "MemberOf_EquipmentContainer",
+          "description": "A SynchronousMachine --> EquipmentContainer --> Substation",
+          "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"                    
+         } 
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
