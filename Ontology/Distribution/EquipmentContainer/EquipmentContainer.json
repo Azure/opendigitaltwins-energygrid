@@ -1,0 +1,24 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1",
+    "@type": "Interface",
+    "displayName": "EquipmentContainer",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: A modeling construct to provide a root class for containing equipment.",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Name",
+            "description": "Property. EquipmentContainer name.",
+            "schema": "string",
+            "writable": true
+        },
+       
+        {
+            "@type": "Relationship",
+            "name": "Location",
+            "displayName": "Location",
+            "description": "The location to equipment container ",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"
+        }            
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}
