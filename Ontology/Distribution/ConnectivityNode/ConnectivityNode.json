@@ -1,0 +1,40 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1",
+    "@type": "Interface",
+    "displayName": "ConnectivityNode",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.",
+    "contents": [    
+      {
+        "@type": "Property",
+        "name": "name",
+        "displayName": "Name",
+        "description": "The name of the ConnectivityNode.",
+        "schema": "string"                
+      },
+  
+      {
+        "@type": "Property",
+        "name": "ConnectivityNodeContainer",
+        "description": "Container of this connectivity node.",
+        "schema": "string"                
+      },
+  
+      {
+        "@type": "Property",
+        "name": "Terminals",
+        "description": "The connectivity node to which this terminal connects with zero impedance. Default: 'list'",
+        "schema": {
+          "@type": "Array",
+          "elementSchema": "string"
+        }            
+      },             
+
+     {
+      "@type": "Relationship",
+      "name": "MemberOf_Substation",
+      "description": "The associations for PowerTransformer containment are: Substation -> PowerTransformer -> TransformerWinding",
+      "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"                    
+  },
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  }
