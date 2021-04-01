@@ -1,0 +1,91 @@
+{
+  "@id": "dtmi:igitaltwins:ngsi_ld:cim:energy:Battery;1",
+  "@type": "Interface",
+  "displayName": "Battery",
+  "description": "A Battery model",
+  "contents": [    
+    {
+      "@type": "Property",
+      "name": "BatteryID",
+      "description": "The identifier/name of a battery.",
+      "writable": true,
+      "schema": "string"
+     },
+
+     {
+      "@type": "Property",
+      "name": "BatteryTypeName",
+      "description": "Type of battery.",
+      "writable": true,
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      }            
+     },
+
+     {
+      "@type": "Property",
+      "name": "capacity",
+      "description": "Total battery capacity.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeMin",
+      "description": "Minimum charge limit.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeMax",
+      "description": "Maximum charge limit.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeRateMin",
+      "description": "Minimum charging rate.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeRateMax",
+      "description": "Maximum charging rate.",
+      "writable": true,
+      "schema": "double"
+     },
+     
+     {
+      "@type": "Property",
+      "name": "dischargeRateMin",
+      "description": "Minimum discharge rate.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "dischargeRateMax",
+      "description": "Maximum discharge rate.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeTarget",
+      "description": "Target capacity to be charged",
+      "writable": true,
+      "schema": "double"
+     }    
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

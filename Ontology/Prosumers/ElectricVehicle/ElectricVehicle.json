@@ -1,0 +1,87 @@
+{
+  "@id": "dtmi:igitaltwins:ngsi_ld:cim:energy:ElectricVehicle;1",
+  "@type": "Interface",
+  "displayName": "ElectricVehicle",
+  "description": "An electcric vehicle model",
+  "contents": [    
+    {
+      "@type": "Property",
+      "name": "EVID",
+      "description": "The ID/name of the electcric vehicle.",
+      "writable": true,
+      "schema": "string"
+     },
+
+     {
+      "@type": "Property",
+      "name": "capacity",
+      "description": "Total EV battery capacity.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeMin",
+      "description": "Minimum charge limit.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeRateMin",
+      "description": "Minimum charging rate.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeRateMax",
+      "description": "Maximum charging rate.",
+      "writable": true,
+      "schema": "double"
+     },
+     
+     {
+      "@type": "Property",
+      "name": "dischargeRateMin",
+      "description": "Minimum discharge rate.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "dischargeRateMax",
+      "description": "Maximum discharge rate.",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeTarget",
+      "description": "Target capacity to be charged",
+      "writable": true,
+      "schema": "double"
+     },
+
+     {
+      "@type": "Property",
+      "name": "chargeTargetTimestamp",
+      "description": "Target end datetime to be charged",
+      "writable": true,
+      "schema": "dateTime"
+     },
+
+     {
+      "@type": "Relationship",
+      "name": "ConnectedTo_ChargingStation",
+      "description": "EV --> ChargingStation",
+      "target":"dtmi:digitaltwins:ngsi_ld:city:EVChargingStation;1"                    
+     }       
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
