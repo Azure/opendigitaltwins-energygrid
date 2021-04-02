@@ -16,7 +16,7 @@
             "@type": "Property",
             "name": "NominalVoltage",
             "displayName": "NominalVoltage",
-            "description": "The nominal voltage of assets",
+            "description": "The nominal voltage of the associated asset or resource",
             "writable": true,
             "schema": "double"
         }                        
