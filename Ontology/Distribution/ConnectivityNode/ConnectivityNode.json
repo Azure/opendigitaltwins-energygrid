@@ -11,30 +11,28 @@
         "description": "The name of the ConnectivityNode.",
         "schema": "string"                
       },
-  
+   
       {
         "@type": "Property",
-        "name": "ConnectivityNodeContainer",
-        "description": "Container of this connectivity node.",
-        "schema": "string"                
-      },
-  
-      {
-        "@type": "Property",
-        "name": "Terminals",
-        "description": "The connectivity node to which this terminal connects with zero impedance. Default: 'list'",
-        "schema": {
-          "@type": "Array",
-          "elementSchema": "string"
-        }            
-      },             
+        "name": "TerminalCount",
+        "description": "The connectivity node to which this terminal connects with zero impedance. This propoerty to defined total number of terminals connected to a node.",
+        "schema": "integer"   
+      },       
 
-     {
+      {
+        "@type": "Relationship",
+        "name": "MemberOf_EquipmentContainer",
+        "description": "The relation to equipment container which is <Voltage Level> in case of a ConnectivityNode",
+        "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"
+      }, 
+
+      {
       "@type": "Relationship",
       "name": "MemberOf_Substation",
-      "description": "The associations for PowerTransformer containment are: Substation -> PowerTransformer -> TransformerWinding",
+      "description": "Another relationship Substation -> ConnectivityNode",
       "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"                    
-  },
+      }
+      
     ],
     "@context": "dtmi:dtdl:context;2"
   }

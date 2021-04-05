@@ -2,8 +2,7 @@
     "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformer;1",
     "@type": "Interface",
     "displayName": "Power Transformer",
-    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: An electrical device consisting of  two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow). A power transformer may be composed of separate transformer tanks that need not be identical. A power transformer can be modeled with or without tanks and is intended for use in both balanced and unbalanced representations. A power transformer typically has two terminals, but may have one (grounding), three or more terminals. The inherited association ConductingEquipment.BaseVoltage should not be used.  The association from TransformerEnd to BaseVoltage should be used instead.",
-    "extends": "dtmi:digitaltwins:ngsi_ld:energy:NGSILDBaseModel;1",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: An electrical device consisting of two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. A power transformer typically has two terminals, but may have one (grounding), three or more terminals and use to control voltage and phase shift (active power flow).",
     "contents": [
         {
             "@type": "Property",
@@ -39,7 +38,7 @@
             "description": "Property. The angle of power factor before short circuit (phib in the IEC 60909-0). It is used for calculation of the impedance correction factor KT defined in IEC 60909-0. This is the worst case power factor. Used to define operating conditions. Default: 0.0",
             "schema": "double",
             "writable": true
-        },
+        },        
         {
             "@type": "Property",
             "name": "highSideMinOperatingU",
@@ -53,38 +52,19 @@
             "description": "Property. Indicates whether the machine is part of a power station unit. Used for short circuit data exchange according to IEC 60909 Default: False",
             "schema": "double",
             "writable": true
-        },
+        },        
         {
             "@type": "Property",
             "name": "operationalValuesConsidered",
             "description": "Property. Model:'https://schema.org/Number'. It is used to define if the data (other attributes related to short circuit data exchange) defines long term operational conditions or not. Used for short circuit data exchange according to IEC 60909. Default: False",
             "schema": "double",
             "writable": true
-        },  
-        {
-            "@type": "Relationship",
-            "name": "InputVoltageLevel",
-            "description": "The input voltage level to the power transformer.",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"
         },
-        {
-            "@type": "Relationship",
-            "name": "OutputVoltageLevel",
-            "description": "The Output Voltage level from the power transformer.",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"
-        },      
         {
             "@type": "Relationship",
             "name": "MemberOf_Substation",
             "description": "The associations for PowerTransformer containment are: Substation -> PowerTransformer -> TransformerWinding",
             "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"                    
-        },
-        {
-            "@type": "Relationship",
-            "name": "Location",
-            "displayName": "Location",
-            "description": "The location of the power transformer",
-            "target": "dtmi:company:Basic:GmlPositon;1"
         },
         {
             "@type": "Relationship",

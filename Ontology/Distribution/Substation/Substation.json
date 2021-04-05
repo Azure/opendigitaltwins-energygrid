@@ -7,7 +7,6 @@
 		{
             "@type": "Property",
             "name": "Name",
-            "displayName": "Name",
             "description": "The name of the substation.",
             "writable": true,
             "schema": "string"
@@ -15,8 +14,8 @@
         {
             "@type": "Property",
             "name": "substationType",
-            "displayName": "Substation Type",
             "description": "The type of substations.",
+            "writable": true,
             "schema": {
                 "@type": "Enum",  
                 "valueSchema": "string", 
@@ -41,16 +40,14 @@
           },       
         {
             "@type": "Property",
-            "name": "Capacity",
-            "displayName": "Capacity",
-            "description": "The Capacity of the substation.",
+            "name": "MaxPowerCapacity",
+            "description": "The maximum supported power capacity of the substation.",
             "writable": true,
             "schema": "double"
         },
         {
             "@type": "Relationship",
             "name": "Location",
-            "displayName": "Location",
             "description": "The location of the substation",
             "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"                    
         }       
