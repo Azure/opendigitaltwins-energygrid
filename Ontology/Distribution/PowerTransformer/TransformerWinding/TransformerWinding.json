@@ -53,14 +53,8 @@
             "description": "G of the winding",
             "writable": true,
             "schema": "double"
-        },        
-   
-        {
-            "@type": "Relationship",
-            "name": "Terminal_connectivityNode",
-            "description": "The connection to a termminal of a connectivity node.",
-            "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1"
-        },
+        },       
+        
 
         {
             "@type": "Relationship",
