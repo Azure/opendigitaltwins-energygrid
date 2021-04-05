@@ -15,14 +15,14 @@
             "@type": "Property",
             "name": "normalOpen",
             "description": "Property. The attribute is used in cases when no Measurement for the status value is present. If the Switch has a status measurement the Discrete.normalValue is expected to match with the Switch.normalOpen. Default: False",
-            "schema": "Boolean",
+            "schema": "boolean",
             "writable": true
         },
+
         {
             "@type": "Relationship",
             "name": "MemberOf_EquipmentContainer",
-            "displayName": "MemberOf_EquipmentContainer",
-            "description": "The relation to equipment container ",
+            "description": "The relation to equipment container which is < voltage_level > in case of a switch",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer:Line;1"
         }            
     ],
