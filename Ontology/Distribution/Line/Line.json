@@ -7,33 +7,23 @@
 			{
                 "@type": "Property",
                 "name": "lineID",
-                "displayName": "Line ID",
-                "description": "The id of the Line.",
+                "description": "The id/name of the Line.",
                 "writable": true,
                 "schema": "string"
-            },			
-            {
-                "@type": "Property",
-                "name": "Description",
-                "displayName": "Description",
-                "description": "The description of the Line.",
-                "writable": true,
-                "schema": "string"
-            },
+            },		          
             {
                 "@type": "Property",
                 "name": "numberofsegments",
-                "displayName": "number of line segments",
                 "description": "The Total number of line segments.",
                 "writable": true,
                 "schema": "integer"
-            }
+            },
             {
                 "@type": "Relationship",
                 "name": "Location",
                 "displayName": "Location",
                 "description": "The location of the instance of LineSegment",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GmlPositon;1"
+                "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"      
             }  
         ],
 		 "@context": "dtmi:dtdl:context;2"
