@@ -54,12 +54,12 @@
             "writable": true,
             "schema": "double"
         },        
-
+   
         {
             "@type": "Relationship",
-            "name": "Terminal_ConnectivityNode",
-            "description": "The connection to a termminal of the connectivity node.",
-            "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1"
+            "name": "Terminal_connectivityNode",
+            "description": "The connection to a termminal of a connectivity node.",
+            "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1"
         },
 
         {
