@@ -54,6 +54,21 @@
             "writable": true,
             "schema": "double"
         },        
+
+        {
+            "@type": "Relationship",
+            "name": "Terminal_ConnectivityNode",
+            "description": "The connection to a termminal of the connectivity node.",
+            "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1"
+        },
+
+        {
+            "@type": "Relationship",
+            "name": "BaseVoltage",
+            "description": "The voltage level of the transformer winding.",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"
+        },      
+
         {
             "@type": "Relationship",
             "name": "MemberOf_PowerTransformer",
