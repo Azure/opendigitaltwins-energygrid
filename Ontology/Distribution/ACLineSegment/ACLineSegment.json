@@ -48,14 +48,7 @@
                 "description": "The link to the line",
                 "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Line;1"
             },
-
-            {
-                "@type": "Relationship",
-                "name": "Terminal_connectivityNode",
-                "description": "The connection to a termminal of a connectivity node.",
-                "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1"
-            },
-
+         
             {
                 "@type": "Relationship",
                 "name": "Location",
