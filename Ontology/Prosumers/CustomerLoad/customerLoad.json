@@ -51,11 +51,12 @@
       "writable": true,
       "schema": "double"
      },    
+     
      {
       "@type": "Relationship",
-      "name": "MemberOf_EquipmentContainer",
+      "name": "MemberOf_EquipmentContainerVL",
       "description": "A CustomerLoad --> EquipmentContainer --> Substation",
-      "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"                    
+      "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"                 
      }       
   ],
   "@context": "dtmi:dtdl:context;2"

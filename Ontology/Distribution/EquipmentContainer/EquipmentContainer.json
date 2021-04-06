@@ -11,14 +11,21 @@
             "schema": "string",
             "writable": true
         },
-       
+
         {
             "@type": "Relationship",
-            "name": "Location",
-            "displayName": "Location",
-            "description": "The location to equipment container ",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"
-        }            
+            "name": "MemberOf_Substation",
+            "description": "Shows a relationship to a substation",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"
+        },
+        
+        {
+            "@type": "Relationship",
+            "name": "Associated_VoltageLevel",
+            "description": "Shows a relationship to a VoltageLevel",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"
+        } 
+        
     ],
     "@context": "dtmi:dtdl:context;2"
 }
