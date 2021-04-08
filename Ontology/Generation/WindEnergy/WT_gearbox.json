@@ -1,21 +1,19 @@
 {
 	"@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Gearbox;1",
 	"@type": "Interface",
-	"displayName": "Gear box",
-	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models:Gear box system",
+    "displayName": "Gearbox",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: the gearbox transforms the low shaft speed (30-60 rpm) into faster speed (about 1000-1800 rpm).",
 	"contents": [
 		{
             "@type": "Property",
             "name": "id",
-            "displayName": "id",
-            "description": "The unique id of the gearbox.",
+            "description": "The unique id/name of the gearbox.",
             "writable": true,
             "schema": "string"
         },
         {
             "@type": "Property",
             "name": "ModelNumber",
-            "displayName": "ModelNumber",
             "description": "The ModelNumber of the gearbox.",
             "writable": true,
             "schema": "string"
@@ -29,6 +27,7 @@
         {
             "@type": "Telemetry",
             "name": "GearPump2Rpm",
+            "description": "The rpm speed.",
             "schema": "double"
         },
         {

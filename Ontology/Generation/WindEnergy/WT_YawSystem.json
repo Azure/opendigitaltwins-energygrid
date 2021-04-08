@@ -1,0 +1,38 @@
+{
+	"@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:YawSystem;1",
+	"@type": "Interface",
+	"displayName": "YawSystem",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: the yaw system orients turbines to move according to the wind direction and speed",
+	"contents": [
+		{
+            "@type": "Property",
+            "name": "Yawid",
+            "description": "The unique id or name of the yaw system.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "YawMotor",
+            "description": "The name of the yaw moter.",
+            "writable": true,
+            "schema": "string"
+        },
+
+        {
+            "@type": "Property",
+            "name": "YawBrakeTypeName",
+            "description": "The type of yaw brake.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "YawAngle",
+            "description": "YawAngle as the yaw system orients turbines to move according to the wind direction and speed",
+            "schema": "double"
+        } 
+
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

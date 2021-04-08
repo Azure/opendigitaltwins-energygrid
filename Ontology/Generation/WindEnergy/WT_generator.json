@@ -2,12 +2,11 @@
 	"@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Generator;1",
 	"@type": "Interface",
 	"displayName": "Generator",
-	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Generator system",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: The generator converts rotational motion into electrical energy.",
 	"contents": [
 		{
             "@type": "Property",
             "name": "id",
-            "displayName": "id",
             "description": "The unique id of the generator.",
             "writable": true,
             "schema": "string"
@@ -15,7 +14,6 @@
         {
             "@type": "Property",
             "name": "ModelNumber",
-            "displayName": "ModelNumber",
             "description": "The model number of the generator.",
             "writable": true,
             "schema": "string"

@@ -1,0 +1,62 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WeatherSensors;1",            
+	"@type": "Interface",
+	"displayName": "WeatherSensors",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: the weather sensors system to measure wind speead and direction",
+	"contents": [
+		{
+            "@type": "Property",
+            "name": "AnemometerId",
+            "description": "The unique id/name of the anemometer.",
+            "writable": true,
+            "schema": "string"
+        },
+
+        {
+            "@type": "Property",
+            "name": "AnemometerModelNumber",
+            "displayName": "ModelNumber",
+            "description": "The ModelNumber of the anemometer.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "WindSpeed",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "VaneID",
+            "description": "The unique id/name of the vane.",
+            "writable": true,
+            "schema": "string"
+        },
+
+        {
+            "@type": "Property",
+            "name": "VaneModelNumber",
+            "displayName": "ModelNumber",
+            "description": "The ModelNumber of the Vane.",
+            "writable": true,
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "WindDirection",
+            "schema": "double"
+        },
+     
+        {
+            "@type": "Telemetry",
+            "name": "humidity",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "OutdoorTemp",
+            "schema": "double"
+        }             
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

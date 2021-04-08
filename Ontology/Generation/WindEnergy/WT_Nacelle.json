@@ -1,22 +1,20 @@
 {
 	"@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Nacelle;1",
-	"@type": "Interface",
-	"displayName": "Nacelle",
-	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Nacelle system",
+    "@type": "Interface",
+    "displayName": "Nacelle",
+	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: The Nacelle is nothing but the housing of generator, gearbox, braking system, shafts etc.",
 	"contents": [
 		{
             "@type": "Property",
             "name": "id",
-            "displayName": "id",
-            "description": "The unique id of a nacelle.",
+            "description": "The unique id or name of the nacelle.",
             "writable": true,
             "schema": "string"
         },
         {
             "@type": "Property",
             "name": "ModelNumber",
-            "displayName": "ModelNumber",
-            "description": "The ModelNumber of a nacelle",
+            "description": "The ModelNumber of the nacelle",
             "writable": true,
             "schema": "string"
         },
@@ -24,7 +22,6 @@
         {
             "@type": "Property",
             "name": "NacelleLength",
-            "displayName": "NacelleLength",
             "description": "The lenght of the nacelle",
             "writable": true,
             "schema": "integer"
@@ -32,8 +29,7 @@
         {
             "@type": "Property",
             "name": "NacelleHeight",
-            "displayName": "NacelleHeight",
-            "description": "The height of a nacelle",
+            "description": "The height of the nacelle",
             "writable": true,
             "schema": "integer"
         },        
@@ -41,8 +37,7 @@
         {
             "@type": "Property",
             "name": "NacelleWidth",
-            "displayName": "NacelleWidth",
-            "description": "The width of a nacelle",
+            "description": "The width of the nacelle",
             "writable": true,
             "schema": "integer"
         }
