@@ -11,8 +11,7 @@
             "description": "The name of the wind farm.",
             "writable": true,
             "schema": "string"
-        },     
-             
+        },             
         {
             "@type": "Property",
             "name": "InstalledCapacity",
@@ -29,20 +28,18 @@
             "writable": true,
             "schema": "integer"
         },
-
         {
             "@type": "Telemetry",
             "name": "CurrentCapacity",
             "displayName": "Current Capacity",
-            "description": "The current capacity of the WindFarm.",
+            "description": "The current capacity of the wind farm.",
             "schema": "double"
         },
-
         {
             "@type": "Relationship",
             "name": "location",
             "displayName": "location",
-            "description": "The location of the WindFarm",
+            "description": "The location of the wind farm.",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"              
         }     
        

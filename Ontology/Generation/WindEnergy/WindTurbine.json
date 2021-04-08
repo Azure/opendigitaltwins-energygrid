@@ -1,22 +1,19 @@
 {
     "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:windTurbine;1",
     "@type": "Interface",
-    "@context": "dtmi:dtdl:context;2",
     "displayName": "windTurbine",
-    "description": "windTurbine",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models:",
     "contents": [
                         {
                             "@type": "Property",
                             "name": "windTurbineID",
-                            "displayName": "windTurbineID",
-                            "description": "The unique identifier.",
+                            "description": "The unique identifier or name of the wind turnbine.",
                             "writable": true,
                             "schema": "string"
                          },
                         {
                             "@type": "Property",
                             "name": "windTurbineName",
-                            "displayName": "windTurbineName",
                             "description": "The name of wind turbine.",
                             "writable": true,
                             "schema": "string"
@@ -24,7 +21,6 @@
                         {
                             "@type": "Property",
                             "name": "ModelTypeId",
-                            "displayName": "ModelTypeId",
                             "description": "The model type number of the wind turbine.",
                             "writable": true,
                             "schema": "string"
@@ -32,7 +28,6 @@
                         {
                             "@type": "Property",
                             "name": "ShutdownSpeed",
-                            "displayName": "ShutdownSpeed",
                             "description": "The max wind speeds at which turbine will be shutdown for the safety purpose",
                             "writable": true,
                             "schema": "string"
@@ -40,7 +35,6 @@
                         {
                             "@type": "Property",
                             "name": "Height",
-                            "displayName": "Height",
                             "description": "The height of the tower.",
                             "writable": true,
                             "schema": "string"
@@ -48,60 +42,56 @@
                         {
                             "@type": "Property",
                             "name": "PowerCapacitykW",
-                            "displayName": "Power Capacity",
                             "description": "wind turbine power capacity shows the maximum KW it can generate per hours (kWh) ",
                             "writable": true,
                             "schema":"float"
                         },
-
                         {
                             "@type": "Property",
                             "name": "Status",
-                            "displayName": "Status",
                             "description": "Status of the turbine, such as working and offline.",
                             "writable": true,
                             "schema":"string"
                         },
-                        {
-                            "@type": "Telemetry",
-                            "name": "YawAngle",
-                            "description": "YawAngle",
-                            "schema": "double"
-                        },                        
-                        {
-                            "@type": "Component",
-                            "name": "Nacelle",
-                            "schema": "dtmi:digitaltwins:ngsi_ld:cim:energy:Nacelle;1"
-                        },                                              
-            
+                                         
             {
                 "@type": "Relationship",
-                "name": "contains",
-                "displayName": "Gearbox",
-                "description": "The relation to its gearbox system.",
+                "name": "consistOf",
+                "description": "The yaw system of the wind turbine.",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:YawSystem;1"
+            },
+            {
+                "@type": "Relationship",
+                "name": "consistOf",
+                "description": "The nacelle of the wind turbine.",
+                "schema": "dtmi:digitaltwins:ngsi_ld:cim:energy:Nacelle;1"
+            },               
+            {
+                "@type": "Relationship",
+                "name": "consistOf",
+                "description": "The gearbox system of the wind turbine.",
                 "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Gearbox;1"
-            },                            
+            },  
             {
                 "@type": "Relationship",
-                "name": "contains",
-                "displayName": "WeatherSensors",
+                "name": "consistOf",
                 "description": "The relation to the weather sensors.",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:WeatherSensors;1"
-            },                                                         
+                "target":  "dtmi:digitaltwins:ngsi_ld:cim:energy:WeatherSensors;1"
+            },        
             {
                 "@type": "Relationship",
-                "name": "MemberOf_WindFarm",
-                "displayName": "MemberOf_WindFarm",
-                "description": "The relation to the WindFarm.",
+                "name": "MemberOf_WindPlant",
+                "description": "The relation to the wind energy plant.",
                 "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindFarm;1"
             },     
             {
                 "@type": "Relationship",
                 "name": "Location",
-                "displayName": "Location",
                 "description": "The location of the tower",
                 "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"
                           
             }         
-        ]
+        ],
+        "@context": "dtmi:dtdl:context;2"
+
     }
