@@ -6,19 +6,19 @@
   "contents": [
     {
       "@type": "Property",
-      "name": "ID",
+      "name": "terminalName",
       "description": "The ID or name of the Terminal.",
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "Connected",
+      "name": "connected",
       "description": "The connected status is related to a bus-branch model and the topological node to terminal relation. True implies the terminal is connected to the related topological node and false implies it is not.",
-      "schema": "string"
+      "schema": "boolean"
     },
     {
       "@type": "Property",
-      "name": "OperationalLimitSet",
+      "name": "operationalLimitSet",
       "description": "The OperationalLimitSet of the terminal.",
       "schema": "string"
     },
@@ -30,31 +30,31 @@
     },
     {
       "@type": "Relationship",
-      "name": "ConnectivityNode",
-      "description": "The relation to ConnectivityNode",
+      "name": "connectedNode",
+      "description": "The relation to the connectivity node",
       "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1"
     },
     {
       "@type": "Relationship",
-      "name": "ConductingEquipmentTW",
+      "name": "conductingEquipmentTW",
       "description": "The relation to ConnectivityNode",
       "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerWinding;1"
     },
     {
       "@type": "Relationship",
-      "name": "ConductingEquipmentSW",
+      "name": "conductingEquipmentSW",
       "description": "The connectivityNode.termminal connection to other equipment.",
       "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1"
     },
     {
       "@type": "Relationship",
-      "name": "ConductingEquipmentLS",
+      "name": "conductingEquipmentLS",
       "description": "The connectivityNode.termminal connection to other equipment.",
       "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ACLineSegment;1"
     },
     {
       "@type": "Relationship",
-      "name": "ConductingEquipmentEC",
+      "name": "conductingEquipmentEL",
       "description": "The connectivityNode.termminal connection to other equipment.",
       "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquivalentLoad;1"
     },
@@ -63,6 +63,12 @@
       "name": "ConductingEquipmentCL",
       "description": "The connectivityNode.termminal connection to other equipment.",
       "target": "dtmi:igitaltwins:ngsi_ld:cim:energy:CustomerLoad;1"
+    }
+    {
+      "@type": "Relationship",
+      "name": "ConductingEquipmentBT",
+      "description": "The connectivityNode.termminal connection to other equipment.",
+      "target": "dtmi:igitaltwins:cim:energy:Battery;1"
     }
   ],
   "@context": "dtmi:dtdl:context;2"

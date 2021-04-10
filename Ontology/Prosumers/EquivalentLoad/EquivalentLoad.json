@@ -3,71 +3,62 @@
   "@type": "Interface",
   "displayName": "EquivalentLoad",
   "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: a LV customer is an EquivalentLoad",
-
-  "contents": [   
-    
-        {
-          "@type": "Property",
-          "name": "EquivalentLoadID",
-          "description": "The ID/name of the EquivalentLoad.",
-          "writable": true,
-          "schema": "string"
-         },
-
-         {
-          "@type": "Property",
-          "name": "p",
-          "description": "Active power of the load. Load sign convention is used, i.e. positive sign means flow out from a node. For voltage dependent loads the value is at rated voltage. Starting value for a steady state solution. Default: 0.0",
-          "writable": true,
-          "schema": "double"
-         },
-
-         {
-          "@type": "Property",
-          "name": "pfixed",
-          "description": "Active power of the load that is a fixed quantity. Load sign convention is used, i.e. positive sign means flow out from a node. Default: 0.0",
-          "writable": true,
-          "schema": "double"
-         },
-
-         {
-          "@type": "Property",
-          "name": "q",
-          "description": "Reactive power of the load. Load sign convention is used, i.e. positive sign means flow out from a node. For voltage dependent loads the value is at rated voltage. Starting value for a steady state solution. Default: 0.0",
-          "writable": true,
-          "schema": "double"
-         },
-         
-         {
-          "@type": "Property",
-          "name": "qfixed",
-          "description": "Reactive power of the load that is a fixed quantity. Load sign convention is used, i.e. positive sign means flow out from a node. Default: 0.0",
-          "writable": true,
-          "schema": "double"
-         },
-
-         {
-          "@type": "Property",
-          "name": "powerFactor",
-          "description": "the power factor value",
-          "writable": true,
-          "schema": "double"
-         },
-         
-         {
-          "@type": "Property",
-          "name": "customerCount",
-          "description": "the attribute that indicate the number of customers attached",
-          "writable": true,
-          "schema": "integer"
-         },
-
-         {
-          "@type": "Relationship",
-          "name": "MemberOf_EquipmentContainer",
-          "description": "A EquivalentLoad --> EquipmentContainer --> Substation",
-          "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"                    
-         }   
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "eqLoadName",
+      "description": "The name of the equivalent load.",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "p",
+      "description": "Active power of the load. Load sign convention is used, i.e. positive sign means flow out from a node. For voltage dependent loads the value is at rated voltage. Starting value for a steady state solution. Default: 0.0",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "pfixed",
+      "description": "Active power of the load that is a fixed quantity. Load sign convention is used, i.e. positive sign means flow out from a node. Default: 0.0",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "q",
+      "description": "Reactive power of the load. Load sign convention is used, i.e. positive sign means flow out from a node. For voltage dependent loads the value is at rated voltage. Starting value for a steady state solution. Default: 0.0",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "qfixed",
+      "description": "Reactive power of the load that is a fixed quantity. Load sign convention is used, i.e. positive sign means flow out from a node. Default: 0.0",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "powerFactor",
+      "description": "the power factor value",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "customerCount",
+      "description": "the attribute that indicate the number of customers attached",
+      "writable": true,
+      "schema": "integer"
+    },
+    {
+      "@type": "Relationship",
+      "name": "memberOf_EquipmentContainer",
+      "description": "A EquivalentLoad --> EquipmentContainer --> Substation",
+      "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }
