@@ -7,19 +7,18 @@
 		{
             "@type": "Property",
             "name": "Name",
-            "displayName": "Name",
             "description": "The name of the base voltage. For example, Basevoltage_01",
             "writable": true,
             "schema": "string"
         },
         {
-            "@type": "Property",
+            "@type": ["Property", "Voltage"],
+            "unit" : "volt",    
             "name": "NominalVoltage",
-            "displayName": "NominalVoltage",
             "description": "The nominal voltage of the associated asset or resource",
             "writable": true,
             "schema": "double"
-        }                        
+        }  
     ],
     "@context": "dtmi:dtdl:context;2"
 }

@@ -1,51 +1,46 @@
 {
-	"@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Gearbox;1",
-	"@type": "Interface",
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Gearbox;1",
+    "@type": "Interface",
     "displayName": "Gearbox",
-	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: the gearbox transforms the low shaft speed (30-60 rpm) into faster speed (about 1000-1800 rpm).",
-	"contents": [
-		{
-            "@type": "Property",
-            "name": "id",
-            "description": "The unique id/name of the gearbox.",
-            "writable": true,
-            "schema": "string"
-        },
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: the gearbox transforms the low shaft speed (30-60 rpm) into faster speed (about 1000-1800 rpm).",
+    "contents": [
         {
             "@type": "Property",
-            "name": "ModelNumber",
+            "name": "modelNumber",
             "description": "The ModelNumber of the gearbox.",
             "writable": true,
             "schema": "string"
         },
         {
             "@type": "Telemetry",
-            "name": "GearInjNozzleTemp",
-            "description": "The nozzle temperature.",
+            "name": "gearInjNozzleTemp",
+            "description": "The telemtry for the nozzle temperature.",
             "schema": "double"
         },
         {
             "@type": "Telemetry",
-            "name": "GearPump2Rpm",
-            "description": "The rpm speed.",
+            "name": "gearPump2Rpm",
+            "description": "The telemtry for the rpm speed value.",
             "schema": "double"
         },
         {
             "@type": "Telemetry",
-            "name": "GearLubricationPressure",
+            "name": "gearLubricationPressure",
+            "description": "The telemtry for the lubrication pressure value.",
             "schema": "double"
         },
         {
             "@type": "Telemetry",
-            "name": "GearOilPressure",
+            "name": "gearOilPressure",
+            "description": "The telemtry for the oil pressure value.",
             "schema": "double"
         },
         {
             "@type": "Telemetry",
-            "name": "GearOilTanklevel",
+            "name": "gearOilTanklevel",
+            "description": "The telemtry for the oil level value.",
             "schema": "double"
-        }    
-     
+        }
     ],
     "@context": "dtmi:dtdl:context;2"
 }

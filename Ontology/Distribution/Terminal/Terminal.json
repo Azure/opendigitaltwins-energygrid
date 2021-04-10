@@ -1,79 +1,69 @@
 {
-    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1",
-    "@type": "Interface",
-    "displayName": "Terminal",
-    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Terminals are connected at physical connection points called connectivity nodes. ",
-    "contents": [    
-      {
-        "@type": "Property",
-        "name": "ID",
-        "description": "The ID or name of the Terminal.",
-        "schema": "string"                
-      },
-
-      {
-        "@type": "Property",
-        "name": "Connected",
-        "description": "The connected status is related to a bus-branch model and the topological node to terminal relation. True implies the terminal is connected to the related topological node and false implies it is not.",
-        "schema": "string"                
-      },
-   
-      {
-        "@type": "Property",
-        "name": "OperationalLimitSet",
-        "description": "The OperationalLimitSet of the terminal.",
-        "schema": "string"                
-      },
-     
-      {
-        "@type": "Property",
-        "name": "sequenceNumber",
-        "description": "The orientation of the terminal connections for a multiple terminal conducting equipment.  The sequence numbering starts with 1 and additional terminals should follow in increasing order.   The first terminal is the `starting point` for a two terminal branch.",
-        "schema": "integer"   
-      },       
-
-      {
-        "@type": "Relationship",
-        "name": "ConnectivityNode",
-        "description": "The relation to ConnectivityNode",
-        "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1"
-      }, 
-
-      {
-        "@type": "Relationship",
-        "name": "ConductingEquipmentTW",
-        "description": "The relation to ConnectivityNode",
-        "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerWinding;1"
-      },
-
-      {
-       "@type": "Relationship",
-       "name": "ConductingEquipmentSW",
-       "description": "The connectivityNode.termminal connection to other equipment.",
-       "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1"
-      },
-
-      {
-        "@type": "Relationship",
-        "name": "ConductingEquipmentLS",
-        "description": "The connectivityNode.termminal connection to other equipment.",
-        "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:ACLineSegment;1"
-       },
-
-      {
-        "@type": "Relationship",
-        "name": "ConductingEquipmentEC",
-        "description": "The connectivityNode.termminal connection to other equipment.",
-        "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:EquivalentLoad;1"
-       },
-
-       {
-        "@type": "Relationship",
-        "name": "ConductingEquipmentCL",
-        "description": "The connectivityNode.termminal connection to other equipment.",
-        "target":"dtmi:igitaltwins:ngsi_ld:cim:energy:CustomerLoad;1"
-       }
-
-    ],
-    "@context": "dtmi:dtdl:context;2"
-  }
+  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1",
+  "@type": "Interface",
+  "displayName": "Terminal",
+  "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Terminals are connected at physical connection points called connectivity nodes. ",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "ID",
+      "description": "The ID or name of the Terminal.",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Connected",
+      "description": "The connected status is related to a bus-branch model and the topological node to terminal relation. True implies the terminal is connected to the related topological node and false implies it is not.",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "OperationalLimitSet",
+      "description": "The OperationalLimitSet of the terminal.",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "sequenceNumber",
+      "description": "The orientation of the terminal connections for a multiple terminal conducting equipment.  The sequence numbering starts with 1 and additional terminals should follow in increasing order.   The first terminal is the `starting point` for a two terminal branch.",
+      "schema": "integer"
+    },
+    {
+      "@type": "Relationship",
+      "name": "ConnectivityNode",
+      "description": "The relation to ConnectivityNode",
+      "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "ConductingEquipmentTW",
+      "description": "The relation to ConnectivityNode",
+      "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerWinding;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "ConductingEquipmentSW",
+      "description": "The connectivityNode.termminal connection to other equipment.",
+      "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "ConductingEquipmentLS",
+      "description": "The connectivityNode.termminal connection to other equipment.",
+      "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ACLineSegment;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "ConductingEquipmentEC",
+      "description": "The connectivityNode.termminal connection to other equipment.",
+      "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquivalentLoad;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "ConductingEquipmentCL",
+      "description": "The connectivityNode.termminal connection to other equipment.",
+      "target": "dtmi:igitaltwins:ngsi_ld:cim:energy:CustomerLoad;1"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
