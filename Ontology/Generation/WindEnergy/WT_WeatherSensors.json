@@ -1,62 +1,61 @@
 {
-    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WeatherSensors;1",            
-	"@type": "Interface",
-	"displayName": "WeatherSensors",
-	"description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: the weather sensors system to measure wind speead and direction",
-	"contents": [
-		{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WeatherSensors;1",
+    "@type": "Interface",
+    "displayName": "WeatherSensors",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: the weather sensors system to measure wind speead and direction",
+    "contents": [
+        {
             "@type": "Property",
-            "name": "AnemometerId",
+            "name": "anemometerId",
             "description": "The unique id/name of the anemometer.",
             "writable": true,
             "schema": "string"
         },
-
         {
             "@type": "Property",
-            "name": "AnemometerModelNumber",
-            "displayName": "ModelNumber",
+            "name": "anemometerModelNumber",
             "description": "The ModelNumber of the anemometer.",
             "writable": true,
             "schema": "string"
         },
         {
             "@type": "Telemetry",
-            "name": "WindSpeed",
+            "name": "windSpeed",
+            "description": "The telemtry for the wind speed value.",
             "schema": "double"
         },
         {
             "@type": "Property",
-            "name": "VaneID",
+            "name": "vaneID",
             "description": "The unique id/name of the vane.",
             "writable": true,
             "schema": "string"
         },
-
         {
             "@type": "Property",
-            "name": "VaneModelNumber",
-            "displayName": "ModelNumber",
-            "description": "The ModelNumber of the Vane.",
+            "name": "vaneModelNumber",
+            "description": "The model number of the Vane.",
             "writable": true,
             "schema": "string"
         },
         {
             "@type": "Telemetry",
-            "name": "WindDirection",
+            "name": "windDirection",
+            "description": "The telemtry for the wind direction value.",
             "schema": "double"
         },
-     
         {
             "@type": "Telemetry",
             "name": "humidity",
+            "description": "The telemtry for the humidity value .",
             "schema": "double"
         },
         {
             "@type": "Telemetry",
-            "name": "OutdoorTemp",
+            "name": "outsideTemp",
+            "description": "The telemtry for the outside temperature value .",
             "schema": "double"
-        }             
+        }
     ],
     "@context": "dtmi:dtdl:context;2"
 }

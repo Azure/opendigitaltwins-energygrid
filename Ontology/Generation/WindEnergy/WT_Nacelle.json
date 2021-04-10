@@ -6,14 +6,14 @@
 	"contents": [
 		{
             "@type": "Property",
-            "name": "id",
+            "name": "nacelleName",
             "description": "The unique id or name of the nacelle.",
             "writable": true,
             "schema": "string"
         },
         {
             "@type": "Property",
-            "name": "ModelNumber",
+            "name": "nacelleModelNumber",
             "description": "The ModelNumber of the nacelle",
             "writable": true,
             "schema": "string"
@@ -21,14 +21,14 @@
 
         {
             "@type": "Property",
-            "name": "NacelleLength",
+            "name": "nacelleLength",
             "description": "The lenght of the nacelle",
             "writable": true,
             "schema": "integer"
         },
         {
             "@type": "Property",
-            "name": "NacelleHeight",
+            "name": "nacelleHeight",
             "description": "The height of the nacelle",
             "writable": true,
             "schema": "integer"
@@ -36,7 +36,7 @@
 
         {
             "@type": "Property",
-            "name": "NacelleWidth",
+            "name": "nacelleWidth",
             "description": "The width of the nacelle",
             "writable": true,
             "schema": "integer"

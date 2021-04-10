@@ -39,7 +39,6 @@
             "writable": true,
             "schema": "double"
         },
-
         {
             "@type": "Property",
             "name": "winding_X",
@@ -53,16 +52,13 @@
             "description": "G of the winding",
             "writable": true,
             "schema": "double"
-        },       
-        
-
+        },
         {
             "@type": "Relationship",
             "name": "BaseVoltage",
             "description": "The voltage level of the transformer winding.",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"
-        },      
-
+        },
         {
             "@type": "Relationship",
             "name": "MemberOf_PowerTransformer",
