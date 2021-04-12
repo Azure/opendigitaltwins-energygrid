@@ -1,19 +1,19 @@
 {
-  "@id": "dtmi:digitaltwins:energy:Battery;1",
+  "@id": "dtmi:igitaltwins:cim:energy:Battery;1",
   "@type": "Interface",
   "displayName": "Battery",
   "description": "An example of a battery model",
   "contents": [
     {
       "@type": "Property",
-      "name": "Name",
+      "name": "name",
       "description": "The name of a battery.",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
-      "name": "BatteryTypeName",
+      "name": "batteryTypeName",
       "description": "Type of battery.",
       "writable": true,
       "schema": "string"
