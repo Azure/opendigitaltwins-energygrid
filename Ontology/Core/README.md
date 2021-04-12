@@ -1,3 +1,3 @@
-# BaseVoltage 
+# Core 
 
-For every operating voltage found in the network we create a BaseVoltage. For example, An ACLineSegment is associated to a BaseVoltage. A TransformerWinding is associated to a BaseVoltage. 
+Contains the core PowerSystemResource and ConductingEquipment entities shared by all applications plus common collections of those entities. Not all applications require all the Core entities.  This package does not depend on any other package except the Domain package, but most of the other packages have associations and generalizations that depend on it.

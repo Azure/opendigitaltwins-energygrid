@@ -1,6 +1,7 @@
 
 # Digital Twins Definition Language (DTDL) ontology for Energy Grid 
 
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
