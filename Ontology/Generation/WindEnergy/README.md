@@ -12,7 +12,7 @@ Wind Turbine is a power generating device, which converts kinetic energy of wind
 The Nacelle is nothing but the housing of generator, gearbox, braking system, shafts etc. It is a lightweight box made from glass fiber. It connects the tower to the rotor.
 
 ## **Yaw System**
-Yawning is the movement of the turbine along the vertical axis. Yaw mechanism consists of the yaw motor. Yaw mechanism orients turbines to move according to the wind direction and speed. It is a part of upwind turbines only. 
+Yawing is the movement of the turbine along the vertical axis. Yaw mechanism consists of the yaw motor. Yaw mechanism orients turbines to move according to the wind direction and speed. It is a part of upwind turbines only. 
 
 ## **Electrical generator**
 The generator converts rotational motion into electrical energy. The electrical generators used in turbines are either asynchronous generators or induction generators.
