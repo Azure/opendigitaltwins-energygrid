@@ -1,0 +1,17 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Breaker;1",
+    "@type": "Interface",
+    "displayName": "Breaker",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: A generic device designed to close, or open, or both, one or more electric circuits.  All switches are two terminal devices including grounding switches.",
+    "extends": "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "id",
+            "description": "the id or name of breaker switch. For example, breaker_01",
+            "schema": "string",
+            "writable": true
+        }       
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}
