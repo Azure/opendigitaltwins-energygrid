@@ -2,7 +2,7 @@
   "@id": "dtmi:igitaltwins:ngsi_ld:cim:energy:ElectricVehicle;1",
   "@type": "Interface",
   "displayName": "ElectricVehicle",
-  "description": "An electcric vehicle model",
+  "description":  "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: an electcric vehicle model",
   "contents": [
     {
       "@type": "Property",
