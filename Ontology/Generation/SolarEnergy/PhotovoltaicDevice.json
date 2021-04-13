@@ -1,0 +1,763 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:energy:green:PhotovoltaicDevice;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "GreenEnergyGenerator",
+    "extends": "dtmi:digitaltwins:ngsi_ld:energy:green:NGSILDBaseModel;1",
+    "description":"The Data Model is intended to describe the mechanical, electrical and thermal characteristics of photo-voltaic panels according to STC (Standard Test Condition) and NOCT (Normal Operating Cell Temperature)",
+    "contents":
+    [
+        {
+            "@type":"Property",
+            "name": "maxPressureLoad",
+            "description": "Maximum mechanics Pressure (shear, elasticity, compression) load on a Panel. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **PAL** represents Pascal",
+            "schema" : 
+            {
+              "@type": "Object",
+              "fields": 
+              [
+                {
+                  "name": "hail",
+                  "schema": "double"
+                },
+                {
+                  "name": "snow",
+                  "schema": "double"
+                },
+                {
+                  "name":"wind",
+                  "schema": "double"
+                }
+              ]
+            }
+        },
+        {
+          "@type": ["Property","Voltage"],
+          "name": "maximumSystemVoltage",
+          "description": "Maximum system voltage permitted for the module",
+          "schema": "double",
+          "unit": "volt"
+        },
+        {
+          "@type": ["Property","Power"],
+          "name": "nominalPower",
+          "description": "Nominal power for the panel",
+          "schema": "double",
+          "unit": "watt"
+        },
+        {
+          "@type": "Property",
+          "name": "panelNbModules",
+          "description": "Number of modules per panel",
+          "schema": "integer"
+        },
+        {
+          "@type": "Property",
+          "name": "application",
+          "description": "Target application regarding the Type of Solar panel (In our case `electric`).",
+          "schema": 
+          {
+            "@type": "Enum",
+            "valueSchema": "string",
+            "enumValues": 
+            [
+              {
+                "name": "electric",
+                "enumValue": "electric"
+              },
+              {
+                "name": "thermal",
+                "enumValue": "thermal"
+              },
+              {
+                "name": "other",
+                "enumValue": "other"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "applicationClass",
+          "description": "Evaluation of the potential hazards associated with the module.",
+          "schema": 
+          {
+            "@type": "Enum",
+            "valueSchema": "string",
+            "enumValues": 
+            [
+              {
+                "name": "A",
+                "enumValue": "A"
+              },
+              {
+                "name": "B",
+                "enumValue": "B"
+              },
+              {
+                "name": "C",
+                "enumValue": "C"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "areaWeight",
+          "description": "Area Weight measured in Kg/m²",
+          "schema": "double"
+        },
+        {
+          "@type": "Property",
+          "name": "brandName",
+          "description": "Brand name of the item",
+          "schema": "string"
+        },
+        {
+          "@type": "Property",
+          "name": "cellDimension",
+          "description": "External dimension of a cell",
+          "schema": 
+          {
+            "@type": "Object",
+            "fields": 
+            [
+              {
+                "name": "length",
+                "schema": "double"
+              },
+              {
+                "name": "width",
+                "schema": "double"
+              },
+              {
+                "name": "thickness",
+                "schema": "double"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "cellOperatingTemperature",
+          "description": "This is the nominal operating temperature range of the cells in which it collects solar energy.",
+          "schema": 
+          {
+            "@type": "Object",
+            "fields": 
+            [
+              {
+                "name": "min",
+                "schema": "double"
+              },
+              {
+                "name": "max",
+                "schema": "double"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "cellType",
+          "description": "Type of cells used to built the photovoltaic unit.",
+          "schema": 
+          {
+            "@type": "Enum",
+            "valueSchema": "string",
+            "enumValues": 
+            [
+              {
+                "name": "amorphousSilicon",
+                "enumValue": "amorphousSilicon"
+              },
+              {
+                "name": "CfTe",
+                "enumValue": "CfTe"
+              },
+              {
+                "name":"CIS",
+                "enumValue": "CIS"
+              },
+              {
+                "name": "monocrystalline",
+                "enumValue": "monocrystalline"
+              },
+              {
+                "name": "polycrystalline",
+                "enumValue": "polycrystalline"
+              },
+              {
+                "name": "other",
+                "enumValue": "other"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Telemetry",
+          "name": "dateLastReported",
+          "description": "A timestamp which denotes the last time when the device successfully reported data.",
+          "schema": "dateTime"
+        },
+        {
+          "@type": "Property",
+          "name": "documentation",
+          "description": "Technical documentation (Installation / maintenance / used).",
+          "schema": "string"
+        },
+        {
+          "@type": "Property",
+          "name": "fireClass",
+          "description": "Evaluation to the fire (IEC 61730).",
+          "schema": 
+          {
+            "@type": "Enum",
+            "valueSchema": "string",
+            "enumValues": 
+            [
+              {
+                "enumValue": "A",
+                "name": "A"
+              },
+              {
+                "name": "B",
+                "enumValue": "B"
+              },
+              {
+                "name": "C",
+                "enumValue": "C"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "installationCondition",
+          "description": "Condition and possibility of use in the following environments.",
+          "schema": 
+          {
+            "@type": "Enum",
+            "valueSchema": "string",
+            "enumValues": 
+            [
+              {
+                "name": "desert",
+                "enumValue": "desert"
+              },
+              {
+                "name": "dust",
+                "enumValue": "dust"
+              },
+              {
+                "name": "extremeHeat",
+                "enumValue": "extremeHeat"
+              },
+              {
+                "name": "extremeCold",
+                "enumValue": "extremeCold"
+              },
+              {
+                "name": "extremeClimate",
+                "enumValue": "extremeClimate"
+              },
+              {
+                "name": "extremeHumidity",
+                "enumValue": "extremeHumidity"
+              },
+              {
+                "name": "marine",
+                "enumValue": "marine"
+              },
+              {
+                "name": "none",
+                "enumValue": "none"
+              },
+              {
+                "name": "other",
+                "enumValue": "other"
+              },
+              {
+                "name": "saline",
+                "enumValue": "saline"
+              },
+              {
+                "name": "sand",
+                "enumValue": "sand"
+              },
+              {
+                "name": "seismic",
+                "enumValue": "seismic"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "installationMode",
+          "description": "Positioning of the device in relation to a ground reference system.",
+          "schema": 
+          {
+            "@type": "Enum",
+            "valueSchema": "string",
+            "enumValues": 
+            [
+              
+              {
+                "name": "ground",
+                "enumValue": "ground"
+              },
+              {
+                "name": "other",
+                "enumValue": "other"
+              },
+              {
+                "name": "pole",
+                "enumValue": "pole"
+              },
+              {
+                "name": "roofing",
+                "enumValue": "roofing"
+              },
+              {
+                "name": "wall",
+                "enumValue": "wall"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "manufacturerName",
+          "description": "Manufacturer name of the item",
+          "schema": "string"
+        },
+        {
+          "@type": "Property",
+          "name":"modelName",
+          "description": "Model name of the item",
+          "schema": "string"
+        },
+        {
+          "@type": "Property",
+          "name": "moduleDimensions",
+          "description": "External dimension of a module. A module can be an assembly of 1 to n cells",
+          "schema": {
+            "@type": "Object",
+            "fields": 
+            [
+              {
+                "name": "length",
+                "schema": "double"
+              },
+              {
+                "name": "width",
+                "schema": "double"
+              },
+              {
+                "name": "thickness",
+                "schema": "double"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "moduleNOCT",
+          "description": "Normal Operating Cell Temperature measurements.",
+          "comment": "Pmax in Watt. Umpp in Volt. Impp in Ampere. Uoc in Volt. Isc in Ampere",
+          "schema": {
+            "@type": "Object",
+            "fields": 
+            [
+              {
+                "name": "Impp",
+                "schema": "double"
+              },
+              {
+                "name": "Isc",
+                "schema": "double"
+              },
+              {
+                "name": "Pmax",
+                "schema": "double"
+              },
+              {
+                "name": "Umpp",
+                "schema": "double"
+              },
+              {
+                "name": "Uoc",
+                "schema": "double"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "moduleNbCells",
+          "description": "Number of cells per module",
+          "schema": "integer"
+        },
+        {
+          "@type": "Property",
+          "name": "moduleSTC",
+          "description": "Standard Test Condition measurements.",
+          "comment": "Pmax in Watt. Umpp in Volt. Impp in Ampere. Uoc in Volt. Isc in Ampere",
+          "schema": {
+            "@type": "Object",
+            "fields": 
+            [
+              {
+                "name": "Impp",
+                "schema": "double"
+              },
+              {
+                "name": "Isc",
+                "schema": "double"
+              },
+              {
+                "name": "Pmax",
+                "schema": "double"
+              },
+              {
+                "name": "Umpp",
+                "schema": "double"
+              },
+              {
+                "name": "Uoc",
+                "schema": "double"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "moduleYieldRate",
+          "description": "Positioning of the device in relation to a ground reference system.",
+          "schema": "double"
+        },
+        {
+          "@type": "Property",
+          "name": "nTCClass",
+          "description": "The Negative Temperature Coefficient of resistance - *NTC*, describes the relative change of a physical property that is associated with a given change in negative temperature.",
+          "schema": "double"
+        },
+        {
+          "@type": "Property",
+          "name":"pTCClass",
+          "description": "The Positive Temperature Coefficient of resistance - *PTC*, describes the relative change of a physical property that is associated with a given change in positive temperature.",
+          "schema": "double"
+        },
+        {
+          "@type": "Property",
+          "name": "panelDimensions",
+          "description": "External dimension of a Panel. A solar panel can be an assembly of 1 to n modules, which themselves are made of several cells which collect heat from the sun''s rays.",
+          "schema": {
+            "@type": "Object",
+            "fields": 
+            [
+              {
+                "name": "length",
+                "schema": "double"
+                
+              },
+              {
+                "name": "width",
+                "schema": "double"
+              },
+              {
+                "name": "thickness",
+                "schema": "double"
+              }
+            ]
+          }
+        },
+        {
+          "@type": ["Property","TimeSpan"],
+          "name": "panelLifetime",
+          "description": "Average lifetime of a panel.",
+          "schema": "double",
+          "unit": "year"
+        },
+        {
+          "@type": "Property",
+          "name": "panelOperatingTemperature",
+          "description": "Ambient operating temperature range. This is the minimum and maximum resistance to cold and heat for using the panel.",
+          "schema": {
+            "@type": "Object",
+            "fields": 
+            [
+              {
+                "name": "min",
+                "schema": "double"
+              },
+              {
+                "name": "max",
+                "schema": "double"
+              }
+            ]
+          }
+        },
+        {
+          "@type": ["Property","Mass"],
+          "name": "panelWeight",
+          "description": "Weight of a panel",
+          "unit": "kilogram",
+          "schema": "double"
+        },
+        {
+          "@type": "Property",
+          "name": "panelYieldCurve",
+          "description": "Option 1. Energy production yield curve of the panel from its [NominalPower] at [T0] and along its [panelLifetime]. The Measurements provided in the list are a sequence of Energy Production Capacity represented in Percent starting at 5 years with a ''Step'' of 5 years according to the information provided by the manufacturer.",
+          "schema": {
+            "@type": "Map",
+            "mapKey": 
+              {
+                "name": "year",
+                "schema": "string"
+              },
+            "mapValue": 
+              {
+                "name": "value",
+                "schema": "double"
+              }
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "performanceLowIrradiance",
+          "description": "Average relative yield to Performance at Low Irradiance.",
+          "schema": "double"
+        },
+        {
+          "@type": "Property",
+          "name": "possibilityOfUse",
+          "description": "Possibility of use.",
+          "schema": 
+          {
+            "@type": "Enum",
+            "valueSchema": "string",
+            "enumValues": 
+            [
+              {
+                "name": "mixed",
+                "enumValue": "mixed"
+              },
+              {
+                "name": "mobile",
+                "enumValue": "mobile"
+              },
+              {
+                "name":"other",
+                "enumValue": "other"
+              },
+              {
+                "name": "stationary",
+                "enumValue": "stationary"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name":"protectionIP",
+          "description": "IP 'Ingress Protection' for the Junction Box. This is the level classifies and rates the degree of protection provided by mechanical casings and electrical enclosures against intrusion, dust, accidental contact, and water according to International Electrotechnical Commission standard (EN 60-529).",
+          "comment": "First digit: Solid particle protection (Single numeral: 0–6 or ''X''). Second digit: Liquid ingress protection (Single numeral: 0–9 or ''X'' ).Third digit: Personal Protection  against access to dangerous parts (optional additional letter). Fourth digit: Other protections (optional additional letter)",
+          "schema": "string"
+        },
+        {
+          "@type": "Property",
+          "name": "serialNumber",
+          "description": "List of serial numbers of Photo-voltaic device supplied by the manufacturer and assembled in operating mode on a single location",
+          "schema": "string"
+        },
+        {
+          "@type": "Property",
+          "name": "temperatureCoefficient",
+          "description": "Temperature influence coefficient on the panel.",
+          "schema":
+          {
+            "@type": "Object",
+            "fields": 
+            [
+              {
+                "name": "Isc",
+                "schema": "double"
+              },
+              {
+                "name": "Pmax",
+                "schema": "double"
+              },
+              {
+                "name":"Uoc",
+                "schema": "double"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Property",
+          "name": "typeOfUse",
+          "description": "Accepted use regarding its positioning in an indoor / outdoor environment.",
+          "schema": 
+          {
+           "@type": "Enum",
+           "valueSchema": "string",
+           "enumValues": 
+           [
+             {
+               "name": "indoor",
+               "enumValue": "indoor"
+             },
+             {
+              "name": "outdoor",
+              "enumValue": "outdoor"
+            },
+            {
+              "name": "mixed",
+              "enumValue": "mixed"
+            },
+            {
+              "name": "other",
+              "enumValue": "other"
+            }
+           ] 
+          }
+        },
+        {
+          "@type": ["Telemetry","Power"],
+          "name": "activePower",
+          "description": "Active Power,where phi is the phase shift of the current compared to the voltage.",
+          "unit": "kilowatt",
+          "schema": "double"
+        },
+        {
+          "@type": ["Telemetry","Current"],
+          "name": "Current",
+          "description": "Electrical intensity of the current.",
+          "unit": "ampere",
+          "schema": "double"
+        },
+        {
+          "@type": "Telemetry",
+          "name": "dateEnergyMeteringStarted",
+          "description": "The starting date for metering energy in an ISO8601 UTC format",
+          "schema": "dateTime"
+        },
+        {
+          "@type": "Telemetry",
+          "name": "dateObservedFrom",
+          "description": "Observation period: Start date and time in an ISO8601 UTC format.",
+          "schema": "dateTime"
+        },
+        {
+          "@type": "Telemetry",
+          "name": "dateObservedTo",
+          "description": "Observation period: End date and time in an ISO8601 UTC format.",
+          "schema": "dateTime"
+        },
+        {
+          "@type": "Telemetry",
+          "name": "inverterStatus",
+          "description": "Status of the inverter",
+          "schema": 
+          {
+            "@type": "Array",
+            "elementSchema": 
+            {
+              "@type": "Enum",
+              "valueSchema": "integer",
+              "enumValues": 
+              [
+                {
+                  "name": "onSector",
+                  "enumValue": 0,
+                  "displayName": "On sector"
+                },
+                {
+                  "name": "powerFailure",
+                  "enumValue": 1,
+                  "displayName": "Power failure / On battery"
+                },
+                {
+                  "name":"communicationLoss",
+                  "displayName": "Loss of Communication",
+                  "enumValue": 2
+                },
+                {
+                  "enumValue": 3,
+                  "displayName": "Battery Fault",
+                  "name": "batteryFault"
+                },
+                {
+                  "name": "systemShutdown",
+                  "displayName": "SystemShutdown",
+                  "enumValue": 4
+                },
+                {
+                  "enumValue": 5,
+                  "displayName": "Tension dip",
+                  "name": "tensionDip"
+                },
+                {
+                  "enumValue": 6,
+                  "name": "overvoltage"
+                },
+                {
+                  "enumValue": 7,
+                  "name": "voltageDrop",
+                  "displayName": "Voltage Drop"
+                },
+                {
+                  "enumValue": 8,
+                  "displayName": "Voltage Increase",
+                  "name": "voltageIncrease"
+                },
+                {
+                  "enumValue": 9,
+                  "name": "lineNoise",
+                  "displayName": "Line Noise"
+                },
+                {
+                  "enumValue": 10,
+                  "name": "frequencyVariation",
+                  "displayName": "Frequency Variation"
+                },
+                {
+                  "enumValue": 11,
+                  "name": "transientDistortion",
+                  "displayName": "Transient Distortion"
+                },
+                {
+                  "enumValue": 12,
+                  "name": "harmonicDistortion",
+                  "displayName": "Harmonic Distortion"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@type": ["Telemetry","Power"],
+          "name": "nominalPeakPowerGeneration",
+          "description": "nominalPeakPowerGeneration is a number.",
+          "unit": "kilowatt",
+          "schema": "double"
+        },
+        {
+          "@type": "Telemetry",
+          "name": "reactivePower",
+          "description": "Reactive power used by circuits",
+          "comment": "unit can be kilovolt-ampere-reactive",
+          "schema": "double"
+        },
+        {
+          "@type": ["Telemetry","Temperature"],
+          "name": "temperature",
+          "description": "Temperature recorded at the time of Observation compared to the  nominal reference temperature of the device.",
+          "unit": "degreeCelsius",
+          "schema": "double"
+        }
+    ]
+}

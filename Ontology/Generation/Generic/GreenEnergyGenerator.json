@@ -1,5 +1,5 @@
 {
-    "@id": "dtmi:digitaltwins:ngsi_ld:energy:green:GreenEnergy;1",
+    "@id": "dtmi:digitaltwins:ngsi_ld:energy:green:GreenEnergyGenerator;1",
     "@type": "Interface",
     "displayName": "GreenEnergyGenerator",
     "extends": "dtmi:digitaltwins:ngsi_ld:energy:green:NGSILDBaseModel;1",
