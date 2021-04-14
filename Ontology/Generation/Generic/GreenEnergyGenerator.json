@@ -42,34 +42,39 @@
             }
         },
         {
-            "@type": "Property",
+            "@type": ["Property","Power"],
             "name": "maxBiomassMeasure",
             "description": "A measure of maximum biomass energy that can be generated.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
-            "@type": "Property",
+            "@type": ["Property","Power"],
             "name": "maxEolicPowerMeasure",
             "description": "A measure of maximum eolic energy that can be generated.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
-            "@type": "Property",
+            "@type": ["Property","Power"],
             "name": "maxGeothermalPowerGenerated",
             "description": " A measure of maximum geothermal energy that can be generated.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
-            "@type": "Property",
+            "@type": ["Property","Power"],
             "name": "maxHydroPowerMeasure",
             "description": " A measure of maximum hydropower energy that can be generated.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
-            "@type": "Property",
+            "@type": ["Property","Power"],
             "name": "maxSolarPowerMeasure",
             "description": "A measure of maximum solar energy that can be generated.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
             "@type": "Property",
@@ -110,34 +115,39 @@
             }
         },
         {
-            "@type": "Telemetry",
+            "@type": ["Telemetry","Power"],
             "name": "biomassPowerGenerated",
             "description": "Specifies the amount of power generated using biomass energy.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
-            "@type": "Telemetry",
+            "@type": ["Telemetry","Power"],
             "name": "eolicPowerGenerated",
             "description": "Specifies the amount of power generated using eolic energy.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
-            "@type": "Telemetry",
+            "@type": ["Telemetry","Power"],
             "name": "geothermalPowerGenerated",
             "description": "Specifies the amount of power generated using geothermal energy.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
-            "@type": "Telemetry",
+            "@type": ["Telemetry","Power"],
             "name": "hydroPowerGenerated",
             "description": "Specifies the amount of power generated using hydropower energy.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         },
         {
-            "@type": "Telemetry",
+            "@type": ["Telemetry","Power"],
             "name": "solarPowerGenerated",
             "description": "Specifies the amount of power generated using solar energy.",
-            "schema": "double"
+            "schema": "double",
+            "unit": "kilowatt"
         }
     ],
     "@context": "dtmi:dtdl:context;2"
