@@ -1,0 +1,20 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:dimensions;1",
+  "@type": "Interface",
+  "displayName": "dimensions",
+  "contents": [
+    {
+      "@type": ["Property","Temperature"],
+      "name": "min",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": ["Property","Temperature"],
+      "name": "max",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    }
+  ]
+}

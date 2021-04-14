@@ -8,28 +8,10 @@
     "contents":
     [
         {
-            "@type":"Property",
+            "@type":"Component",
             "name": "maxPressureLoad",
-            "description": "Maximum mechanics Pressure (shear, elasticity, compression) load on a Panel. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **PAL** represents Pascal",
-            "schema" : 
-            {
-              "@type": "Object",
-              "fields": 
-              [
-                {
-                  "name": "hail",
-                  "schema": "double"
-                },
-                {
-                  "name": "snow",
-                  "schema": "double"
-                },
-                {
-                  "name":"wind",
-                  "schema": "double"
-                }
-              ]
-            }
+            "description": "Maximum mechanics Pressure (shear, elasticity, compression) load on a Panel.",
+            "schema" : "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:pressureLoad;1"
         },
         {
           "@type": ["Property","Voltage"],
@@ -105,6 +87,7 @@
           "@type": "Property",
           "name": "areaWeight",
           "description": "Area Weight measured in Kg/m²",
+          "comment": "kg/m²",
           "schema": "double"
         },
         {
@@ -114,48 +97,16 @@
           "schema": "string"
         },
         {
-          "@type": "Property",
+          "@type": "Component",
           "name": "cellDimension",
           "description": "External dimension of a cell",
-          "schema": 
-          {
-            "@type": "Object",
-            "fields": 
-            [
-              {
-                "name": "length",
-                "schema": "double"
-              },
-              {
-                "name": "width",
-                "schema": "double"
-              },
-              {
-                "name": "thickness",
-                "schema": "double"
-              }
-            ]
-          }
+          "schema": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:dimensions;1"
         },
         {
-          "@type": "Property",
+          "@type": "Component",
           "name": "cellOperatingTemperature",
           "description": "This is the nominal operating temperature range of the cells in which it collects solar energy.",
-          "schema": 
-          {
-            "@type": "Object",
-            "fields": 
-            [
-              {
-                "name": "min",
-                "schema": "double"
-              },
-              {
-                "name": "max",
-                "schema": "double"
-              }
-            ]
-          }
+          "schema": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:temperatureRange;1"
         },
         {
           "@type": "Property",
@@ -235,6 +186,7 @@
           "@type": "Property",
           "name": "installationCondition",
           "description": "Condition and possibility of use in the following environments.",
+          "comment": "Can be a combination of enum values",
           "schema": 
           {
             "@type": "Enum",
@@ -339,59 +291,17 @@
           "schema": "string"
         },
         {
-          "@type": "Property",
+          "@type": "Component",
           "name": "moduleDimensions",
           "description": "External dimension of a module. A module can be an assembly of 1 to n cells",
-          "schema": {
-            "@type": "Object",
-            "fields": 
-            [
-              {
-                "name": "length",
-                "schema": "double"
-              },
-              {
-                "name": "width",
-                "schema": "double"
-              },
-              {
-                "name": "thickness",
-                "schema": "double"
-              }
-            ]
-          }
+          "schema": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:dimensions;1"
         },
         {
-          "@type": "Property",
+          "@type": "Component",
           "name": "moduleNOCT",
           "description": "Normal Operating Cell Temperature measurements.",
           "comment": "Pmax in Watt. Umpp in Volt. Impp in Ampere. Uoc in Volt. Isc in Ampere",
-          "schema": {
-            "@type": "Object",
-            "fields": 
-            [
-              {
-                "name": "Impp",
-                "schema": "double"
-              },
-              {
-                "name": "Isc",
-                "schema": "double"
-              },
-              {
-                "name": "Pmax",
-                "schema": "double"
-              },
-              {
-                "name": "Umpp",
-                "schema": "double"
-              },
-              {
-                "name": "Uoc",
-                "schema": "double"
-              }
-            ]
-          }
+          "schema": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:measurement;1"
         },
         {
           "@type": "Property",
@@ -404,32 +314,7 @@
           "name": "moduleSTC",
           "description": "Standard Test Condition measurements.",
           "comment": "Pmax in Watt. Umpp in Volt. Impp in Ampere. Uoc in Volt. Isc in Ampere",
-          "schema": {
-            "@type": "Object",
-            "fields": 
-            [
-              {
-                "name": "Impp",
-                "schema": "double"
-              },
-              {
-                "name": "Isc",
-                "schema": "double"
-              },
-              {
-                "name": "Pmax",
-                "schema": "double"
-              },
-              {
-                "name": "Umpp",
-                "schema": "double"
-              },
-              {
-                "name": "Uoc",
-                "schema": "double"
-              }
-            ]
-          }
+          "schema":"dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:measurement;1"
         },
         {
           "@type": "Property",
@@ -450,28 +335,10 @@
           "schema": "double"
         },
         {
-          "@type": "Property",
+          "@type": "Component",
           "name": "panelDimensions",
           "description": "External dimension of a Panel. A solar panel can be an assembly of 1 to n modules, which themselves are made of several cells which collect heat from the sun''s rays.",
-          "schema": {
-            "@type": "Object",
-            "fields": 
-            [
-              {
-                "name": "length",
-                "schema": "double"
-                
-              },
-              {
-                "name": "width",
-                "schema": "double"
-              },
-              {
-                "name": "thickness",
-                "schema": "double"
-              }
-            ]
-          }
+          "schema":"dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:dimensions;1"
         },
         {
           "@type": ["Property","TimeSpan"],
@@ -481,23 +348,10 @@
           "unit": "year"
         },
         {
-          "@type": "Property",
+          "@type": "Component",
           "name": "panelOperatingTemperature",
           "description": "Ambient operating temperature range. This is the minimum and maximum resistance to cold and heat for using the panel.",
-          "schema": {
-            "@type": "Object",
-            "fields": 
-            [
-              {
-                "name": "min",
-                "schema": "double"
-              },
-              {
-                "name": "max",
-                "schema": "double"
-              }
-            ]
-          }
+          "schema": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:temperatureRange;1"
         },
         {
           "@type": ["Property","Mass"],
@@ -576,25 +430,7 @@
           "@type": "Property",
           "name": "temperatureCoefficient",
           "description": "Temperature influence coefficient on the panel.",
-          "schema":
-          {
-            "@type": "Object",
-            "fields": 
-            [
-              {
-                "name": "Isc",
-                "schema": "double"
-              },
-              {
-                "name": "Pmax",
-                "schema": "double"
-              },
-              {
-                "name":"Uoc",
-                "schema": "double"
-              }
-            ]
-          }
+          "schema":"dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:temperatureCoefficient;1"
         },
         {
           "@type": "Property",
