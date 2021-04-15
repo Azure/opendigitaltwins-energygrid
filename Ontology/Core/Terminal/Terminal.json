@@ -63,12 +63,18 @@
       "name": "ConductingEquipmentCL",
       "description": "The connectivityNode.termminal connection to other equipment.",
       "target": "dtmi:igitaltwins:ngsi_ld:cim:energy:CustomerLoad;1"
-    }
+    },
     {
       "@type": "Relationship",
       "name": "ConductingEquipmentBT",
       "description": "The connectivityNode.termminal connection to other equipment.",
       "target": "dtmi:igitaltwins:cim:energy:Battery;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "connectedACDC_Terminal",
+      "description": "The connectivityNode.termminal connection to other equipment.",
+      "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ACDCTerminal;1"
     }
   ],
   "@context": "dtmi:dtdl:context;2"

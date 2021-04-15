@@ -7,37 +7,25 @@
         {
             "@type": "Property",
             "name": "Name",
-            "description": "switch name. For example, Switch_01",
+            "description": "Property. switch name. For example, Switch_01",
             "schema": "string",
-            "writable": true
-        },
-        {
-            "@type": "Property",
-            "name": "open",
-            "description": "The attribute tells if the switch is considered open when used as input to topology processing.",
-            "schema": "boolean",
             "writable": true
         },
         {
             "@type": "Property",
             "name": "normalOpen",
             "description": "Property. The attribute is used in cases when no Measurement for the status value is present. If the Switch has a status measurement the Discrete.normalValue is expected to match with the Switch.normalOpen. Default: False",
-            "schema": "boolean",
+            "schema": "Boolean",
             "writable": true
         },
-        {
-            "@type": "Property",
-            "name": "ratedCurrent",
-            "description": "The maximum continuous current carrying capacity in amps governed by the device material and construction.",
-            "schema": "double",
-            "writable": true
-        },
+                
         {
             "@type": "Relationship",
             "name": "MemberOf_EquipmentContainer",
+            "displayName": "MemberOf_EquipmentContainer",
             "description": "The relation to equipment container which is < voltage_level > in case of a switch",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer:Line;1"
-        }
+        }            
     ],
     "@context": "dtmi:dtdl:context;2"
 }
