@@ -1,0 +1,27 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SeasonDayTypeSchedule;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "DayType",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:DayType;1",
+                "description": "DayType for the Schedule.",
+                "displayName": "DayType"
+            },
+            {
+                "@type": "Relationship",
+                "name": "Season",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Season;1",
+                "description": "Season for the Schedule.",
+                "displayName": "Season"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:RegularIntervalSchedule;1"
+        ],
+        "displayName": "SeasonDayTypeSchedule",
+        "description": "A time schedule covering a 24 hour period, with curve data for a specific type of season and day.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

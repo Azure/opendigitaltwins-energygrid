@@ -1,0 +1,27 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ReactiveCapabilityCurve;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "EquivalentInjection",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquivalentInjection;1",
+                "comment": "The equivalent injection using this reactive capability curve.",
+                "displayName": "EquivalentInjection"
+            },
+            {
+                "@type": "Relationship",
+                "name": "InitiallyUsedBySynchronousMachines",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachine;1",
+                "comment": "Synchronous machines using this curve as default.",
+                "displayName": "InitiallyUsedBySynchronousMachines"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:Curve;1"
+        ],
+        "displayName": "ReactiveCapabilityCurve",
+        "comment": "Reactive power rating envelope versus the synchronous machine's active power, in both the generating and motoring modes. For each active power value there is a corresponding high and low reactive power limit  value. Typically there will be a separate curve for each coolant condition, such as hydrogen pressure.  The Y1 axis values represent reactive minimum and the Y2 axis values represent reactive maximum.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

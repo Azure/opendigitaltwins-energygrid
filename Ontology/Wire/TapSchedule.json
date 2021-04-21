@@ -1,0 +1,20 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapSchedule;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "TapChanger",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChanger;1",
+                "description": "A TapSchedule is associated with a TapChanger.",
+                "displayName": "TapChanger"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:SeasonDayTypeSchedule;1"
+        ],
+        "displayName": "TapSchedule",
+        "description": "A pre-established pattern over time for a tap step.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

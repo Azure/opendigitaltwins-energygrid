@@ -1,0 +1,20 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ReportingGroup;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "BusNameMarker",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BusNameMarker;1",
+                "description": "The bus name markers that belong to this reporting group.",
+                "displayName": "BusNameMarker"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+        ],
+        "displayName": "ReportingGroup",
+        "description": "A reporting group is used for various ad-hoc groupings used for reporting.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

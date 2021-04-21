@@ -1,0 +1,16 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Conductor;1",
+        "@type": "Interface",
+        "contents": [
+           {
+                "@type": "Property",
+                "name": "length",
+                "comment": "Segment length for calculating line section capabilities.",
+                "schema": "float",
+                "writable": true
+            }
+       ],
+        "displayName": "Conductor",
+        "description": "Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

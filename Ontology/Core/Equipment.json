@@ -1,0 +1,41 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "aggregate",
+                "comment": "The aggregate flag provides an alternative way of representing an aggregated (equivalent) element. It is applicable in cases when the dedicated classes for equivalent equipment do not have all of the attributes necessary to represent the required level of detail.  In case the flag is set to “true” the single instance of equipment represents multiple pieces of equipment that have been modelled together as an aggregate equivalent obtained by a network reduction procedure. Examples would be power transformers ",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "normallyInService",
+                "comment": "Specifies the availability of the equipment under normal operating conditions. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "EquipmentContainer",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1",
+                "comment": "Container of this equipment.",
+                "displayName": "EquipmentContainer"
+            },
+            {
+                "@type": "Relationship",
+                "name": "OperationalLimitSet",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:OperationalLimitSet;1",
+                "comment": "The operational limit sets associated with this equipment.",
+                "displayName": "OperationalLimitSet"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
+        ],
+        "displayName": "Equipment",
+        "description": "The parts of a power system that are physical devices, electronic or mechanical.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

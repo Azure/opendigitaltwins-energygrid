@@ -1,0 +1,57 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachineKind;1",
+        "@type": "Interface",
+        "contents": [
+		 {
+            "@type": "Property",
+            "name": "SynchronousMachineKind",
+            "description": "Synchronous machine type.",
+            "writable": true,
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "generator",
+                        "displayName": "generator",
+                        "enumValue": "generator"
+                    },
+                    {
+                        "name": "condenser",
+                        "displayName": "condenser",
+                        "enumValue": "condenser"
+                    },
+					{
+                        "name": "generatorOrCondenser",
+                        "displayName": "generatorOrCondenser",
+                        "enumValue": "generatorOrCondenser"
+                    },
+                    {
+                        "name": "motor",
+                        "displayName": "motor",
+                        "enumValue": "motor"
+                    },
+					{
+                        "name": "generatorOrMotor",
+                        "displayName": "generatorOrMotor",
+                        "enumValue": "generatorOrMotor"
+                    },
+                    {
+                        "name": "motorOrCondenser",
+                        "displayName": "motorOrCondenser",
+                        "enumValue": "motorOrCondenser"
+                    },
+					{
+                        "name": "generatorOrCondenserOrMotor",
+                        "displayName": "generatorOrCondenserOrMotor",
+                        "enumValue": "generatorOrCondenserOrMotor"
+                    }					
+                ]
+            }
+        }
+		],
+        "@context": "dtmi:dtdl:context;2",
+        "displayName": "SynchronousMachineKind",
+        "description": "Synchronous machine type.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

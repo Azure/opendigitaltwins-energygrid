@@ -1,0 +1,34 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegularIntervalSchedule;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "endTime",
+                "comment": "The time for the last time point.  The value can be a time of day, not a specific date.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "timeStep",
+                "comment": "The time between each pair of subsequent regular time points in sequence order.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "TimePoints",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegularTimePoint;1",
+                "comment": "The regular interval time point data values that define this schedule.",
+                "displayName": "TimePoints"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:BasicIntervalSchedule;1"
+        ],
+        "displayName": "RegularIntervalSchedule",
+        "comment": "The schedule has time points where the time between them is constant.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

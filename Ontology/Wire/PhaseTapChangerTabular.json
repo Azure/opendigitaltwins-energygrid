@@ -1,0 +1,20 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTabular;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "PhaseTapChangerTable",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTable;1",
+                "comment": "The phase tap changer table for this phase tap changer.",
+                "displayName": "PhaseTapChangerTable"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChanger;1"
+        ],
+        "displayName": "PhaseTapChangerTabular",
+        "comment": "Describes a tap changer with a table defining the relation between the tap step and the phase angle difference across the transformer. ",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

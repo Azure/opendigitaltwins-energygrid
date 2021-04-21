@@ -1,0 +1,27 @@
+   {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:AsynchronousMachine;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "nominalFrequency",
+                "comment": "Nameplate data indicates if the machine is 50 Hz or 60 Hz.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "nominalSpeed",
+                "comment": "Nameplate data.  Depends on the slip and number of pole pairs.",
+                "schema": "float",
+                "writable": true
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1"
+        ],
+        "displayName": "AsynchronousMachine",
+        "comment": "A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

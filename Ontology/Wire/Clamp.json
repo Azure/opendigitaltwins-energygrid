@@ -1,0 +1,27 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Clamp;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "lengthFromTerminal1",
+                "comment": "The length to the place where the clamp is located starting from side one of the line segment, i.e. the line segment terminal with sequence number equal to 1.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "ACLineSegment",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ACLineSegment;1",
+                "comment": "The line segment to which the clamp is connected.",
+                "displayName": "ACLineSegment"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
+        ],
+        "displayName": "Clamp",
+        "comment": "A Clamp is a galvanic connection at a line segment where other equipment is connected. A Clamp does not cut the line segment. \nA Clamp is ConductingEquipment and has one Terminal with an associated ConnectivityNode. Any other ConductingEquipment can be connected to the Clamp ConnectivityNode.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

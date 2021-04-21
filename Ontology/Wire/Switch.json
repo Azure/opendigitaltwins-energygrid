@@ -1,0 +1,41 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "normalOpen",
+                "comment": "The attribute is used in cases when no Measurement for the status value is present. If the Switch has a status measurement the Discrete.normalValue is expected to match with the Switch.normalOpen.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "ratedCurrent",
+                "comment": "The maximum continuous current carrying capacity in amps governed by the device material and construction.\nThe attribute shall be a positive value.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "retained",
+                "comment": "Branch is retained in the topological solution.  The flow through retained switches will normally be calculated in power flow.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "SwitchSchedules",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SwitchSchedule;1",
+                "comment": "A Switch can be associated with SwitchSchedules.",
+                "displayName": "SwitchSchedules"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
+        ],
+        "displayName": "Switch",
+        "comment": "A generic device designed to close, or open, or both, one or more electric circuits.  All switches are two terminal devices including grounding switches. The ACDCTerminal.connected at the two sides of the switch shall not be considered for assessing switch connectivity, i.e. only Switch.open, .normalOpen and .locked are relevant.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

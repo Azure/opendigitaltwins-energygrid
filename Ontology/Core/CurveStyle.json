@@ -1,0 +1,9 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:CurveStyle;1",
+        "@type": "Interface",
+        "contents": [],
+        "@context": "dtmi:dtdl:context;2",
+        "displayName": "CurveStyle",
+        "description": "Style or shape of curve.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

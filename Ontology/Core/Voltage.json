@@ -1,0 +1,28 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Voltage;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "value",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "multiplier",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:UnitMultiplier;1",
+                "displayName": "multiplier"
+            },
+            {
+                "@type": "Relationship",
+                "name": "unit",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:UnitSymbol;1",
+                "displayName": "unit"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "displayName": "Voltage",
+        "description": "Electrical voltage, can be both AC and DC.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

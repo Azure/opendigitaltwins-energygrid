@@ -1,0 +1,10 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingControlModeKind;1",
+        "@type": "Interface",
+        "contents": [
+		 ],
+        "@context": "dtmi:dtdl:context;2",
+        "displayName": "RegulatingControlModeKind",
+        "comment": "The kind of regulation model.   For example regulating voltage, reactive power, active power, etc.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

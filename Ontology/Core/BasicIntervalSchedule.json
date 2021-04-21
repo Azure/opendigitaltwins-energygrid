@@ -1,0 +1,31 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:BasicIntervalSchedule;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "startTime",
+                "comment": "The time for the first time point.  The value can be a time of day, not a specific date.",
+                "schema": "dateTime",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "value1Unit",
+                "comment": "Value 1 units of measure.",
+                "schema": "double",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "value2Unit",
+                "comment": "Value 2 units of measure.",
+                "schema": "double",
+                "writable": true
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "displayName": "BasicIntervalSchedule",
+        "description": "Schedule of values at points in time.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }
