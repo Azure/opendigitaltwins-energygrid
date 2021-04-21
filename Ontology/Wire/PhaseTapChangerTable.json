@@ -1,0 +1,27 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTable;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "PhaseTapChangerTablePoint",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTablePoint;1",
+                "comment": "The points of this table.",
+                "displayName": "PhaseTapChangerTablePoint"
+            },
+            {
+                "@type": "Relationship",
+                "name": "PhaseTapChangerTabular",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTabular;1",
+                "comment": "The phase tap changers to which this phase tap table applies.",
+                "displayName": "PhaseTapChangerTabular"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+        ],
+        "displayName": "PhaseTapChangerTable",
+        "comment": "Describes a tabular curve for how the phase angle difference and impedance varies with the tap step.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

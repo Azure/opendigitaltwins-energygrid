@@ -1,0 +1,20 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChangerTablePoint;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "RatioTapChangerTable",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChangerTable;1",
+                "comment": "Table of this point.",
+                "displayName": "RatioTapChangerTable"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChangerTablePoint;1"
+        ],
+        "displayName": "RatioTapChangerTablePoint",
+        "comment": "Describes each tap step in the ratio tap changer tabular curve.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

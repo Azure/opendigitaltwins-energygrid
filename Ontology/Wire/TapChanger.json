@@ -1,0 +1,69 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChanger;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "highStep",
+                "description": "Highest possible tap step position, advance from neutral.\nThe attribute shall be greater than lowStep.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "lowStep",
+                "description": "Lowest possible tap step position, retard from neutral.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "ltcFlag",
+                "description": "Specifies whether or not a TapChanger has load tap changing capabilities.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "neutralStep",
+                "description": "The neutral tap step position for this winding.\nThe attribute shall be equal to or greater than lowStep and equal or less than highStep.\nIt is the step position where the voltage is neutralU when the other terminals of the transformer are at the ratedU.  If there are other tap changers on the transformer those taps are kept constant at their neutralStep.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "neutralU",
+                "description": "Voltage at which the winding operates at the neutral tap setting. It is the voltage at the terminal of the PowerTransformerEnd associated with the tap changer when all tap changers on the transformer are at their neutralStep position.  Normally neutralU of the tap changer is the same as ratedU of the PowerTransformerEnd, but it can differ in special cases such as when the tapping mechanism is separate from the winding more common on lower voltage transformers.\nThis attribute is not relevant for PhaseTapChan",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "normalStep",
+                "description": "The tap step position used in \"normal\" network operation for this winding. For a \"Fixed\" tap changer indicates the current physical tap setting.\nThe attribute shall be equal to or greater than lowStep and equal to or less than highStep.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "TapChangerControl",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChangerControl;1",
+                "description": "The regulating control scheme in which this tap changer participates.",
+                "displayName": "TapChangerControl"
+            },
+            {
+                "@type": "Relationship",
+                "name": "TapSchedules",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapSchedule;1",
+                "description": "A TapChanger can have TapSchedules.",
+                "displayName": "TapSchedules"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
+        ],
+        "displayName": "TapChanger",
+        "description": "Mechanism for changing transformer winding tap positions.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

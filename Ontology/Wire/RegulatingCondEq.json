@@ -1,0 +1,20 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "RegulatingControl",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingControl;1",
+                "comment": "The regulating control scheme in which this equipment participates.",
+                "displayName": "RegulatingControl"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergyConnection;1"
+        ],
+        "displayName": "RegulatingCondEq",
+        "comment": "A type of conducting equipment that can regulate a quantity (i.e. voltage or flow) at a specific point in the network. ",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

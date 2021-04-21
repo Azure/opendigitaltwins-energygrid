@@ -1,0 +1,12 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Junction;1",
+        "@type": "Interface",
+        "contents": [],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:Connector;1"
+        ],
+        "displayName": "Junction",
+        "comment": "A point where one or more conducting equipments are connected with zero resistance.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

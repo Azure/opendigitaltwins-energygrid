@@ -1,0 +1,20 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformer;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "PowerTransformerEnd",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformerEnd;1",
+                "comment": "The ends of this power transformer.",
+                "displayName": "PowerTransformerEnd"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
+        ],
+        "displayName": "PowerTransformer",
+        "comment": "An electrical device consisting of  two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow).\nA power transformer may be composed of separate transformer tanks that need not be identical.\nA power transformer can be modelled with or without tanks and is intended for use in both balanced and unbalanced representations.   A power transformer typically has two terminal",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }
