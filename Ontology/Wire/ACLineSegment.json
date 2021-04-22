@@ -49,7 +49,7 @@
             "name": "Conductor",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Conductor;1",
             "comment": "conductor details applied to the line segment.",
-            "displayName": "Cut"
+            "displayName": "Conductor"
           }
         ],
         "@context": "dtmi:dtdl:context;2",

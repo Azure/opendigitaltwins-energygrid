@@ -1,7 +1,15 @@
    {
         "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:BusbarSection;1",
         "@type": "Interface",
-        "contents": [],
+        "contents": [
+			{
+                "@type": "Property",
+                "name": "ipMax",
+                "comment": "Maximum allowable peak short-circuit current of busbar.",
+                "schema": "float",
+                "writable": true
+            }
+		],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
             "dtmi:digitaltwins:ngsi_ld:cim:energy:Connector;1"

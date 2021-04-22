@@ -1,7 +1,15 @@
   {
         "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:EarthFaultCompensator;1",
         "@type": "Interface",
-        "contents": [],
+        "contents": [
+			{
+                "@type": "Property",
+                "name": "r",
+                "comment": "Nominal resistance of device.",
+                "schema": "float",
+                "writable": true
+            }
+		],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
             "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"

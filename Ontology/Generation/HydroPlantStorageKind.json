@@ -1,0 +1,9 @@
+  {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPlantStorageKind;1",
+        "@type": "Interface",
+        "contents": [],
+        "@context": "dtmi:dtdl:context;2",
+        "displayName": "HydroPlantStorageKind",
+        "comment": "The type of hydro power plant.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

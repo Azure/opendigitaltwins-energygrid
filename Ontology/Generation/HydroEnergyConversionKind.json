@@ -1,0 +1,32 @@
+   {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroEnergyConversionKind;1",
+        "@type": "Interface",
+        "contents": [
+		 {
+            "@type": "Property",
+            "name": "HydroEnergyConversionKind",
+            "description": "The type of hydro energy conversion kind.",
+            "writable": true,
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "generator",
+                        "displayName": "generator",
+                        "enumValue": "generator"
+                    },                               
+                    {
+                        "name": "pumpAndGenerator",
+                        "displayName": "pumpAndGeneratorn",
+                        "enumValue": "pumpAndGenerator"
+                    }
+                ]
+            }
+        }
+		],
+        "@context": "dtmi:dtdl:context;2",
+        "displayName": "HydroEnergyConversionKind",
+        "comment": "Specifies the capability of the hydro generating unit to convert energy as a generator or pump.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }
