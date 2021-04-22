@@ -1,0 +1,16 @@
+{
+  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:T2Battery;1",
+  "@type": "Interface",
+  "displayName": "terminalTo_Battery",
+  "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: Terminals are connected at physical connection points called connectivity nodes. ",
+  "extends": "dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "ConductingEquipment",
+      "description": "The relation to ConnectivityNode",
+      "target": "dtmi:igitaltwins:cim:energy:Battery;1"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
