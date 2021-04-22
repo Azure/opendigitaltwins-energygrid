@@ -1,0 +1,43 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratorControlSource;1",
+        "@type": "Interface",
+        "contents": [
+		 {
+            "@type": "Property",
+            "name": "substationType",
+            "description": "The type of substations.",
+            "writable": true,
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "unavailable",
+                        "displayName": "Not available",
+                        "enumValue": "unavailable"
+                    },
+                    {
+                        "name": "offAGC",
+                        "displayName": "Off of automatic generation control (AGC).",
+                        "enumValue": "offAGC"
+                    },
+					 {
+                        "name": "onAGC",
+                        "displayName": "On automatic generation control (AGC).",
+                        "enumValue": "offAGC"
+                    },
+                    {
+                        "name": "plantControl",
+                        "displayName": "Plant is controlling",
+                        "enumValue": "plantControl"
+                    }
+                ]
+            }
+        }
+		
+		],
+        "@context": "dtmi:dtdl:context;2",
+        "displayName": "GeneratorControlSource",
+        "comment": "The source of controls for a generating unit.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

@@ -1,0 +1,27 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindGeneratingUnit;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "windGenUnitType",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindGenUnitKind;1",
+                "comment": "The kind of wind generating unit.",
+                "displayName": "windGenUnitType"
+            },
+            {
+                "@type": "Relationship",
+                "name": "WindPowerPlant",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindPowerPlant;1",
+                "comment": "A wind power plant may have wind generating units.",
+                "displayName": "WindPowerPlant"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
+        ],
+        "displayName": "WindGeneratingUnit",
+        "comment": "A wind driven generating unit, connected to the grid by means of a rotating machine.  May be used to represent a single turbine or an aggregation.    ",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

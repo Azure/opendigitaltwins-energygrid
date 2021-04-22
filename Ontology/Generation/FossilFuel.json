@@ -1,0 +1,27 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:FossilFuel;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "ThermalGeneratingUnit",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ThermalGeneratingUnit;1",
+                "comment": "A thermal generating unit may have one or more fossil fuels.",
+                "displayName": "ThermalGeneratingUnit"
+            },
+            {
+                "@type": "Relationship",
+                "name": "fossilFuelType",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:FuelType;1",
+                "comment": "The type of fossil fuel, such as coal, oil, or gas.",
+                "displayName": "fossilFuelType"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+        ],
+        "displayName": "FossilFuel",
+        "comment": "The fossil fuel consumed by the non-nuclear thermal generating unit.   For example, coal, oil, gas, etc.   These are the specific fuels that the generating unit can consume.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

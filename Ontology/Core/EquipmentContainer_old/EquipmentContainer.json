@@ -1,0 +1,31 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1",
+    "@type": "Interface",
+    "displayName": "EquipmentContainer",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: A modeling construct to provide a root class for containing equipment.",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Name",
+            "description": "Property. EquipmentContainer name.",
+            "schema": "string",
+            "writable": true
+        },
+
+        {
+            "@type": "Relationship",
+            "name": "MemberOf_Substation",
+            "description": "Shows a relationship to a substation",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"
+        },
+        
+        {
+            "@type": "Relationship",
+            "name": "Associated_VoltageLevel",
+            "description": "Shows a relationship to a VoltageLevel",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1"
+        } 
+        
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}
