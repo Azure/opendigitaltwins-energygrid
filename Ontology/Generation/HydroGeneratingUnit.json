@@ -1,0 +1,41 @@
+   {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroGeneratingUnit;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "dropHeight",
+                "comment": "The height water drops from the reservoir mid-point to the turbine.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "HydroPowerPlant",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPowerPlant;1",
+                "comment": "The hydro generating unit belongs to a hydro power plant.",
+                "displayName": "HydroPowerPlant"
+            },
+            {
+                "@type": "Relationship",
+                "name": "energyConversionCapability",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroEnergyConversionKind;1",
+                "comment": "Energy conversion capability for generating.",
+                "displayName": "energyConversionCapability"
+            },
+            {
+                "@type": "Relationship",
+                "name": "turbineType",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroTurbineKind;1",
+                "comment": "Type of turbine.",
+                "displayName": "turbineType"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
+        ],
+        "displayName": "HydroGeneratingUnit",
+        "comment": "A generating unit whose prime mover is a hydraulic turbine (e.g., Francis, Pelton, Kaplan).",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

@@ -1,7 +1,43 @@
   {
         "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PetersenCoil;1",
         "@type": "Interface",
-        "contents": [],
+        "contents": [
+		{
+                "@type": "Property",
+                "name": "mode",
+                "comment": "The mode of operation of the Petersen coil.",
+                "schema": "string",
+                "writable": true
+            },
+			{
+                "@type": "Property",
+                "name": "nominalU",
+                "comment": "The nominal voltage for which the coil is designed.",
+                "schema": "float",
+                "writable": true
+            },
+			{
+                "@type": "Property",
+                "name": "offsetCurrent",
+                "comment": "The offset current that the Petersen coil controller is operating from the resonant point.  This is normally a fixed amount for which the controller is configured and could be positive or negative.",
+                "schema": "float",
+                "writable": true
+            },
+			{
+                "@type": "Property",
+                "name": "positionCurrent",
+                "comment": "The control current used to control the Petersen coil also known as the position current.",
+                "schema": "float",
+                "writable": true
+            },
+			{
+                "@type": "Property",
+                "name": "xGroundNominal",
+                "comment": "The nominal reactance.",
+                "schema": "float",
+                "writable": true
+            }
+		],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
             "dtmi:digitaltwins:ngsi_ld:cim:energy:EarthFaultCompensator;1"
