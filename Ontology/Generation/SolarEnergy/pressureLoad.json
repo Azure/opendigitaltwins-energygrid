@@ -1,0 +1,26 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:pressureLoad;1",
+  "@type": "Interface",
+  "displayName": "Pressure Load",
+  "contents": [
+    {
+      "@type": ["Property","Pressure"],
+      "name": "hail",
+      "schema": "double",
+      "unit": "pascal"
+    },
+    {
+      "@type": ["Property","Pressure"],
+      "name": "snow",
+      "schema": "double",
+      "unit": "pascal"
+    },
+    {
+      "@type": ["Property","Pressure"],
+      "name": "wind",
+      "schema": "double",
+      "unit": "pascal"
+    }
+  ]
+}

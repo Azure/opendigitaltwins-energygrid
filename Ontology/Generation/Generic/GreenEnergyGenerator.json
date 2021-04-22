@@ -1,0 +1,154 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:energy:green:GreenEnergyGenerator;1",
+    "@type": "Interface",
+    "displayName": "GreenEnergyGenerator",
+    "extends": "dtmi:digitaltwins:ngsi_ld:energy:green:NGSILDBaseModel;1",
+    "description": "Adapted from https://github.com/smart-data-models/dataModel.GreenEnergy/tree/master/GreenEnergyGenerator data model: A generic generator station which can generate energy from green energy",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "generationSources",
+            "description": "A list of sources used for power generation.",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "solar",
+                        "displayName": "solar",
+                        "enumValue": "solar"
+                    },
+                    {
+                        "name": "eolic",
+                        "displayName": "eolic",
+                        "enumValue": "eolic"
+                    },
+                    {
+                        "name": "hydropower",
+                        "displayName": "hydropower",
+                        "enumValue": "hydropower"
+                    },
+                    {
+                        "name": "biomass",
+                        "displayName": "biomass",
+                        "enumValue": "biomass"
+                    },
+                    {
+                        "name": "geothermal",
+                        "displayName": "geothermal",
+                        "enumValue": "geothermal"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": ["Property","Power"],
+            "name": "maxBiomassMeasure",
+            "description": "A measure of maximum biomass energy that can be generated.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Property","Power"],
+            "name": "maxEolicPowerMeasure",
+            "description": "A measure of maximum eolic energy that can be generated.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Property","Power"],
+            "name": "maxGeothermalPowerGenerated",
+            "description": " A measure of maximum geothermal energy that can be generated.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Property","Power"],
+            "name": "maxHydroPowerMeasure",
+            "description": " A measure of maximum hydropower energy that can be generated.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Property","Power"],
+            "name": "maxSolarPowerMeasure",
+            "description": "A measure of maximum solar energy that can be generated.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": "Property",
+            "name": "redistribution",
+            "description": "Indicates whether the generated energy will be dumped into the network.",
+            "schema": "boolean"
+        },
+        {
+            "@type": "Property",
+            "name": "selfConsumption",
+            "description": "Indicates whether the generated energy will be dumped into the network.",
+            "schema": "boolean"
+        },
+        {
+            "@type": "Property",
+            "name":"status",
+            "description":"Status of the green energy generator.",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "working",
+                        "displayName": "working",
+                        "enumValue": "working"
+                    },
+                    {
+                        "name": "outOfService",
+                        "displayName": "outOfService",
+                        "enumValue": "outOfService"
+                    },
+                    {
+                        "name": "withIncidence",
+                        "displayName": "withIncidence",
+                        "enumValue": "withIncidence"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": ["Telemetry","Power"],
+            "name": "biomassPowerGenerated",
+            "description": "Specifies the amount of power generated using biomass energy.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Telemetry","Power"],
+            "name": "eolicPowerGenerated",
+            "description": "Specifies the amount of power generated using eolic energy.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Telemetry","Power"],
+            "name": "geothermalPowerGenerated",
+            "description": "Specifies the amount of power generated using geothermal energy.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Telemetry","Power"],
+            "name": "hydroPowerGenerated",
+            "description": "Specifies the amount of power generated using hydropower energy.",
+            "schema": "double",
+            "unit": "kilowatt"
+        },
+        {
+            "@type": ["Telemetry","Power"],
+            "name": "solarPowerGenerated",
+            "description": "Specifies the amount of power generated using solar energy.",
+            "schema": "double",
+            "unit": "kilowatt"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

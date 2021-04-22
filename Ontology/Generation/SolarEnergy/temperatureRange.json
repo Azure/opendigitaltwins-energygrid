@@ -1,0 +1,26 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:temperatureRange;1",
+  "@type": "Interface",
+  "displayName": "Temperature Range",
+  "contents": [
+    {
+      "@type": ["Property","Length"],
+      "name": "length",
+      "schema": "double",
+      "unit": "millimetre"
+    },
+    {
+      "@type": ["Property","Length"],
+      "name": "width",
+      "schema": "double",
+      "unit": "millimetre"
+    },
+    {
+      "@type": ["Property","Length"],
+      "name": "thickness",
+      "schema": "double",
+      "unit": "millimetre"
+    }
+  ]
+}

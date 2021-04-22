@@ -1,0 +1,26 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:digitaltwins:ngsi_ld:energy:green:solarenergy:temperatureCoefficient;1",
+  "@type": "Interface",
+  "displayName": "Temperature Coefficient",
+  "contents": [
+    {
+      "@type": ["Property","Current"],
+      "name": "Isc",
+      "schema": "double",
+      "unit": "ampere"
+    },
+    {
+      "@type": ["Property","Power"],
+      "name": "Pmax",
+      "schema": "double",
+      "unit": "watt"
+    },
+    {
+      "@type": ["Property","Voltage"],
+      "name": "Uoc",
+      "schema": "double",
+      "unit": "volt"
+    }
+  ]
+}
