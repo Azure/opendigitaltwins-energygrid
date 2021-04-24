@@ -4,10 +4,11 @@
         "contents": [
 		  {
             "@type": "Property",
-            "name": "substationType",
-            "description": "The type of substations.",
+            "name": "FuelType",
+            "description": "The type of Fuel.",
             "writable": true,
-            "schema": {
+            "schema": 
+			{
                 "@type": "Enum",
                 "valueSchema": "string",
                 "enumValues": [
@@ -60,10 +61,10 @@
                         "name": "other",
                         "displayName": "other",
                         "enumValue": "other"
-                    }
-					
+                    }					
+				]
             }
-        }
+		  }
 		],
         "@context": "dtmi:dtdl:context;2",
         "displayName": "FuelType",
