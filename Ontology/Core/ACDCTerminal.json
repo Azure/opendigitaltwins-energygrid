@@ -1,0 +1,34 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ACDCTerminal;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "sequenceNumber",
+                "comment": "The orientation of the terminal connections for a multiple terminal conducting equipment.  The sequence numbering starts with 1 and additional terminals should follow in increasing order.   The first terminal is the \"starting point\" for a two terminal branch.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "BusNameMarker",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BusNameMarker;1",
+                "comment": "The bus name marker used to name the bus (topological node).",
+                "displayName": "BusNameMarker"
+            },
+            {
+                "@type": "Relationship",
+                "name": "OperationalLimitSet",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:OperationalLimitSet;1",
+                "comment": "The operational limit sets at the terminal.",
+                "displayName": "OperationalLimitSet"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+        ],
+        "displayName": "ACDCTerminal",
+        "description": "An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

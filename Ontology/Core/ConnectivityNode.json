@@ -1,0 +1,33 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "ConnectivityNodeContainer",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNodeContainer;1",
+                "comment": "Container of this connectivity node.",
+                "displayName": "ConnectivityNodeContainer"
+            },
+			{
+				"@type": "Property",
+				"name": "TerminalCount",
+				"description": "The connectivity node to which this terminal connects with zero impedance. This propoerty to defined total number of terminals connected to a node.",
+				"schema": "integer"   
+			},   
+            {
+                "@type": "Relationship",
+                "name": "BoundaryPoint",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BoundaryPoint;1",
+                "comment": "The boundary point associated with the connectivity node.",
+                "displayName": "BoundaryPoint"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+        ],
+        "displayName": "ConnectivityNode",
+        "description": "Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }
