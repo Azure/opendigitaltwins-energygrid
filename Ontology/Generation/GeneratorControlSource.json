@@ -4,8 +4,8 @@
         "contents": [
 		 {
             "@type": "Property",
-            "name": "substationType",
-            "description": "The type of substations.",
+            "name": "generationControlValue",
+            "description": "The value of generationControl.",
             "writable": true,
             "schema": {
                 "@type": "Enum",
@@ -24,7 +24,7 @@
 					 {
                         "name": "onAGC",
                         "displayName": "On automatic generation control (AGC).",
-                        "enumValue": "offAGC"
+                        "enumValue": "onAGC"
                     },
                     {
                         "name": "plantControl",
@@ -33,11 +33,10 @@
                     }
                 ]
             }
-        }
-		
+        }		
 		],
         "@context": "dtmi:dtdl:context;2",
         "displayName": "GeneratorControlSource",
         "comment": "The source of controls for a generating unit.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models."
     }
