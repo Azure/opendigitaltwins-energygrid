@@ -1,0 +1,68 @@
+{
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1",
+        "@type": "Interface",
+        "contents": [
+			 {
+				"@type": "Property",
+				"name": "substationName",
+				"description": "The name of the substation.",
+				"writable": true,
+				"schema": "string"
+			},
+			{
+				"@type": "Property",
+				"name": "substationType",
+				"description": "The type of substations.",
+				"writable": true,
+				"schema": {
+					"@type": "Enum",
+					"valueSchema": "string",
+					"enumValues": [
+						{
+							"name": "MV_MV_substation",
+							"displayName": "MV/MV substation",
+							"enumValue": "MVMV"
+						},
+						{
+							"name": "MV_LV_substation",
+							"displayName": "MV/LV substation",
+							"enumValue": "MVLV"
+						},
+						{
+							"name": "LV_LV_substation",
+							"displayName": "LV/LV substation",
+							"enumValue": "LVLV"
+						}
+					]
+				}
+			},		
+            {
+                "@type": "Relationship",
+                "name": "DCConverterUnit",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:DCConverterUnit;1",
+                "comment": "The DC converter unit belonging of the substation.",
+                "displayName": "DCConverterUnit"
+            },
+            {
+                "@type": "Relationship",
+                "name": "Region",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SubGeographicalRegion;1",
+                "comment": "The SubGeographicalRegion containing the substation.",
+                "displayName": "Region"
+            },
+            {
+                "@type": "Relationship",
+                "name": "VoltageLevels",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1",
+                "comment": "The voltage levels within this substation.",
+                "displayName": "VoltageLevels"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"
+        ],
+        "displayName": "Substation",
+        "description": "A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics. ",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }

@@ -1,0 +1,34 @@
+ {
+        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "highVoltageLimit",
+                "comment": "The bus bar's high voltage limit.\nThe limit applies to all equipment and nodes contained in a given VoltageLevel. It is not required that it is exchanged in pair with lowVoltageLimit. It is preferable to use operational VoltageLimit, which prevails, if present.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "lowVoltageLimit",
+                "comment": "The bus bar's low voltage limit.\nThe limit applies to all equipment and nodes contained in a given VoltageLevel. It is not required that it is exchanged in pair with highVoltageLimit. It is preferable to use operational VoltageLimit, which prevails, if present.",
+                "schema": "float",
+                "writable": true
+            },
+            {
+                "@type": "Relationship",
+                "name": "BaseVoltage",
+                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1",
+                "comment": "The base voltage used for all equipment within the voltage level.",
+                "displayName": "BaseVoltage"
+            }               
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"
+        ],
+        "displayName": "VoltageLevel",
+        "description": "A collection of equipment at one common system voltage forming a switchgear. The equipment typically consists of breakers, busbars, instrumentation, control, regulation and protection devices as well as assemblies of all these.",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    }
