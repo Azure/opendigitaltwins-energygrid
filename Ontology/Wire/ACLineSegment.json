@@ -29,21 +29,8 @@
                 "comment": "Positive sequence series reactance of the entire line section.",
                 "schema": "float",
                 "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "Clamp",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Clamp;1",
-                "comment": "The clamps connected to the line segment.",
-                "displayName": "Clamp"
-            },
-          {
-            "@type": "Relationship",
-            "name": "Cut",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Cut;1",
-            "comment": "Cuts applied to the line segment.",
-            "displayName": "Cut"
-          },
+            },        
+       
           {
             "@type": "Relationship",
             "name": "Conductor",
