@@ -1,9 +1,32 @@
   {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindGenUnitKind;1",
-        "@type": "Interface",
-        "contents": [],
-        "@context": "dtmi:dtdl:context;2",
-        "displayName": "WindGenUnitKind",
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindGenUnitKind;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "WindGenUnitKind",
         "comment": "Kind of wind generating unit.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+        "writable": true,
+        "schema": {
+          "@type": "Enum",
+          "valueSchema": "string",
+          "enumValues": [
+            {
+              "name": "offshore",
+              "displayName": "offshore",
+              "enumValue": "offshore"
+            },
+            {
+              "name": "onshore",
+              "displayName": "onshore",
+              "enumValue": "onshore"
+            }
+          ]
+        }
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "WindGenUnitKind",
+    "comment": "Kind of wind generating unit.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+  }
