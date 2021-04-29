@@ -1,0 +1,27 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:MeterReading;1",
+    "@type": "Interface",
+    "displayName": "MeterReading",
+    "description": "Set of values obtained from the meter.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "isCoincidentTrigger",
+            "comment": "If true, this meter reading is the meter reading for which other coincident meter readings are requested or provided.",
+            "schema": "boolean",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "valuesInterval",
+            "comment": "Date and time interval of the data items contained within this meter reading.",
+            "schema": "dateTime",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+    ]
+}

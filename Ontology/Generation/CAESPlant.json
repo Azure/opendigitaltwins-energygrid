@@ -1,20 +1,20 @@
-  {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:CAESPlant;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "ThermalGeneratingUnit",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ThermalGeneratingUnit;1",
-                "comment": "A thermal generating unit may be a member of a compressed air energy storage plant.",
-                "displayName": "ThermalGeneratingUnit"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
-        ],
-        "displayName": "CAESPlant",
-        "comment": "Compressed air energy storage plant.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:CAESPlant;1",
+    "@type": "Interface",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "ThermalGeneratingUnit",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ThermalGeneratingUnit;1",
+            "comment": "A thermal generating unit may be a member of a compressed air energy storage plant.",
+            "displayName": "ThermalGeneratingUnit"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
+    ],
+    "displayName": "CAESPlant",
+    "comment": "Compressed air energy storage plant.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+}

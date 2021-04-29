@@ -1,0 +1,204 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:UsagePoint;1",
+    "@type": "Interface",
+    "displayName": "UsagePoint",
+    "description": "Logical or physical point in the network to which readings or events may be attributed. Used at the place where a physical or virtual meter may be located; however, it is not required that a meter be present.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "amiBillingReady",
+            "comment": "Tracks the lifecycle of the metering installation at a usage point with respect to readiness for billing via advanced metering infrastructure reads.",
+            "writable": false,
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "enabled",
+                        "displayName": "enabled",
+                        "enumValue": "enabled"
+                    },
+                    {
+                        "name": "operable",
+                        "displayName": "operable",
+                        "enumValue": "operable"
+                    },
+                    {
+                        "name": "billingApproved",
+                        "displayName": "billingApproved",
+                        "enumValue": "billingApproved"
+                    },
+                    {
+                        "name": "nonAmi",
+                        "displayName": "nonAmi",
+                        "enumValue": "nonAmi"
+                    },
+                    {
+                        "name": "amiDisabled",
+                        "displayName": "amiDisabled",
+                        "enumValue": "amiDisabled"
+                    },
+                    {
+                        "name": "amiCapable",
+                        "displayName": "amiCapable",
+                        "enumValue": "amiCapable"
+                    },
+                    {
+                        "name": "nonMetered",
+                        "displayName": "nonMetered",
+                        "enumValue": "nonMetered"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "checkBilling",
+            "comment": "True if as a result of an inspection or otherwise, there is a reason to suspect that a previous billing may have been performed with erroneous data. Value should be reset once this potential discrepancy has been resolved.",
+            "schema": "boolean",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "connectionCategory",
+            "comment": "A code used to specify the connection category, e.g., low voltage or low pressure, where the usage point is defined.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "connectionState",
+            "comment": "State of the usage point with respect to connection to the network.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "disconnectionMethod",
+            "comment": "Is an indication of how the usage point is physically connected or disconnected.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "estimatedLoad",
+            "comment": "Estimated load (current flow).",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "grounded",
+            "comment": "True if grounded.",
+            "schema": "boolean",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "isSdp",
+            "comment": "If true, this usage point is a service delivery point, i.e., a usage point where the ownership of the service changes hands.",
+            "schema": "boolean",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "isVirtual",
+            "comment": "If true, this usage point is virtual, i.e., no physical location exists in the network where a meter could be located to collect the meter readings.",
+            "schema": "boolean",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "minimalUsageExpected",
+            "comment": "If true, minimal or zero usage is expected at this usage point for situations such as premises vacancy, logical or physical disconnect.",
+            "schema": "boolean",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "nominalServiceVoltage",
+            "comment": "Nominal service voltage.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "outageRegion",
+            "comment": "Outage region in which this usage point is located.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "phaseCode",
+            "comment": "Phase code. Number of wires and specific nominal phases can be deduced from enumeration literal values.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "phaseCount",
+            "comment": "Number of potential phases the Usage Point supports, typically 0, 1 or 3.",
+            "schema": "integer",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "physicalConnectionCapacity",
+            "comment": "Quantitative information about the maximum physical capacity of the connection for the usage point.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedCurrent",
+            "comment": "Current flow that this usage point is configured to deliver.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedPower",
+            "comment": "Active power that this usage point is configured to deliver.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "readCycle",
+            "comment": "Cycle day on which the meter for this usage point will normally be read.  Usually correlated with the billing cycle.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "readRoute",
+            "comment": "Identifier of the route to which this usage point is assigned for purposes of meter reading. Typically used to configure hand held meter reading systems prior to collection of reads.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "serviceDeliveryRemark",
+            "comment": "Remarks about this usage point, for example the reason for it being rated with a non-nominal priority.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "servicePriority",
+            "comment": "Priority of service for this usage point. Note that usage points at the same service location can have different priorities.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "relatedEquipment",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1",
+            "comment": "connection to an equipment.",
+            "displayName": "relatedEquipment"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

@@ -6,7 +6,7 @@
                 "@type": "Property",
                 "name": "endTime",
                 "comment": "The time for the last time point.  The value can be a time of day, not a specific date.",
-                "schema": "float",
+                "schema": "dateTime",
                 "writable": true
             },
             {
