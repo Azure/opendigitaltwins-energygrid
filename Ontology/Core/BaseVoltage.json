@@ -1,34 +1,21 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "nominalVoltage",
-                "comment": "The power system resource's base voltage.  Shall be a positive value and not zero.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "ConductingEquipment",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1",
-                "comment": "All conducting equipment with this base voltage.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers.",
-                "displayName": "ConductingEquipment"
-            },
-            {
-                "@type": "Relationship",
-                "name": "TransformerEnds",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerEnd;1",
-                "comment": "Transformer ends at the base voltage.  This is essential for PU calculation.",
-                "displayName": "TransformerEnds"
-            }      
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
-        ],
-        "displayName": "BaseVoltage",
-        "description": "Defines a system base voltage which is referenced. ",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1",
+    "@type": "Interface",
+    "displayName": "BaseVoltage",
+    "description": "Defines a system base voltage which is referenced. ",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": ["Property","Voltage"],
+            "name": "nominalVoltage",
+            "comment": "The power system resource's base voltage.  Shall be a positive value and not zero.",
+            "schema": "float",
+            "unit": "volt",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+    ]    
+}
