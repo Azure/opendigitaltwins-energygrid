@@ -1,20 +1,20 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Conductor;1",
-        "@type": "Interface",
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Conductor;1",
+    "@type": "Interface",
+    "displayName": "Conductor",
+    "comment": "Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.  ",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
         "contents": [
-            {
-                "@type": "Property",
-                "name": "length",
-                "comment": "Segment length for calculating line section capabilities.",
-                "schema": "float",
-                "writable": true
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
-        ],
-        "displayName": "Conductor",
-        "comment": "Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.  ",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+        {
+            "@type": "Property",
+            "name": "length",
+            "comment": "Segment length for calculating line section capabilities.",
+            "schema": "float",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
+    ]
+}

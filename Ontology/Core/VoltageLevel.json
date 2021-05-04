@@ -18,7 +18,7 @@
             },
             {
                 "@type": "Relationship",
-                "name": "BaseVoltage",
+                "name": "assignedBaseVoltage",
                 "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1",
                 "comment": "The base voltage used for all equipment within the voltage level.",
                 "displayName": "BaseVoltage"
