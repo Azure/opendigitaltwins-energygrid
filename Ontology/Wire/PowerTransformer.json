@@ -1,8 +1,8 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformer;1",
-        "@type": "Interface",
-        "contents": [
-		   {
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformer;1",
+    "@type": "Interface",
+    "contents": [
+        {
             "@type": "Property",
             "name": "Name",
             "description": "Power transformer name. For example, SAMWA0001",
@@ -36,7 +36,7 @@
             "description": "The angle of power factor before short circuit (phib in the IEC 60909-0). It is used for calculation of the impedance correction factor KT defined in IEC 60909-0. This is the worst case power factor. Used to define operating conditions. Default: 0.0",
             "schema": "double",
             "writable": true
-        },        
+        },
         {
             "@type": "Property",
             "name": "highSideMinOperatingU",
@@ -50,7 +50,7 @@
             "description": "Indicates whether the machine is part of a power station unit. Used for short circuit data exchange according to IEC 60909 Default: False",
             "schema": "double",
             "writable": true
-        },        
+        },
         {
             "@type": "Property",
             "name": "operationalValuesConsidered",
@@ -62,21 +62,21 @@
             "@type": "Relationship",
             "name": "MemberOf_Substation",
             "description": "The associations for PowerTransformer containment are: Substation -> PowerTransformer -> TransformerWinding",
-            "target":"dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"                    
-        },      
-            {
-                "@type": "Relationship",
-                "name": "PowerTransformerEnd",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformerEnd;1",
-                "comment": "The ends of this power transformer.",
-                "displayName": "PowerTransformerEnd"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
-        ],
-        "displayName": "PowerTransformer",
-        "comment": "An electrical device consisting of  two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow).\nA power transformer may be composed of separate transformer tanks that need not be identical.\nA power transformer can be modelled with or without tanks and is intended for use in both balanced and unbalanced representations.   A power transformer typically has two terminal",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"
+        },
+        {
+            "@type": "Relationship",
+            "name": "PowerTransformerEnd",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformerEnd;1",
+            "comment": "The ends of this power transformer.",
+            "displayName": "PowerTransformerEnd"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
+    ],
+    "displayName": "PowerTransformer",
+    "comment": "An electrical device consisting of  two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow).\nA power transformer may be composed of separate transformer tanks that need not be identical.\nA power transformer can be modelled with or without tanks and is intended for use in both balanced and unbalanced representations.   A power transformer typically has two terminal",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+}

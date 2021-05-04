@@ -1,6 +1,9 @@
 {
         "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1",
         "@type": "Interface",
+        "displayName": "EquipmentContainer",
+        "description": "A modelling construct to provide a root class for containing equipment. ",
+        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
         "contents": [
             {
                 "@type": "Relationship",
@@ -13,8 +16,5 @@
         "@context": "dtmi:dtdl:context;2",
         "extends": [
             "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNodeContainer;1"
-        ],
-        "displayName": "EquipmentContainer",
-        "description": "A modelling construct to provide a root class for containing equipment. ",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+        ]     
     }

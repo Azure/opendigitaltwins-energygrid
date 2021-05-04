@@ -1,27 +1,20 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "BaseVoltage",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1",
-                "comment": "Base voltage of this conducting equipment.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers.",
-                "displayName": "BaseVoltage"
-            },
-            {
-                "@type": "Relationship",
-                "name": "Terminals",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1",
-                "comment": "Conducting equipment have terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes.",
-                "displayName": "Terminals"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
-        ],
-        "displayName": "ConductingEquipment",
-        "description": "The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1",
+    "@type": "Interface",
+    "displayName": "ConductingEquipment",
+    "description": "The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "BaseVoltage",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1",
+            "comment": "Base voltage of this conducting equipment.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers.",
+            "displayName": "BaseVoltage"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
+    ]
+}
