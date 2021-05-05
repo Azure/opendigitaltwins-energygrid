@@ -1,20 +1,20 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SolarPowerPlant;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "SolarGeneratingUnits",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SolarGeneratingUnit;1",
-                "comment": "A solar generating unit or units may be a member of a solar power plant.",
-                "displayName": "SolarGeneratingUnits"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
-        ],
-        "displayName": "SolarPowerPlant",
-        "comment": "Solar power plant.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SolarPowerPlant;1",
+    "@type": "Interface",
+    "displayName": "SolarPowerPlant",
+    "comment": "Solar power plant.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "SolarGeneratingUnits",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SolarGeneratingUnit;1",
+            "comment": "A solar generating unit or units may be a member of a solar power plant.",
+            "displayName": "SolarGeneratingUnits"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
+    ]
+}

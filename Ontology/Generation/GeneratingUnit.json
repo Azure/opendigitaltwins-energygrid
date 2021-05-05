@@ -1,139 +1,139 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "governorSCD",
-                "comment": "Governor Speed Changer Droop.   This is the change in generator power output divided by the change in frequency normalized by the nominal power of the generator and the nominal frequency and expressed in percent and negated. A positive value of speed change droop provides additional generator output upon a drop in frequency.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "longPF",
-                "comment": "Generating unit long term economic participation factor.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "maxOperatingP",
-                "comment": "This is the maximum operating active power limit the dispatcher can enter for this unit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "maximumAllowableSpinningReserve",
-                "comment": "Maximum allowable spinning reserve. Spinning reserve will never be considered greater than this value regardless of the current operating point.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "minOperatingP",
-                "comment": "This is the minimum operating active power limit the dispatcher can enter for this unit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "nominalP",
-                "comment": "The nominal power of the generating unit.  Used to give precise meaning to percentage based attributes such as the governor speed change droop (governorSCD attribute).\nThe attribute shall be a positive value equal to or less than RotatingMachine.ratedS.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedGrossMaxP",
-                "comment": "The unit's gross rated maximum capacity (book value).\nThe attribute shall be a positive value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedGrossMinP",
-                "comment": "The gross rated minimum generation level which the unit can safely operate at while delivering power to the transmission grid.\nThe attribute shall be a positive value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedNetMaxP",
-                "comment": "The net rated maximum capacity determined by subtracting the auxiliary power used to operate the internal plant machinery from the rated gross maximum capacity.\nThe attribute shall be a positive value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "shortPF",
-                "comment": "Generating unit short term economic participation factor.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "startupCost",
-                "comment": "The initial startup cost incurred for each start of the GeneratingUnit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "startupTime",
-                "comment": "Time it takes to get the unit on-line, from the time that the prime mover mechanical power is applied.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "totalEfficiency",
-                "comment": "The efficiency of the unit in converting the fuel into electrical energy.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "variableCost",
-                "comment": "The variable cost component of production per unit of ActivePower.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "ControlAreaGeneratingUnit",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ControlAreaGeneratingUnit;1",
-                "comment": "ControlArea specifications for this generating unit.",
-                "displayName": "ControlAreaGeneratingUnit"
-            },
-            {
-                "@type": "Relationship",
-                "name": "GrossToNetActivePowerCurves",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GrossToNetActivePowerCurve;1",
-                "comment": "A generating unit may have a gross active power to net active power curve, describing the losses and auxiliary power requirements of the unit.",
-                "displayName": "GrossToNetActivePowerCurves"
-            },
-            {
-                "@type": "Relationship",
-                "name": "RotatingMachine",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1",
-                "comment": "A synchronous machine may operate as a generator and as such becomes a member of a generating unit.",
-                "displayName": "RotatingMachine"
-            },
-            {
-                "@type": "Relationship",
-                "name": "genControlSource",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratorControlSource;1",
-                "comment": "The source of controls for a generating unit.  Defines the control status of the generating unit.",
-                "displayName": "genControlSource"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
-        ],
-        "displayName": "GeneratingUnit",
-        "comment": "A single or set of synchronous machines for converting mechanical power into alternating-current power. For example, individual machines within a set may be defined for scheduling purposes while a single control signal is derived for the set. In this case there would be a GeneratingUnit for each member of the set and an additional GeneratingUnit corresponding to the set.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1",
+    "@type": "Interface",
+    "displayName": "GeneratingUnit",
+    "comment": "A single or set of synchronous machines for converting mechanical power into alternating-current power. For example, individual machines within a set may be defined for scheduling purposes while a single control signal is derived for the set. In this case there would be a GeneratingUnit for each member of the set and an additional GeneratingUnit corresponding to the set.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "governorSCD",
+            "comment": "Governor Speed Changer Droop.   This is the change in generator power output divided by the change in frequency normalized by the nominal power of the generator and the nominal frequency and expressed in percent and negated. A positive value of speed change droop provides additional generator output upon a drop in frequency.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "longPF",
+            "comment": "Generating unit long term economic participation factor.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "maxOperatingP",
+            "comment": "This is the maximum operating active power limit the dispatcher can enter for this unit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "maximumAllowableSpinningReserve",
+            "comment": "Maximum allowable spinning reserve. Spinning reserve will never be considered greater than this value regardless of the current operating point.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "minOperatingP",
+            "comment": "This is the minimum operating active power limit the dispatcher can enter for this unit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "nominalP",
+            "comment": "The nominal power of the generating unit.  Used to give precise meaning to percentage based attributes such as the governor speed change droop (governorSCD attribute).\nThe attribute shall be a positive value equal to or less than RotatingMachine.ratedS.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedGrossMaxP",
+            "comment": "The unit's gross rated maximum capacity (book value).\nThe attribute shall be a positive value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedGrossMinP",
+            "comment": "The gross rated minimum generation level which the unit can safely operate at while delivering power to the transmission grid.\nThe attribute shall be a positive value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedNetMaxP",
+            "comment": "The net rated maximum capacity determined by subtracting the auxiliary power used to operate the internal plant machinery from the rated gross maximum capacity.\nThe attribute shall be a positive value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "shortPF",
+            "comment": "Generating unit short term economic participation factor.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "startupCost",
+            "comment": "The initial startup cost incurred for each start of the GeneratingUnit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "startupTime",
+            "comment": "Time it takes to get the unit on-line, from the time that the prime mover mechanical power is applied.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "totalEfficiency",
+            "comment": "The efficiency of the unit in converting the fuel into electrical energy.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "variableCost",
+            "comment": "The variable cost component of production per unit of ActivePower.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "ControlAreaGeneratingUnit",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ControlAreaGeneratingUnit;1",
+            "comment": "ControlArea specifications for this generating unit.",
+            "displayName": "ControlAreaGeneratingUnit"
+        },
+        {
+            "@type": "Relationship",
+            "name": "GrossToNetActivePowerCurves",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GrossToNetActivePowerCurve;1",
+            "comment": "A generating unit may have a gross active power to net active power curve, describing the losses and auxiliary power requirements of the unit.",
+            "displayName": "GrossToNetActivePowerCurves"
+        },
+        {
+            "@type": "Relationship",
+            "name": "RotatingMachine",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1",
+            "comment": "A synchronous machine may operate as a generator and as such becomes a member of a generating unit.",
+            "displayName": "RotatingMachine"
+        },
+        {
+            "@type": "Relationship",
+            "name": "genControlSource",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratorControlSource;1",
+            "comment": "The source of controls for a generating unit.  Defines the control status of the generating unit.",
+            "displayName": "genControlSource"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
+    ]
+}

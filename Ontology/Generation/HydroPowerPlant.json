@@ -1,34 +1,34 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPowerPlant;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "HydroGeneratingUnits",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroGeneratingUnit;1",
-                "comment": "The hydro generating unit belongs to a hydro power plant.",
-                "displayName": "HydroGeneratingUnits"
-            },
-            {
-                "@type": "Relationship",
-                "name": "HydroPumps",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPump;1",
-                "comment": "The hydro pump may be a member of a pumped storage plant or a pump for distributing water.",
-                "displayName": "HydroPumps"
-            },
-            {
-                "@type": "Relationship",
-                "name": "hydroPlantStorageType",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPlantStorageKind;1",
-                "comment": "The type of hydro power plant water storage.",
-                "displayName": "hydroPlantStorageType"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
-        ],
-        "displayName": "HydroPowerPlant",
-        "comment": "A hydro power station which can generate or pump. When generating, the generator turbines receive water from an upper reservoir. When pumping, the pumps receive their water from a lower reservoir.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPowerPlant;1",
+    "@type": "Interface",
+    "displayName": "HydroPowerPlant",
+    "comment": "A hydro power station which can generate or pump. When generating, the generator turbines receive water from an upper reservoir. When pumping, the pumps receive their water from a lower reservoir.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "HydroGeneratingUnits",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroGeneratingUnit;1",
+            "comment": "The hydro generating unit belongs to a hydro power plant.",
+            "displayName": "HydroGeneratingUnits"
+        },
+        {
+            "@type": "Relationship",
+            "name": "HydroPumps",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPump;1",
+            "comment": "The hydro pump may be a member of a pumped storage plant or a pump for distributing water.",
+            "displayName": "HydroPumps"
+        },
+        {
+            "@type": "Relationship",
+            "name": "hydroPlantStorageType",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPlantStorageKind;1",
+            "comment": "The type of hydro power plant water storage.",
+            "displayName": "hydroPlantStorageType"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
+    ]
+}

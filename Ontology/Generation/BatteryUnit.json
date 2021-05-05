@@ -1,6 +1,9 @@
 {
     "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:BatteryUnit;1",
     "@type": "Interface",
+    "displayName": "BatteryUnit",
+    "comment": "An electrochemical energy storage device.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
     "contents": [
         {
             "@type": "Property",
@@ -21,8 +24,7 @@
             "name": "batteryState",
             "comment": "The current state of the battery (charging, full, etc.).",
             "writable": true,
-            "schema":
-            {
+            "schema": {
                 "@type": "Enum",
                 "valueSchema": "string",
                 "enumValues": [
@@ -35,31 +37,28 @@
                         "name": "discharging",
                         "displayName": "discharging",
                         "enumValue": "discharging"
-                    },                 
+                    },
                     {
                         "name": "full",
                         "displayName": "full",
                         "enumValue": "full"
-                    },    
+                    },
                     {
                         "name": "empty",
                         "displayName": "empty",
                         "enumValue": "empty"
-                    },    
+                    },
                     {
                         "name": "waiting",
                         "displayName": "waiting",
                         "enumValue": "waiting"
-                    }                
-                ] 
+                    }
+                ]
             }
         }
     ],
     "@context": "dtmi:dtdl:context;2",
     "extends": [
         "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsUnit;1"
-    ],
-    "displayName": "BatteryUnit",
-    "comment": "An electrochemical energy storage device.",
-    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    ]
 }

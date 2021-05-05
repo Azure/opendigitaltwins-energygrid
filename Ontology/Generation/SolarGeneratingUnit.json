@@ -1,20 +1,20 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SolarGeneratingUnit;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "SolarPowerPlant",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SolarPowerPlant;1",
-                "description": "A solar power plant may have solar generating units.",
-                "displayName": "SolarPowerPlant"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
-        ],
-        "displayName": "SolarGeneratingUnit",
-        "description": "A solar thermal generating unit, connected to the grid by means of a rotating machine.  This class does not represent photovoltaic (PV) generation.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SolarGeneratingUnit;1",
+    "@type": "Interface",
+    "displayName": "SolarGeneratingUnit",
+    "description": "A solar thermal generating unit, connected to the grid by means of a rotating machine.  This class does not represent photovoltaic (PV) generation.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "SolarPowerPlant",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SolarPowerPlant;1",
+            "description": "A solar power plant may have solar generating units.",
+            "displayName": "SolarPowerPlant"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
+    ]
+}

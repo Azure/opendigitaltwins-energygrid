@@ -1,48 +1,48 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Curve;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "CurveDatas",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CurveData;1",
-                "comment": "The point data values that define this curve.",
-                "displayName": "CurveDatas"
-            },
-            {
-                "@type": "Relationship",
-                "name": "curveStyle",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CurveStyle;1",
-                "comment": "The style or shape of the curve.",
-                "displayName": "curveStyle"
-            },
-            {
-                "@type": "Relationship",
-                "name": "xUnit",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:UnitSymbol;1",
-                "comment": "The X-axis units of measure.",
-                "displayName": "xUnit"
-            },
-            {
-                "@type": "Relationship",
-                "name": "y1Unit",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:UnitSymbol;1",
-                "comment": "The Y1-axis units of measure.",
-                "displayName": "y1Unit"
-            },
-            {
-                "@type": "Relationship",
-                "name": "y2Unit",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:UnitSymbol;1",
-                "comment": "The Y2-axis units of measure.",
-                "displayName": "y2Unit"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
-        ],
-        "displayName": "Curve",
-        "description": "A multi-purpose curve or functional relationship between an independent variable (X-axis) and dependent (Y-axis) variables. ",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Curve;1",
+    "@type": "Interface",
+    "displayName": "Curve",
+    "description": "A multi-purpose curve or functional relationship between an independent variable (X-axis) and dependent (Y-axis) variables. ",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "CurveDatas",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CurveData;1",
+            "comment": "The point data values that define this curve.",
+            "displayName": "CurveDatas"
+        },
+        {
+            "@type": "Relationship",
+            "name": "curveStyle",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CurveStyle;1",
+            "comment": "The style or shape of the curve.",
+            "displayName": "curveStyle"
+        },
+        {
+            "@type": "Relationship",
+            "name": "xUnit",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:UnitSymbol;1",
+            "comment": "The X-axis units of measure.",
+            "displayName": "xUnit"
+        },
+        {
+            "@type": "Relationship",
+            "name": "y1Unit",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:UnitSymbol;1",
+            "comment": "The Y1-axis units of measure.",
+            "displayName": "y1Unit"
+        },
+        {
+            "@type": "Relationship",
+            "name": "y2Unit",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:UnitSymbol;1",
+            "comment": "The Y2-axis units of measure.",
+            "displayName": "y2Unit"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+    ]
+}

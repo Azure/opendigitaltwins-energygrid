@@ -1,20 +1,20 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindPowerPlant;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "WindGeneratingUnits",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindGeneratingUnit;1",
-                "comment": "A wind generating unit or units may be a member of a wind power plant.",
-                "displayName": "WindGeneratingUnits"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
-        ],
-        "displayName": "WindPowerPlant",
-        "comment": "Wind power plant.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindPowerPlant;1",
+    "@type": "Interface",
+    "displayName": "WindPowerPlant",
+    "comment": "Wind power plant.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "WindGeneratingUnits",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindGeneratingUnit;1",
+            "comment": "A wind generating unit or units may be a member of a wind power plant.",
+            "displayName": "WindGeneratingUnits"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
+    ]
+}

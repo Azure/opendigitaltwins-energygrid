@@ -1,12 +1,12 @@
-  {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:NuclearGeneratingUnit;1",
-        "@type": "Interface",
-        "contents": [],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
-        ],
-        "displayName": "NuclearGeneratingUnit",
-        "comment": "A nuclear generating unit.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:NuclearGeneratingUnit;1",
+    "@type": "Interface",
+    "displayName": "NuclearGeneratingUnit",
+    "comment": "A nuclear generating unit.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
+    ]
+}

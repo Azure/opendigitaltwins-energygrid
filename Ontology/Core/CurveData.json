@@ -1,38 +1,38 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:CurveData;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "xvalue",
-                "comment": "The data value of the X-axis variable,  depending on the X-axis units.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "y1value",
-                "comment": "The data value of the  first Y-axis variable, depending on the Y-axis units.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "y2value",
-                "comment": "The data value of the second Y-axis variable (if present), depending on the Y-axis units.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "Curve",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Curve;1",
-                "comment": "The curve of  this curve data point.",
-                "displayName": "Curve"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "displayName": "CurveData",
-        "description": "Multi-purpose data points for defining a curve.  The use of this generic class is discouraged if a more specific class can be used to specify the X and Y axis values along with their specific data types.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:CurveData;1",
+    "@type": "Interface",
+    "displayName": "CurveData",
+    "description": "Multi-purpose data points for defining a curve.  The use of this generic class is discouraged if a more specific class can be used to specify the X and Y axis values along with their specific data types.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "xvalue",
+            "comment": "The data value of the X-axis variable,  depending on the X-axis units.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "y1value",
+            "comment": "The data value of the  first Y-axis variable, depending on the Y-axis units.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "y2value",
+            "comment": "The data value of the second Y-axis variable (if present), depending on the Y-axis units.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "Curve",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Curve;1",
+            "comment": "The curve of  this curve data point.",
+            "displayName": "Curve"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

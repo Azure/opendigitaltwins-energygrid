@@ -1,14 +1,16 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:FuelType;1",
-        "@type": "Interface",
-        "contents": [
-		  {
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:FuelType;1",
+    "@type": "Interface",
+    "displayName": "FuelType",
+    "comment": "Type of fuel.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
             "@type": "Property",
             "name": "FuelType",
             "description": "The type of Fuel.",
             "writable": true,
-            "schema": 
-			{
+            "schema": {
                 "@type": "Enum",
                 "valueSchema": "string",
                 "enumValues": [
@@ -21,53 +23,50 @@
                         "name": "oil",
                         "displayName": "oil",
                         "enumValue": "oil"
-                    },      
-					{
+                    },
+                    {
                         "name": "gas",
                         "displayName": "gas",
                         "enumValue": "gas"
-                    },      
-					{
+                    },
+                    {
                         "name": "lignite",
                         "displayName": "lignit",
                         "enumValue": "lignite"
-                    },      
-					{
+                    },
+                    {
                         "name": "hardCoal",
                         "displayName": "hardCoal",
                         "enumValue": "hardCoal"
                     },
-					{
+                    {
                         "name": "oilShale",
                         "displayName": "oilShale",
                         "enumValue": "oilShale"
                     },
-					{
+                    {
                         "name": "brownCoalLignite",
                         "displayName": "brownCoalLignite",
                         "enumValue": "brownCoalLignite"
-                    },	
-					{
+                    },
+                    {
                         "name": "coalDerivedGas",
                         "displayName": "coalDerivedGas",
                         "enumValue": "coalDerivedGas"
                     },
-					{
+                    {
                         "name": "peat",
                         "displayName": "peat",
                         "enumValue": "peat"
                     },
-					{
+                    {
                         "name": "other",
                         "displayName": "other",
                         "enumValue": "other"
-                    }					
-				]
+                    }
+                ]
             }
-		  }
-		],
-        "@context": "dtmi:dtdl:context;2",
-        "displayName": "FuelType",
-        "comment": "Type of fuel.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}
