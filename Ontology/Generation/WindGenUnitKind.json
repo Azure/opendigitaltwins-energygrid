@@ -1,6 +1,9 @@
   {
     "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindGenUnitKind;1",
     "@type": "Interface",
+    "displayName": "WindGenUnitKind",
+    "comment": "Kind of wind generating unit.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
     "contents": [
       {
         "@type": "Property",
@@ -25,8 +28,5 @@
         }
       }
     ],
-    "@context": "dtmi:dtdl:context;2",
-    "displayName": "WindGenUnitKind",
-    "comment": "Kind of wind generating unit.",
-    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+    "@context": "dtmi:dtdl:context;2"
   }

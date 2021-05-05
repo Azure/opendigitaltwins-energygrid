@@ -1,38 +1,38 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegularTimePoint;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "sequenceNumber",
-                "comment": "The position of the regular time point in the sequence. Note that time points don't have to be sequential, i.e. time points may be omitted. The actual time for a RegularTimePoint is computed by multiplying the associated regular interval schedule's time step with the regular time point sequence number and adding the associated schedules start time. To specify values for the start time, use sequence number 0.  The sequence number cannot be negative.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "value1",
-                "comment": "The first value at the time. The meaning of the value is defined by the derived type of the associated schedule.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "value2",
-                "comment": "The second value at the time. The meaning of the value is defined by the derived type of the associated schedule.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "IntervalSchedule",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegularIntervalSchedule;1",
-                "comment": "Regular interval schedule containing this time point.",
-                "displayName": "IntervalSchedule"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "displayName": "RegularTimePoint",
-        "comment": "Time point for a schedule where the time between the consecutive points is constant.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegularTimePoint;1",
+    "@type": "Interface",
+    "displayName": "RegularTimePoint",
+    "comment": "Time point for a schedule where the time between the consecutive points is constant.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "sequenceNumber",
+            "comment": "The position of the regular time point in the sequence. Note that time points don't have to be sequential, i.e. time points may be omitted. The actual time for a RegularTimePoint is computed by multiplying the associated regular interval schedule's time step with the regular time point sequence number and adding the associated schedules start time. To specify values for the start time, use sequence number 0.  The sequence number cannot be negative.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "value1",
+            "comment": "The first value at the time. The meaning of the value is defined by the derived type of the associated schedule.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "value2",
+            "comment": "The second value at the time. The meaning of the value is defined by the derived type of the associated schedule.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "IntervalSchedule",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegularIntervalSchedule;1",
+            "comment": "Regular interval schedule containing this time point.",
+            "displayName": "IntervalSchedule"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

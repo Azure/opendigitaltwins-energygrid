@@ -1,41 +1,41 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ThermalGeneratingUnit;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "CAESPlant",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CAESPlant;1",
-                "comment": "A thermal generating unit may be a member of a compressed air energy storage plant.",
-                "displayName": "CAESPlant"
-            },
-            {
-                "@type": "Relationship",
-                "name": "CogenerationPlant",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CogenerationPlant;1",
-                "comment": "A thermal generating unit may be a member of a cogeneration plant.",
-                "displayName": "CogenerationPlant"
-            },
-            {
-                "@type": "Relationship",
-                "name": "CombinedCyclePlant",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CombinedCyclePlant;1",
-                "comment": "A thermal generating unit may be a member of a combined cycle plant.",
-                "displayName": "CombinedCyclePlant"
-            },
-            {
-                "@type": "Relationship",
-                "name": "FossilFuels",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:FossilFuel;1",
-                "comment": "A thermal generating unit may have one or more fossil fuels.",
-                "displayName": "FossilFuels"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
-        ],
-        "displayName": "ThermalGeneratingUnit",
-        "comment": "A generating unit whose prime mover could be a steam turbine, combustion turbine, or diesel engine.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ThermalGeneratingUnit;1",
+    "@type": "Interface",
+    "displayName": "ThermalGeneratingUnit",
+    "comment": "A generating unit whose prime mover could be a steam turbine, combustion turbine, or diesel engine.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "CAESPlant",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CAESPlant;1",
+            "comment": "A thermal generating unit may be a member of a compressed air energy storage plant.",
+            "displayName": "CAESPlant"
+        },
+        {
+            "@type": "Relationship",
+            "name": "CogenerationPlant",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CogenerationPlant;1",
+            "comment": "A thermal generating unit may be a member of a cogeneration plant.",
+            "displayName": "CogenerationPlant"
+        },
+        {
+            "@type": "Relationship",
+            "name": "CombinedCyclePlant",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:CombinedCyclePlant;1",
+            "comment": "A thermal generating unit may be a member of a combined cycle plant.",
+            "displayName": "CombinedCyclePlant"
+        },
+        {
+            "@type": "Relationship",
+            "name": "FossilFuels",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:FossilFuel;1",
+            "comment": "A thermal generating unit may have one or more fossil fuels.",
+            "displayName": "FossilFuels"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
+    ]
+}

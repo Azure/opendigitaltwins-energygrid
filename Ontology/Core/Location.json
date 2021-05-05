@@ -24,7 +24,7 @@
             "description": "The gml yPosition of the location .",
             "writable": true,
             "schema": "double"
-        }     
+        }
     ],
     "@context": "dtmi:dtdl:context;2"
 }

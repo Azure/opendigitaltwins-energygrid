@@ -1,12 +1,12 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsWindUnit;1",
-        "@type": "Interface",
-        "contents": [],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsUnit;1"
-        ],
-        "displayName": "PowerElectronicsWindUnit",
-        "comment": "A wind generating unit that connects to the AC network with power electronics rather than rotating machines or an aggregation of such units.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsWindUnit;1",
+    "@type": "Interface",
+    "displayName": "PowerElectronicsWindUnit",
+    "comment": "A wind generating unit that connects to the AC network with power electronics rather than rotating machines or an aggregation of such units.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsUnit;1"
+    ]
+}

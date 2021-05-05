@@ -1,27 +1,27 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPump;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "HydroPowerPlant",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPowerPlant;1",
-                "comment": "The hydro pump may be a member of a pumped storage plant or a pump for distributing water.",
-                "displayName": "HydroPowerPlant"
-            },
-            {
-                "@type": "Relationship",
-                "name": "RotatingMachine",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1",
-                "comment": "The synchronous machine drives the turbine which moves the water from a low elevation to a higher elevation. The direction of machine rotation for pumping may or may not be the same as for generating.",
-                "displayName": "RotatingMachine"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
-        ],
-        "displayName": "HydroPump",
-        "comment": "A synchronous motor-driven pump, typically associated with a pumped storage plant.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPump;1",
+    "@type": "Interface",
+    "displayName": "HydroPump",
+    "comment": "A synchronous motor-driven pump, typically associated with a pumped storage plant.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "HydroPowerPlant",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPowerPlant;1",
+            "comment": "The hydro pump may be a member of a pumped storage plant or a pump for distributing water.",
+            "displayName": "HydroPowerPlant"
+        },
+        {
+            "@type": "Relationship",
+            "name": "RotatingMachine",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1",
+            "comment": "The synchronous machine drives the turbine which moves the water from a low elevation to a higher elevation. The direction of machine rotation for pumping may or may not be the same as for generating.",
+            "displayName": "RotatingMachine"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
+    ]
+}

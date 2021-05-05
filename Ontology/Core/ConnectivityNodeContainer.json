@@ -1,20 +1,20 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNodeContainer;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "ConnectivityNodes",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1",
-                "comment": "Connectivity nodes which belong to this connectivity node container.",
-                "displayName": "ConnectivityNodes"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
-        ],
-        "displayName": "ConnectivityNodeContainer",
-        "description": "A base class for all objects that may contain connectivity nodes or topological nodes.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNodeContainer;1",
+    "@type": "Interface",
+    "displayName": "ConnectivityNodeContainer",
+    "description": "A base class for all objects that may contain connectivity nodes or topological nodes.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "ConnectivityNodes",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1",
+            "comment": "Connectivity nodes which belong to this connectivity node container.",
+            "displayName": "ConnectivityNodes"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerSystemResource;1"
+    ]
+}

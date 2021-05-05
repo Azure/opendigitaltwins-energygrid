@@ -1,34 +1,34 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsUnit;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "maxP",
-                "comment": "Maximum active power limit. This is the maximum (nameplate) limit for the unit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "minP",
-                "comment": "Minimum active power limit. This is the minimum (nameplate) limit for the unit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "PowerElectronicsConnection",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsConnection;1",
-                "comment": "A power electronics unit has a connection to the AC network.",
-                "displayName": "PowerElectronicsConnection"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
-        ],
-        "displayName": "PowerElectronicsUnit",
-        "comment": "A generating unit or battery or aggregation that connects to the AC network using power electronics rather than rotating machines.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsUnit;1",
+    "@type": "Interface",
+    "displayName": "PowerElectronicsUnit",
+    "comment": "A generating unit or battery or aggregation that connects to the AC network using power electronics rather than rotating machines.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "maxP",
+            "comment": "Maximum active power limit. This is the maximum (nameplate) limit for the unit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "minP",
+            "comment": "Minimum active power limit. This is the minimum (nameplate) limit for the unit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "PowerElectronicsConnection",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsConnection;1",
+            "comment": "A power electronics unit has a connection to the AC network.",
+            "displayName": "PowerElectronicsConnection"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
+    ]
+}
