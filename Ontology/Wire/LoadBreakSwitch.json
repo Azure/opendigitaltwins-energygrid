@@ -1,12 +1,12 @@
-   {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:LoadBreakSwitch;1",
-        "@type": "Interface",
-        "contents": [],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:ProtectedSwitch;1"
-        ],
-        "displayName": "LoadBreakSwitch",
-        "comment": "A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:LoadBreakSwitch;1",
+    "@type": "Interface",
+    "displayName": "LoadBreakSwitch",
+    "comment": "A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:ProtectedSwitch;1"
+    ]
+}

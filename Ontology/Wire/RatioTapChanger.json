@@ -1,34 +1,34 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChanger;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "stepVoltageIncrement",
-                "comment": "Tap step increment, in per cent of rated voltage of the power transformer end, per step position.\nWhen the increment is negative, the voltage decreases when the tap step increases.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "RatioTapChangerTable",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChangerTable;1",
-                "comment": "The tap ratio table for this ratio  tap changer.",
-                "displayName": "RatioTapChangerTable"
-            },
-            {
-                "@type": "Relationship",
-                "name": "TransformerEnd",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerEnd;1",
-                "comment": "Transformer end to which this ratio tap changer belongs.",
-                "displayName": "TransformerEnd"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChanger;1"
-        ],
-        "displayName": "RatioTapChanger",
-        "comment": "A tap changer that changes the voltage ratio impacting the voltage magnitude but not the phase angle across the transformer.\n\nAngle sign convention (general): Positive value indicates a positive phase shift from the winding where the tap is located to the other winding (for a two-winding transformer).",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChanger;1",
+    "@type": "Interface",
+    "displayName": "RatioTapChanger",
+    "comment": "A tap changer that changes the voltage ratio impacting the voltage magnitude but not the phase angle across the transformer.\n\nAngle sign convention (general): Positive value indicates a positive phase shift from the winding where the tap is located to the other winding (for a two-winding transformer).",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "stepVoltageIncrement",
+            "comment": "Tap step increment, in per cent of rated voltage of the power transformer end, per step position.\nWhen the increment is negative, the voltage decreases when the tap step increases.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "RatioTapChangerTable",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChangerTable;1",
+            "comment": "The tap ratio table for this ratio  tap changer.",
+            "displayName": "RatioTapChangerTable"
+        },
+        {
+            "@type": "Relationship",
+            "name": "TransformerEnd",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerEnd;1",
+            "comment": "Transformer end to which this ratio tap changer belongs.",
+            "displayName": "TransformerEnd"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChanger;1"
+    ]
+}

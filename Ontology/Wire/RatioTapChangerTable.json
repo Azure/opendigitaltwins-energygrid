@@ -1,27 +1,27 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChangerTable;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "RatioTapChanger",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChanger;1",
-                "comment": "The ratio tap changer of this tap ratio table.",
-                "displayName": "RatioTapChanger"
-            },
-            {
-                "@type": "Relationship",
-                "name": "RatioTapChangerTablePoint",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChangerTablePoint;1",
-                "comment": "Points of this table.",
-                "displayName": "RatioTapChangerTablePoint"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
-        ],
-        "displayName": "RatioTapChangerTable",
-        "comment": "Describes a curve for how the voltage magnitude and impedance varies with the tap step. ",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChangerTable;1",
+    "@type": "Interface",
+    "displayName": "RatioTapChangerTable",
+    "comment": "Describes a curve for how the voltage magnitude and impedance varies with the tap step. ",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "RatioTapChanger",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChanger;1",
+            "comment": "The ratio tap changer of this tap ratio table.",
+            "displayName": "RatioTapChanger"
+        },
+        {
+            "@type": "Relationship",
+            "name": "RatioTapChangerTablePoint",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChangerTablePoint;1",
+            "comment": "Points of this table.",
+            "displayName": "RatioTapChangerTablePoint"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+    ]
+}

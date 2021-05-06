@@ -4,7 +4,7 @@
     "displayName": "Conductor",
     "comment": "Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.  ",
     "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
-        "contents": [
+    "contents": [
         {
             "@type": "Property",
             "name": "length",

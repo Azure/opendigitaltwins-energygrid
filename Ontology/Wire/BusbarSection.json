@@ -1,20 +1,20 @@
-   {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:BusbarSection;1",
-        "@type": "Interface",
-        "contents": [
-			{
-                "@type": "Property",
-                "name": "ipMax",
-                "comment": "Maximum allowable peak short-circuit current of busbar.",
-                "schema": "float",
-                "writable": true
-            }
-		],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:Connector;1"
-        ],
-        "displayName": "BusbarSection",
-        "comment": "A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation. \nVoltage measurements are typically obtained from voltage transformers that are connected to busbar sections. A bus bar section may have many physical terminals but for analysis is modelled with exactly one logical terminal.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:BusbarSection;1",
+    "@type": "Interface",
+    "displayName": "BusbarSection",
+    "comment": "A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation. \nVoltage measurements are typically obtained from voltage transformers that are connected to busbar sections. A bus bar section may have many physical terminals but for analysis is modelled with exactly one logical terminal.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "ipMax",
+            "comment": "Maximum allowable peak short-circuit current of busbar.",
+            "schema": "float",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Connector;1"
+    ]
+}

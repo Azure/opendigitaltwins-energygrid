@@ -1,52 +1,52 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChangerTablePoint;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "b",
-                "description": "The magnetizing branch susceptance deviation as a percentage of nominal value. The actual susceptance is calculated as follows:\ncalculated magnetizing susceptance = b(nominal) * (1 + b(from this class)/100).   The b(nominal) is defined as the static magnetizing susceptance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "g",
-                "description": "The magnetizing branch conductance deviation as a percentage of nominal value. The actual conductance is calculated as follows:\ncalculated magnetizing conductance = g(nominal) * (1 + g(from this class)/100).   The g(nominal) is defined as the static magnetizing conductance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "r",
-                "description": "The resistance deviation as a percentage of nominal value. The actual reactance is calculated as follows:\ncalculated resistance = r(nominal) * (1 + r(from this class)/100).   The r(nominal) is defined as the static resistance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratio",
-                "description": "The voltage at the tap step divided by rated voltage of the transformer end having the tap changer. Hence this is a value close to one.\nFor example, if the ratio at step 1 is 1.01, and the rated voltage of the transformer end is 110kV, then the voltage obtained by setting the tap changer to step 1 to is 111.1kV.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "step",
-                "description": "The tap step.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "x",
-                "description": "The series reactance deviation as a percentage of nominal value. The actual reactance is calculated as follows:\ncalculated reactance = x(nominal) * (1 + x(from this class)/100).   The x(nominal) is defined as the static series reactance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.",
-                "schema": "float",
-                "writable": true
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "displayName": "TapChangerTablePoint",
-        "description": "Describes each tap step in the tabular curve.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChangerTablePoint;1",
+    "@type": "Interface",
+    "displayName": "TapChangerTablePoint",
+    "description": "Describes each tap step in the tabular curve.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "b",
+            "description": "The magnetizing branch susceptance deviation as a percentage of nominal value. The actual susceptance is calculated as follows:\ncalculated magnetizing susceptance = b(nominal) * (1 + b(from this class)/100).   The b(nominal) is defined as the static magnetizing susceptance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "g",
+            "description": "The magnetizing branch conductance deviation as a percentage of nominal value. The actual conductance is calculated as follows:\ncalculated magnetizing conductance = g(nominal) * (1 + g(from this class)/100).   The g(nominal) is defined as the static magnetizing conductance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "r",
+            "description": "The resistance deviation as a percentage of nominal value. The actual reactance is calculated as follows:\ncalculated resistance = r(nominal) * (1 + r(from this class)/100).   The r(nominal) is defined as the static resistance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratio",
+            "description": "The voltage at the tap step divided by rated voltage of the transformer end having the tap changer. Hence this is a value close to one.\nFor example, if the ratio at step 1 is 1.01, and the rated voltage of the transformer end is 110kV, then the voltage obtained by setting the tap changer to step 1 to is 111.1kV.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "step",
+            "description": "The tap step.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "x",
+            "description": "The series reactance deviation as a percentage of nominal value. The actual reactance is calculated as follows:\ncalculated reactance = x(nominal) * (1 + x(from this class)/100).   The x(nominal) is defined as the static series reactance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form.",
+            "schema": "float",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

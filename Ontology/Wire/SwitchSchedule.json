@@ -1,20 +1,20 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SwitchSchedule;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "Switch",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1",
-                "description": "A SwitchSchedule is associated with a Switch.",
-                "displayName": "Switch"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:SeasonDayTypeSchedule;1"
-        ],
-        "displayName": "SwitchSchedule",
-        "description": "A schedule of switch positions.  If RegularTimePoint.value1 is 0, the switch is open.  If 1, the switch is closed.  ",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SwitchSchedule;1",
+    "@type": "Interface",
+    "displayName": "SwitchSchedule",
+    "description": "A schedule of switch positions.  If RegularTimePoint.value1 is 0, the switch is open.  If 1, the switch is closed.  ",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "Switch",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1",
+            "description": "A SwitchSchedule is associated with a Switch.",
+            "displayName": "Switch"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:SeasonDayTypeSchedule;1"
+    ]
+}

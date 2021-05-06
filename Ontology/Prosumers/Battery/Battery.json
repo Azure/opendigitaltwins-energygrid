@@ -1,8 +1,8 @@
 {
-  "@id": "dtmi:igitaltwins:cim:energy:Battery;1",
+  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Battery;1",
   "@type": "Interface",
   "displayName": "Battery",
-  "description": "An example of a battery model",
+  "description": "A battery model",
   "contents": [
     {
       "@type": "Property",

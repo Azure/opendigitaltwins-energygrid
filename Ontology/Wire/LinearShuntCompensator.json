@@ -1,27 +1,27 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:LinearShuntCompensator;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "bPerSection",
-                "comment": "Positive sequence shunt (charging) susceptance per section.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "gPerSection",
-                "comment": "Positive sequence shunt (charging) conductance per section.",
-                "schema": "float",
-                "writable": true
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:ShuntCompensator;1"
-        ],
-        "displayName": "LinearShuntCompensator",
-        "comment": "A linear shunt compensator has banks or sections with equal admittance values.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:LinearShuntCompensator;1",
+    "@type": "Interface",
+    "displayName": "LinearShuntCompensator",
+    "comment": "A linear shunt compensator has banks or sections with equal admittance values.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "bPerSection",
+            "comment": "Positive sequence shunt (charging) susceptance per section.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "gPerSection",
+            "comment": "Positive sequence shunt (charging) conductance per section.",
+            "schema": "float",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:ShuntCompensator;1"
+    ]
+}

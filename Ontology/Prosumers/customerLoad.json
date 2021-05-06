@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:igitaltwins:ngsi_ld:cim:energy:CustomerLoad;1",
+  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:CustomerLoad;1",
   "@type": "Interface",
   "displayName": "CustomerLoad",
   "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: a MV customer is a CustomerLoad",

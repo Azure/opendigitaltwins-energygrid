@@ -1,55 +1,55 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ShuntCompensator;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "aVRDelay",
-                "description": "An automatic voltage regulation delay (AVRDelay) which is the time delay from a change in voltage to when the capacitor is allowed to change state. This filters out temporary changes in voltage.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "grounded",
-                "description": "Used for Yn and Zn connections. True if the neutral is solidly grounded.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "maximumSections",
-                "description": "The maximum number of sections that may be switched in. ",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "nomU",
-                "description": "The voltage at which the nominal reactive power may be calculated. This should normally be within 10% of the voltage at which the capacitor is connected to the network.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "normalSections",
-                "description": "The normal number of sections switched in. The value shall be between zero and ShuntCompensator.maximumSections.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "voltageSensitivity",
-                "description": "Voltage sensitivity required for the device to regulate the bus voltage, in voltage/reactive power.",
-                "schema": "float",
-                "writable": true
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1"
-        ],
-        "displayName": "ShuntCompensator",
-        "description": "A shunt capacitor or reactor or switchable bank of shunt capacitors or reactors. A section of a shunt compensator is an individual capacitor or reactor. A negative value for bPerSection indicates that the compensator is a reactor. ShuntCompensator is a single terminal device.  Ground is implied.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ShuntCompensator;1",
+    "@type": "Interface",
+    "displayName": "ShuntCompensator",
+    "description": "A shunt capacitor or reactor or switchable bank of shunt capacitors or reactors. A section of a shunt compensator is an individual capacitor or reactor. A negative value for bPerSection indicates that the compensator is a reactor. ShuntCompensator is a single terminal device.  Ground is implied.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "aVRDelay",
+            "description": "An automatic voltage regulation delay (AVRDelay) which is the time delay from a change in voltage to when the capacitor is allowed to change state. This filters out temporary changes in voltage.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "grounded",
+            "description": "Used for Yn and Zn connections. True if the neutral is solidly grounded.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "maximumSections",
+            "description": "The maximum number of sections that may be switched in. ",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "nomU",
+            "description": "The voltage at which the nominal reactive power may be calculated. This should normally be within 10% of the voltage at which the capacitor is connected to the network.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "normalSections",
+            "description": "The normal number of sections switched in. The value shall be between zero and ShuntCompensator.maximumSections.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "voltageSensitivity",
+            "description": "Voltage sensitivity required for the device to regulate the bus voltage, in voltage/reactive power.",
+            "schema": "float",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1"
+    ]
+}
