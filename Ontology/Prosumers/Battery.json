@@ -1,20 +1,27 @@
 {
-  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ElectricVehicle;1",
+  "@id": "dtmi:igitaltwins:cim:energy:Battery;1",
   "@type": "Interface",
-  "displayName": "ElectricVehicle",
-  "description":  "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models: an electcric vehicle model",
+  "displayName": "Battery",
+  "description": "An example of a battery model",
   "contents": [
     {
       "@type": "Property",
-      "name": "evName",
-      "description": "The name of the electcric vehicle.",
+      "name": "name",
+      "description": "The name of a battery.",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "batteryTypeName",
+      "description": "Type of battery.",
       "writable": true,
       "schema": "string"
     },
     {
       "@type": "Property",
       "name": "capacity",
-      "description": "Total EV battery capacity.",
+      "description": "Total battery capacity.",
       "writable": true,
       "schema": "double"
     },
@@ -22,6 +29,13 @@
       "@type": "Property",
       "name": "chargeMin",
       "description": "Minimum charge limit.",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "chargeMax",
+      "description": "Maximum charge limit.",
       "writable": true,
       "schema": "double"
     },
@@ -59,19 +73,6 @@
       "description": "Target capacity to be charged",
       "writable": true,
       "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "chargeTargetTimestamp",
-      "description": "Target end datetime to be charged",
-      "writable": true,
-      "schema": "dateTime"
-    },
-    {
-      "@type": "Relationship",
-      "name": "connectedTo_ChargingStation",
-      "description": "EV --> ChargingStation",
-      "target": "dtmi:digitaltwins:ngsi_ld:city:EVChargingStation;1"
     }
   ],
   "@context": "dtmi:dtdl:context;2"

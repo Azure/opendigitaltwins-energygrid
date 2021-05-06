@@ -1,41 +1,41 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergySource;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "nominalVoltage",
-                "comment": "Phase-to-phase nominal voltage.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "pMax",
-                "comment": "This is the maximum active power that can be produced by the source. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "pMin",
-                "comment": "This is the minimum active power that can be produced by the source. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "EnergySchedulingType",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergySchedulingType;1",
-                "comment": "Energy Scheduling Type of an Energy Source.",
-                "displayName": "EnergySchedulingType"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergyConnection;1"
-        ],
-        "displayName": "EnergySource",
-        "comment": "A generic equivalent for an energy supplier on a transmission or distribution voltage level.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergySource;1",
+    "@type": "Interface",
+    "displayName": "EnergySource",
+    "comment": "A generic equivalent for an energy supplier on a transmission or distribution voltage level.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "nominalVoltage",
+            "comment": "Phase-to-phase nominal voltage.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "pMax",
+            "comment": "This is the maximum active power that can be produced by the source. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "pMin",
+            "comment": "This is the minimum active power that can be produced by the source. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "EnergySchedulingType",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergySchedulingType;1",
+            "comment": "Energy Scheduling Type of an Energy Source.",
+            "displayName": "EnergySchedulingType"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergyConnection;1"
+    ]
+}

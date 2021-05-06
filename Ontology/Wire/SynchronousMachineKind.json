@@ -1,8 +1,11 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachineKind;1",
-        "@type": "Interface",
-        "contents": [
-		 {
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachineKind;1",
+    "@type": "Interface",
+    "displayName": "SynchronousMachineKind",
+    "description": "Synchronous machine type.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
             "@type": "Property",
             "name": "SynchronousMachineKind",
             "description": "Synchronous machine type.",
@@ -21,7 +24,7 @@
                         "displayName": "condenser",
                         "enumValue": "condenser"
                     },
-					{
+                    {
                         "name": "generatorOrCondenser",
                         "displayName": "generatorOrCondenser",
                         "enumValue": "generatorOrCondenser"
@@ -31,7 +34,7 @@
                         "displayName": "motor",
                         "enumValue": "motor"
                     },
-					{
+                    {
                         "name": "generatorOrMotor",
                         "displayName": "generatorOrMotor",
                         "enumValue": "generatorOrMotor"
@@ -41,17 +44,14 @@
                         "displayName": "motorOrCondenser",
                         "enumValue": "motorOrCondenser"
                     },
-					{
+                    {
                         "name": "generatorOrCondenserOrMotor",
                         "displayName": "generatorOrCondenserOrMotor",
                         "enumValue": "generatorOrCondenserOrMotor"
-                    }					
+                    }
                 ]
             }
         }
-		],
-        "@context": "dtmi:dtdl:context;2",
-        "displayName": "SynchronousMachineKind",
-        "description": "Synchronous machine type.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

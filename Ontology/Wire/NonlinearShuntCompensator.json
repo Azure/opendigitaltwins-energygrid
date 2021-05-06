@@ -1,20 +1,20 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:NonlinearShuntCompensator;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "NonlinearShuntCompensatorPoints",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:NonlinearShuntCompensatorPoint;1",
-                "comment": "All points of the non-linear shunt compensator.",
-                "displayName": "NonlinearShuntCompensatorPoints"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:ShuntCompensator;1"
-        ],
-        "displayName": "NonlinearShuntCompensator",
-        "comment": "A non linear shunt compensator has bank or section admittance values that differ. The attributes g, b, g0 and b0 of the associated NonlinearShuntCompensatorPoint describe the total conductance and admittance of a NonlinearShuntCompensatorPoint at a section number specified by NonlinearShuntCompensatorPoint.sectionNumber.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:NonlinearShuntCompensator;1",
+    "@type": "Interface",
+    "displayName": "NonlinearShuntCompensator",
+    "comment": "A non linear shunt compensator has bank or section admittance values that differ. The attributes g, b, g0 and b0 of the associated NonlinearShuntCompensatorPoint describe the total conductance and admittance of a NonlinearShuntCompensatorPoint at a section number specified by NonlinearShuntCompensatorPoint.sectionNumber.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "NonlinearShuntCompensatorPoints",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:NonlinearShuntCompensatorPoint;1",
+            "comment": "All points of the non-linear shunt compensator.",
+            "displayName": "NonlinearShuntCompensatorPoints"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:ShuntCompensator;1"
+    ]
+}

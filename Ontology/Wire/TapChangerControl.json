@@ -1,20 +1,20 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChangerControl;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "TapChanger",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChanger;1",
-                "description": "The tap changers that participates in this regulating tap control scheme.",
-                "displayName": "TapChanger"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingControl;1"
-        ],
-        "displayName": "TapChangerControl",
-        "description": "Describes behaviour specific to tap changers, e.g. how the voltage at the end of a line varies with the load level and compensation of the voltage drop by tap adjustment.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChangerControl;1",
+    "@type": "Interface",
+    "displayName": "TapChangerControl",
+    "description": "Describes behaviour specific to tap changers, e.g. how the voltage at the end of a line varies with the load level and compensation of the voltage drop by tap adjustment.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "TapChanger",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChanger;1",
+            "description": "The tap changers that participates in this regulating tap control scheme.",
+            "displayName": "TapChanger"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingControl;1"
+    ]
+}

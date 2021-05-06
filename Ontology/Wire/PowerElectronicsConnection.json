@@ -1,48 +1,48 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsConnection;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "maxQ",
-                "comment": "Maximum reactive power limit. This is the maximum (nameplate) limit for the unit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "minQ",
-                "comment": "Minimum reactive power limit for the unit. This is the minimum (nameplate) limit for the unit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedS",
-                "comment": "Nameplate apparent power rating for the unit.\nThe attribute shall have a positive value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedU",
-                "comment": "Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909.\nThe attribute shall be a positive value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "PowerElectronicsUnit",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsUnit;1",
-                "comment": "An AC network connection may have several power electronics units connecting through it.",
-                "displayName": "PowerElectronicsUnit"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1"
-        ],
-        "displayName": "PowerElectronicsConnection",
-        "comment": "A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsConnection;1",
+    "@type": "Interface",
+    "displayName": "PowerElectronicsConnection",
+    "comment": "A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "maxQ",
+            "comment": "Maximum reactive power limit. This is the maximum (nameplate) limit for the unit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "minQ",
+            "comment": "Minimum reactive power limit for the unit. This is the minimum (nameplate) limit for the unit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedS",
+            "comment": "Nameplate apparent power rating for the unit.\nThe attribute shall have a positive value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedU",
+            "comment": "Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909.\nThe attribute shall be a positive value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "PowerElectronicsUnit",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsUnit;1",
+            "comment": "An AC network connection may have several power electronics units connecting through it.",
+            "displayName": "PowerElectronicsUnit"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1"
+    ]
+}

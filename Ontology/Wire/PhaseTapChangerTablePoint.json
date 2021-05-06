@@ -1,27 +1,27 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTablePoint;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "angle",
-                "comment": "The angle difference in degrees. A positive value indicates a positive angle variation from the Terminal at the  PowerTransformerEnd,  where the TapChanger is located, into the transformer.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "PhaseTapChangerTable",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTable;1",
-                "comment": "The table of this point.",
-                "displayName": "PhaseTapChangerTable"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChangerTablePoint;1"
-        ],
-        "displayName": "PhaseTapChangerTablePoint",
-        "comment": "Describes each tap step in the phase tap changer tabular curve.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTablePoint;1",
+    "@type": "Interface",
+    "displayName": "PhaseTapChangerTablePoint",
+    "comment": "Describes each tap step in the phase tap changer tabular curve.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "angle",
+            "comment": "The angle difference in degrees. A positive value indicates a positive angle variation from the Terminal at the  PowerTransformerEnd,  where the TapChanger is located, into the transformer.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "PhaseTapChangerTable",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PhaseTapChangerTable;1",
+            "comment": "The table of this point.",
+            "displayName": "PhaseTapChangerTable"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:TapChangerTablePoint;1"
+    ]
+}

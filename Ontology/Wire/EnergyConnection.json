@@ -1,12 +1,12 @@
 {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergyConnection;1",
-        "@type": "Interface",
-        "contents": [],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
-        ],
-        "displayName": "EnergyConnection",
-        "comment": "A connection of energy generation or consumption on the power system model.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:EnergyConnection;1",
+    "@type": "Interface",
+    "displayName": "EnergyConnection",
+    "comment": "A connection of energy generation or consumption on the power system model.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
+    ]
+}

@@ -1,69 +1,69 @@
-  {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformerEnd;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "b",
-                "comment": "Magnetizing branch susceptance (B mag).  The value can be positive or negative.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "g",
-                "comment": "Magnetizing branch conductance.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "r",
-                "comment": "Resistance (star-model) of the transformer end.\nThe attribute shall be equal to or greater than zero for non-equivalent transformers.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedS",
-                "comment": "Normal apparent power rating.\nThe attribute shall be a positive value. For a two-winding transformer the values for the high and low voltage sides shall be identical. ",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedU",
-                "comment": "Rated voltage: phase-phase for three-phase windings, and either phase-phase or phase-neutral for single-phase windings.\nA high voltage side, as given by TransformerEnd.endNumber, shall have a ratedU that is greater than or equal to ratedU for the lower voltage sides.\nThe attribute shall be a positive value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "x",
-                "comment": "Positive sequence series reactance (star-model) of the transformer end.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "PowerTransformer",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformer;1",
-                "comment": "The power transformer of this power transformer end.",
-                "displayName": "PowerTransformer"
-            },
-            {
-                "@type": "Relationship",
-                "name": "connectionKind",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindingConnection;1",
-                "comment": "Kind of connection.",
-                "displayName": "connectionKind"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerEnd;1"
-        ],
-        "displayName": "PowerTransformerEnd",
-        "comment": "A PowerTransformerEnd is associated with each Terminal of a PowerTransformer.\nThe impedance values r, r0, x, and x0 of a PowerTransformerEnd represents a star equivalent as follows.\n1) for a two Terminal PowerTransformer the high voltage (TransformerEnd.endNumber=1) PowerTransformerEnd has non zero values on r, r0, x, and x0 while the low voltage (TransformerEnd.endNumber=2) PowerTransformerEnd has zero values for r, r0, x, and x0.  Parameters are always provided, even if the PowerTransformerEnds have the s",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformerEnd;1",
+    "@type": "Interface",
+    "displayName": "PowerTransformerEnd",
+    "comment": "A PowerTransformerEnd is associated with each Terminal of a PowerTransformer.\nThe impedance values r, r0, x, and x0 of a PowerTransformerEnd represents a star equivalent as follows.\n1) for a two Terminal PowerTransformer the high voltage (TransformerEnd.endNumber=1) PowerTransformerEnd has non zero values on r, r0, x, and x0 while the low voltage (TransformerEnd.endNumber=2) PowerTransformerEnd has zero values for r, r0, x, and x0.  Parameters are always provided, even if the PowerTransformerEnds have the s",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "b",
+            "comment": "Magnetizing branch susceptance (B mag).  The value can be positive or negative.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "g",
+            "comment": "Magnetizing branch conductance.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "r",
+            "comment": "Resistance (star-model) of the transformer end.\nThe attribute shall be equal to or greater than zero for non-equivalent transformers.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedS",
+            "comment": "Normal apparent power rating.\nThe attribute shall be a positive value. For a two-winding transformer the values for the high and low voltage sides shall be identical. ",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedU",
+            "comment": "Rated voltage: phase-phase for three-phase windings, and either phase-phase or phase-neutral for single-phase windings.\nA high voltage side, as given by TransformerEnd.endNumber, shall have a ratedU that is greater than or equal to ratedU for the lower voltage sides.\nThe attribute shall be a positive value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "x",
+            "comment": "Positive sequence series reactance (star-model) of the transformer end.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "PowerTransformer",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformer;1",
+            "comment": "The power transformer of this power transformer end.",
+            "displayName": "PowerTransformer"
+        },
+        {
+            "@type": "Relationship",
+            "name": "connectionKind",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindingConnection;1",
+            "comment": "Kind of connection.",
+            "displayName": "connectionKind"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerEnd;1"
+    ]
+}

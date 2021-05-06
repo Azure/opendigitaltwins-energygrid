@@ -1,20 +1,20 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Line;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Relationship",
-                "name": "Region",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SubGeographicalRegion;1",
-                "comment": "The sub-geographical region of the line.",
-                "displayName": "Region"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"
-        ],
-        "displayName": "Line",
-        "comment": "Contains equipment beyond a substation belonging to a power transmission line. ",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Line;1",
+    "@type": "Interface",
+    "displayName": "Line",
+    "comment": "Contains equipment beyond a substation belonging to a power transmission line. ",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "Region",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SubGeographicalRegion;1",
+            "comment": "The sub-geographical region of the line.",
+            "displayName": "Region"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"
+    ]
+}

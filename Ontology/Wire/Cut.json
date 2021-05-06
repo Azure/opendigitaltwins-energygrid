@@ -1,6 +1,9 @@
  {
         "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Cut;1",
         "@type": "Interface",
+        "displayName": "Cut",
+        "comment": "A cut separates a line segment into two parts. The cut appears as a switch inserted between these two parts and connects them together. As the cut is normally open there is no galvanic connection between the two line segment parts. But it is possible to close the cut to get galvanic connection.\nThe cut terminals are oriented towards the line segment terminals with the same sequence number. Hence the cut terminal with sequence number equal to 1 is oriented to the line segment's terminal with sequence number ",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
         "contents": [
             {
                 "@type": "Property",
@@ -20,8 +23,6 @@
         "@context": "dtmi:dtdl:context;2",
         "extends": [
             "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1"
-        ],
-        "displayName": "Cut",
-        "comment": "A cut separates a line segment into two parts. The cut appears as a switch inserted between these two parts and connects them together. As the cut is normally open there is no galvanic connection between the two line segment parts. But it is possible to close the cut to get galvanic connection.\nThe cut terminals are oriented towards the line segment terminals with the same sequence number. Hence the cut terminal with sequence number equal to 1 is oriented to the line segment's terminal with sequence number ",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+        ]
+      
     }

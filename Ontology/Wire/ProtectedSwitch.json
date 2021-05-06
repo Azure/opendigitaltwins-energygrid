@@ -1,12 +1,12 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ProtectedSwitch;1",
-        "@type": "Interface",
-        "contents": [],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1"
-        ],
-        "displayName": "ProtectedSwitch",
-        "comment": "A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ProtectedSwitch;1",
+    "@type": "Interface",
+    "displayName": "ProtectedSwitch",
+    "comment": "A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Switch;1"
+    ]
+}

@@ -1,6 +1,9 @@
    {
         "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:AsynchronousMachine;1",
         "@type": "Interface",
+        "displayName": "AsynchronousMachine",
+        "comment": "A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.",
+        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
         "contents": [
             {
                 "@type": "Property",
@@ -20,8 +23,6 @@
         "@context": "dtmi:dtdl:context;2",
         "extends": [
             "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1"
-        ],
-        "displayName": "AsynchronousMachine",
-        "comment": "A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
+        ]
+       
     }

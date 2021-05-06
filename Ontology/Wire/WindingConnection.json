@@ -1,9 +1,9 @@
   {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindingConnection;1",
-        "@type": "Interface",
-        "contents": [],
-        "@context": "dtmi:dtdl:context;2",
-        "displayName": "WindingConnection",
-        "comment": "Winding connection type.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindingConnection;1",
+    "@type": "Interface",
+    "displayName": "WindingConnection",
+    "comment": "Winding connection type.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2"
+  }

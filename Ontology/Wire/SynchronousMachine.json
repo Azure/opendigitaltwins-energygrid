@@ -1,48 +1,48 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachine;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "maxQ",
-                "comment": "Maximum reactive power limit. This is the maximum (nameplate) limit for the unit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "minQ",
-                "comment": "Minimum reactive power limit for the unit.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "qPercent",
-                "comment": "Part of the coordinated reactive control that comes from this machine. The attribute is used as a participation factor not necessarily summing up to 100% for the participating devices in the control.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "InitialReactiveCapabilityCurve",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ReactiveCapabilityCurve;1",
-                "comment": "The default reactive capability curve for use by a synchronous machine.",
-                "displayName": "InitialReactiveCapabilityCurve"
-            },
-            {
-                "@type": "Relationship",
-                "name": "type",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachineKind;1",
-                "comment": "Modes that this synchronous machine can operate in.",
-                "displayName": "type"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1"
-        ],
-        "displayName": "SynchronousMachine",
-        "comment": "An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachine;1",
+    "@type": "Interface",
+    "displayName": "SynchronousMachine",
+    "comment": "An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "maxQ",
+            "comment": "Maximum reactive power limit. This is the maximum (nameplate) limit for the unit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "minQ",
+            "comment": "Minimum reactive power limit for the unit.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "qPercent",
+            "comment": "Part of the coordinated reactive control that comes from this machine. The attribute is used as a participation factor not necessarily summing up to 100% for the participating devices in the control.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "InitialReactiveCapabilityCurve",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ReactiveCapabilityCurve;1",
+            "comment": "The default reactive capability curve for use by a synchronous machine.",
+            "displayName": "InitialReactiveCapabilityCurve"
+        },
+        {
+            "@type": "Relationship",
+            "name": "type",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachineKind;1",
+            "comment": "Modes that this synchronous machine can operate in.",
+            "displayName": "type"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1"
+    ]
+}

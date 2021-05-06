@@ -1,48 +1,48 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "ratedPowerFactor",
-                "comment": "Power factor (nameplate data). It is primarily used for short circuit data exchange according to IEC 60909. The attribute cannot be a negative value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedS",
-                "comment": "Nameplate apparent power rating for the unit.\nThe attribute shall have a positive value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "ratedU",
-                "comment": "Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909.\nThe attribute shall be a positive value.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "GeneratingUnit",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1",
-                "comment": "A synchronous machine may operate as a generator and as such becomes a member of a generating unit.",
-                "displayName": "GeneratingUnit"
-            },
-            {
-                "@type": "Relationship",
-                "name": "HydroPump",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPump;1",
-                "comment": "The synchronous machine drives the turbine which moves the water from a low elevation to a higher elevation. The direction of machine rotation for pumping may or may not be the same as for generating.",
-                "displayName": "HydroPump"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1"
-        ],
-        "displayName": "RotatingMachine",
-        "comment": "A rotating machine which may be used as a generator or motor.",
-        "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:RotatingMachine;1",
+    "@type": "Interface",
+    "displayName": "RotatingMachine",
+    "comment": "A rotating machine which may be used as a generator or motor.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "ratedPowerFactor",
+            "comment": "Power factor (nameplate data). It is primarily used for short circuit data exchange according to IEC 60909. The attribute cannot be a negative value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedS",
+            "comment": "Nameplate apparent power rating for the unit.\nThe attribute shall have a positive value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ratedU",
+            "comment": "Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909.\nThe attribute shall be a positive value.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "GeneratingUnit",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1",
+            "comment": "A synchronous machine may operate as a generator and as such becomes a member of a generating unit.",
+            "displayName": "GeneratingUnit"
+        },
+        {
+            "@type": "Relationship",
+            "name": "HydroPump",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:HydroPump;1",
+            "comment": "The synchronous machine drives the turbine which moves the water from a low elevation to a higher elevation. The direction of machine rotation for pumping may or may not be the same as for generating.",
+            "displayName": "HydroPump"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1"
+    ]
+}

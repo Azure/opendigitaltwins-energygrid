@@ -1,27 +1,27 @@
-  {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SeriesCompensator;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "r",
-                "description": "Positive sequence resistance.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "x",
-                "description": "Positive sequence reactance.",
-                "schema": "float",
-                "writable": true
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
-        ],
-        "displayName": "SeriesCompensator",
-        "description": "A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance.  It is a two terminal device.",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SeriesCompensator;1",
+    "@type": "Interface",
+    "displayName": "SeriesCompensator",
+    "description": "A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance.  It is a two terminal device.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "r",
+            "description": "Positive sequence resistance.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "x",
+            "description": "Positive sequence reactance.",
+            "schema": "float",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1"
+    ]
+}

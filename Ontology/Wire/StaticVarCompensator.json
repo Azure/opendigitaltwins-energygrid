@@ -1,48 +1,48 @@
- {
-        "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:StaticVarCompensator;1",
-        "@type": "Interface",
-        "contents": [
-            {
-                "@type": "Property",
-                "name": "capacitiveRating",
-                "description": "Capacitive reactance at maximum capacitive reactive power.  Shall always be positive.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "inductiveRating",
-                "description": "Inductive reactance at maximum inductive reactive power.  Shall always be negative.  ",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "slope",
-                "description": "The characteristics slope of an SVC defines how the reactive power output changes in proportion to the difference between the regulated bus voltage and the voltage setpoint.\nThe attribute shall be a positive value or zero.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Property",
-                "name": "voltageSetPoint",
-                "description": "The reactive power output of the SVC is proportional to the difference between the voltage at the regulated bus and the voltage setpoint.  When the regulated bus voltage is equal to the voltage setpoint, the reactive power output is zero.",
-                "schema": "float",
-                "writable": true
-            },
-            {
-                "@type": "Relationship",
-                "name": "sVCControlMode",
-                "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SVCControlMode;1",
-                "description": "SVC control mode.",
-                "displayName": "sVCControlMode"
-            }
-        ],
-        "@context": "dtmi:dtdl:context;2",
-        "extends": [
-            "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1"
-        ],
-        "displayName": "StaticVarCompensator",
-        "description": "A facility for providing variable and controllable shunt reactive power. The SVC typically consists of a stepdown transformer, filter, thyristor-controlled reactor, and thyristor-switched capacitor arms.\n\nThe SVC may operate in fixed MVar output mode or in voltage control mode. When in voltage control mode, the output of the SVC will be proportional to the deviation of voltage at the controlled bus from the voltage setpoint.  The SVC characteristic slope defines the proportion.  If the voltage at the contro",
-        "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models"
-    }
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:StaticVarCompensator;1",
+    "@type": "Interface",
+    "displayName": "StaticVarCompensator",
+    "description": "A facility for providing variable and controllable shunt reactive power. The SVC typically consists of a stepdown transformer, filter, thyristor-controlled reactor, and thyristor-switched capacitor arms.\n\nThe SVC may operate in fixed MVar output mode or in voltage control mode. When in voltage control mode, the output of the SVC will be proportional to the deviation of voltage at the controlled bus from the voltage setpoint.  The SVC characteristic slope defines the proportion.  If the voltage at the contro",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "capacitiveRating",
+            "description": "Capacitive reactance at maximum capacitive reactive power.  Shall always be positive.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "inductiveRating",
+            "description": "Inductive reactance at maximum inductive reactive power.  Shall always be negative.  ",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "slope",
+            "description": "The characteristics slope of an SVC defines how the reactive power output changes in proportion to the difference between the regulated bus voltage and the voltage setpoint.\nThe attribute shall be a positive value or zero.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "voltageSetPoint",
+            "description": "The reactive power output of the SVC is proportional to the difference between the voltage at the regulated bus and the voltage setpoint.  When the regulated bus voltage is equal to the voltage setpoint, the reactive power output is zero.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "sVCControlMode",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SVCControlMode;1",
+            "description": "SVC control mode.",
+            "displayName": "sVCControlMode"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingCondEq;1"
+    ]
+}
