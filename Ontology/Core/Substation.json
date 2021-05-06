@@ -2,7 +2,7 @@
 	"@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1",
 	"@type": "Interface",
 	"displayName": "Substation",
-	"description": "A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics. ",
+	"description": "A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics.",
 	"comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
 	"contents": [
 		{
