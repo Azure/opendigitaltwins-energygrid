@@ -1,0 +1,30 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Meter;1",
+    "@type": "Interface",
+    "displayName": "Meter",
+    "description": "Physical asset that performs the metering role of the usage point. Used for measuring consumption and detection of events.",
+    "comment": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "connectionCategory",
+            "comment": "A code used to specify the connection category, e.g. low voltage, where the meter operates.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "formNumber",
+            "comment": "Meter form designation per ANSI C12.10 or other applicable standard. An alphanumeric designation denoting the circuit arrangement for which the meter is applicable and its specific terminal arrangement.",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "meterReading",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:MeterReading;1",            
+            "displayName": "meterReading"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

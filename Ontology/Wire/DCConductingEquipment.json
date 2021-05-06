@@ -1,0 +1,27 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:DCConductingEquipment;1",
+    "@type": "Interface",
+    "displayName": "DCConductingEquipment",
+    "comment": "The parts of the DC power system that are designed to carry current or that are conductively connected through DC terminals.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "ratedUdc",
+            "comment": "Rated DC device voltage. The attribute shall be a positive value. It is configuration data used in power flow.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "DCTerminals",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:DCTerminal;1",
+            "comment": "A DC conducting equipment has DC terminals.",
+            "displayName": "DCTerminals"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Equipment;1"
+    ]
+}

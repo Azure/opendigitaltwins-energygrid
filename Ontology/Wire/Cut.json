@@ -14,7 +14,7 @@
             },
             {
                 "@type": "Relationship",
-                "name": "ACLineSegment",
+                "name": "associatedTo",
                 "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ACLineSegment;1",
                 "comment": "The line segment to which the cut is applied.",
                 "displayName": "ACLineSegment"
