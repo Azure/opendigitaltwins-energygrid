@@ -32,14 +32,7 @@
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RatioTapChanger;1",
             "comment": "Ratio tap changer associated with this transformer end.",
             "displayName": "RatioTapChanger"
-        },
-        {
-            "@type": "Relationship",
-            "name": "Terminal",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1",
-            "comment": "Terminal of the power transformer to which this transformer end belongs.",
-            "displayName": "Terminal"
-        }
+        }       
     ],
     "@context": "dtmi:dtdl:context;2",
     "extends": [
