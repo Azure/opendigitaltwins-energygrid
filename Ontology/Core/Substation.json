@@ -41,7 +41,7 @@
 		},
 		{
 			"@type": "Relationship",
-			"name": "DCConverterUnit",
+			"name": "dcConverterUnit",
 			"target": "dtmi:digitaltwins:ngsi_ld:cim:energy:DCConverterUnit;1",
 			"comment": "The DC converter unit belonging of the substation.",
 			"displayName": "DCConverterUnit"
@@ -52,13 +52,6 @@
 			"target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SubGeographicalRegion;1",
 			"comment": "The SubGeographicalRegion containing the substation.",
 			"displayName": "Region"
-		},
-		{
-			"@type": "Relationship",
-			"name": "VoltageLevels",
-			"target": "dtmi:digitaltwins:ngsi_ld:cim:energy:VoltageLevel;1",
-			"comment": "The voltage levels within this substation.",
-			"displayName": "VoltageLevels"
 		}
 	],
 	"@context": "dtmi:dtdl:context;2",

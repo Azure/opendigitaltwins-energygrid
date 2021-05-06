@@ -7,35 +7,15 @@
     "contents": [
         {
             "@type": "Relationship",
-            "name": "DCLines",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:DCLine;1",
-            "comment": "The DC lines in this sub-geographical region.",
-            "displayName": "DCLines"
-        },
-        {
-            "@type": "Relationship",
-            "name": "Lines",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Line;1",
-            "comment": "The lines within the sub-geographical region.",
-            "displayName": "Lines"
-        },
-        {
-            "@type": "Relationship",
-            "name": "Region",
+            "name": "withIn",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeographicalRegion;1",
             "comment": "The geographical region which this sub-geographical region is within.",
             "displayName": "Region"
-        },
-        {
-            "@type": "Relationship",
-            "name": "Substations",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1",
-            "comment": "The substations in this sub-geographical region.",
-            "displayName": "Substations"
         }
     ],
     "@context": "dtmi:dtdl:context;2",
     "extends": [
-        "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1",
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"
     ]
 }

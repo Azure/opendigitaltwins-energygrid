@@ -1,0 +1,41 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:DCLineSegment;1",
+    "@type": "Interface",
+    "displayName": "DCLineSegment",
+    "comment": "A wire or combination of wires not insulated from one another, with consistent electrical characteristics, used to carry direct current between points in the DC region of the power system.",
+    "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "capacitance",
+            "comment": "Capacitance of the DC line segment. Significant for cables only.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "inductance",
+            "comment": "Inductance of the DC line segment. Negligible compared with DCSeriesDevice used for smoothing.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "length",
+            "comment": "Segment length for calculating line section capabilities.",
+            "schema": "float",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "resistance",
+            "comment": "Resistance of the DC line segment.",
+            "schema": "float",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2",
+    "extends": [
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:DCConductingEquipment;1"
+    ]
+}

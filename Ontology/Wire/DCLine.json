@@ -1,20 +1,20 @@
 {
-    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:Line;1",
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:DCLine;1",
     "@type": "Interface",
-    "displayName": "Line",
-    "comment": "Contains equipment beyond a substation belonging to a power transmission line. ",
+    "displayName": "DCLine",
+    "comment": "Overhead lines and/or cables connecting two or more HVDC substations.",
     "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
     "contents": [
         {
             "@type": "Relationship",
             "name": "region",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SubGeographicalRegion;1",
-            "comment": "The sub-geographical region of the line.",
+            "comment": "The SubGeographicalRegion containing the DC line.",
             "displayName": "Region"
         }
     ],
     "@context": "dtmi:dtdl:context;2",
     "extends": [
-        "dtmi:digitaltwins:ngsi_ld:cim:energy:EquipmentContainer;1"
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:DCEquipmentContainer;1"
     ]
 }

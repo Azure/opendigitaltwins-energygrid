@@ -13,49 +13,49 @@
         },
         {
             "@type": "Relationship",
-            "name": "AuxiliaryEquipment",
+            "name": "auxiliaryEquipment",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:AuxiliaryEquipment;1",
             "comment": "The auxiliary equipment connected to the terminal.",
             "displayName": "AuxiliaryEquipment"
         },
         {
             "@type": "Relationship",
-            "name": "ConductingEquipment",
+            "name": "conductingEquipment",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConductingEquipment;1",
             "comment": "The conducting equipment of the terminal.  Conducting equipment have  terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes.",
             "displayName": "ConductingEquipment"
         },
         {
             "@type": "Relationship",
-            "name": "ConnectivityNode",
+            "name": "connectivityNode",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConnectivityNode;1",
             "comment": "The connectivity node to which this terminal connects with zero impedance.",
             "displayName": "ConnectivityNode"
         },
         {
             "@type": "Relationship",
-            "name": "ConverterDCSides",
+            "name": "converterDCSides",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:ACDCConverter;1",
             "comment": "All converters' DC sides linked to this point of common coupling terminal.",
             "displayName": "ConverterDCSides"
         },
         {
             "@type": "Relationship",
-            "name": "RegulatingControl",
+            "name": "regulatingControl",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulatingControl;1",
             "comment": "The controls regulating this terminal.",
             "displayName": "RegulatingControl"
         },
         {
             "@type": "Relationship",
-            "name": "TieFlow",
+            "name": "tieFlow",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TieFlow;1",
             "comment": "The control area tie flows to which this terminal associates.",
             "displayName": "TieFlow"
         },
         {
             "@type": "Relationship",
-            "name": "TransformerEnd",
+            "name": "transformerEnd",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:TransformerEnd;1",
             "comment": "All transformer ends connected at this terminal.",
             "displayName": "TransformerEnd"

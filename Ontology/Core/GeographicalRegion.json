@@ -5,16 +5,11 @@
     "comment": "A geographical region of a power system network model.",
     "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
     "contents": [
-        {
-            "@type": "Relationship",
-            "name": "Regions",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:SubGeographicalRegion;1",
-            "comment": "All sub-geographical regions within this geographical region.",
-            "displayName": "Regions"
-        }
+      
     ],
     "@context": "dtmi:dtdl:context;2",
     "extends": [
-        "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1"
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1",
+        "dtmi:digitaltwins:ngsi_ld:cim:energy:Location;1"
     ]
 }

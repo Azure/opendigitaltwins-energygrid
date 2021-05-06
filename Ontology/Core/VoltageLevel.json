@@ -25,7 +25,13 @@
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:BaseVoltage;1",
             "comment": "The base voltage used for all equipment within the voltage level.",
             "displayName": "BaseVoltage"
-        }
+        },
+        {
+            "@type": "Relationship",
+            "name": "MemberOf_Substation",
+            "description": "Shows a relationship to a substation",
+            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Substation;1"
+        } 
     ],
     "@context": "dtmi:dtdl:context;2",
     "extends": [

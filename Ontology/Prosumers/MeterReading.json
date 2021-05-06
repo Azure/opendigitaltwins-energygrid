@@ -18,7 +18,7 @@
             "comment": "Date and time interval of the data items contained within this meter reading.",
             "schema": "dateTime",
             "writable": true
-        }
+        }       
     ],
     "@context": "dtmi:dtdl:context;2",
     "extends": [
