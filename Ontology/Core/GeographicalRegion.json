@@ -4,9 +4,7 @@
     "displayName": "GeographicalRegion",
     "comment": "A geographical region of a power system network model.",
     "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
-    "contents": [
-      
-    ],
+    "contents": [],
     "@context": "dtmi:dtdl:context;2",
     "extends": [
         "dtmi:digitaltwins:ngsi_ld:cim:energy:IdentifiedObject;1",

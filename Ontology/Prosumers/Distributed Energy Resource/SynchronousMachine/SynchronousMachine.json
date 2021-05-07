@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:SynchronousMachine;1",
+  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConsumerSynchronousMachine;1",
   "@type": "Interface",
   "displayName": "SynchronousMachine",
   "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models:An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.",
@@ -42,7 +42,7 @@
     {
       "@type": "Relationship",
       "name": "MemberOf_GeneratingUnit",
-      "description": "The relationship between a synchronous machine to a generating nit",
+      "description": "The relationship between a synchronous machine to a generating unit",
       "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1"
     },
     {

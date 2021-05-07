@@ -69,7 +69,7 @@
         },
         {
             "@type": "Relationship",
-            "name": "PowerTransformerEnd",
+            "name": "PowerTransformerEnds",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerTransformerEnd;1",
             "comment": "The ends of this power transformer.",
             "displayName": "PowerTransformerEnd"

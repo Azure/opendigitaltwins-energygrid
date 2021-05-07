@@ -1,4 +1,4 @@
-  {
+{
     "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:WindingConnection;1",
     "@type": "Interface",
     "displayName": "WindingConnection",
@@ -6,4 +6,4 @@
     "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models",
     "contents": [],
     "@context": "dtmi:dtdl:context;2"
-  }
+}

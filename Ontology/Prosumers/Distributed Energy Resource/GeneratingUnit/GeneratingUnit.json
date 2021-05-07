@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:GeneratingUnit;1",
+  "@id": "dtmi:digitaltwins:ngsi_ld:cim:energy:ConsumerGeneratingUnit;1",
   "@type": "Interface",
   "displayName": "GeneratingUnit",
   "description": "Adapted from CIM and https://github.com/smart-data-models/dataModel.EnergyCIM/ data models:A single or set of synchronous machines for converting mechanical power into alternating-current power. For example, individual machines within a set may be defined for scheduling purposes while a single control signal is derived for the set. In this case there would be a GeneratingUnit for each member of the set and an additional GeneratingUnit corresponding to the set.",

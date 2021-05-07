@@ -9,35 +9,35 @@
             "@type": "Property",
             "name": "description",
             "comment": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
-            "schema": "String",
+            "schema": "string",
             "writable": true
         },
         {
             "@type": "Property",
             "name": "mRID",
             "comment": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.\nFor CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
-            "schema": "String",
+            "schema": "string",
             "writable": true
         },
         {
             "@type": "Property",
             "name": "name",
             "comment": "The name is any free human readable and possibly non unique text naming the object.",
-            "schema": "String",
+            "schema": "string",
             "writable": true
         },
         {
             "@type": "Property",
             "name": "energyIdentCodeEic",
             "comment": "The attribute is used for an exchange of the EIC code (Energy identification Code). The length of the string is 16 characters as defined by the EIC code. For details on EIC scheme please refer to ENTSO-E web site.",
-            "schema": "String",
+            "schema": "string",
             "writable": true
         },
         {
             "@type": "Property",
             "name": "shortName",
             "comment": "The attribute is used for an exchange of a human readable short name with length of the string 12 characters maximum.",
-            "schema": "String",
+            "schema": "string",
             "writable": true
         }
     ],
