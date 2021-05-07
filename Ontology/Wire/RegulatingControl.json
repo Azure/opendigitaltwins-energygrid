@@ -18,14 +18,7 @@
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:RegulationSchedule;1",
             "comment": "Schedule for this regulating control.",
             "displayName": "RegulationSchedule"
-        },
-        {
-            "@type": "Relationship",
-            "name": "Terminal",
-            "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:Terminal;1",
-            "comment": "The terminal associated with this regulating control.  The terminal is associated instead of a node, since the terminal could connect into either a topological node or a connectivity node.  Sometimes it is useful to model regulation at a terminal of a bus bar object. ",
-            "displayName": "Terminal"
-        },
+        },       
         {
             "@type": "Relationship",
             "name": "mode",
