@@ -1,0 +1,25 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energyMarket:ElectricalEnergyProvider;1",
+    "@type": "Interface",
+    "displayName": "ElectricalEnergyProvider",
+    "comment": "A electrical energy provider that can sell or buy electrical energy",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "powerSupply",
+            "comment": "the currently provided power of the supplier to the energy grid of a city",
+            "schema": "float",
+            "unit": "watt",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "powerConsumption",
+            "comment": "the currently buyed power of the supplier from the energy grid of a city",
+            "schema": "float",
+            "unit": "watt",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}

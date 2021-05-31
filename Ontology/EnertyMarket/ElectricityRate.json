@@ -1,0 +1,44 @@
+{
+    "@id": "dtmi:digitaltwins:ngsi_ld:cim:energyMarket:ElectricityRate;1",
+    "@type": "Interface",
+    "displayName": "ElectricityRate",
+    "comment": "the current rate for elctrical energy",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "rateType",
+            "comment": "The type of rate for the electrical energy",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "marketPrice",
+                        "displayName": "marketPrice",
+                        "enumValue": "marketPrice"
+                    },
+                    {
+                        "name": "endCustomerPrice",
+                        "displayName": "endCustomerPrice",
+                        "enumValue": "endCustomerPrice"
+                    },
+                    {
+                        "name": "endCustomerNetPrice",
+                        "displayName": "endCustomerPrice",
+                        "enumValue": "endCustomerPrice"
+                    }
+                ]
+            },
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "rate",
+            "comment": "rate of electrical work in kwh",
+            "schema": "float",
+            "unit": "euro/kwh",
+            "writable": true
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}
