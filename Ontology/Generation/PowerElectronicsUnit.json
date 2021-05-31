@@ -20,6 +20,14 @@
             "writable": true
         },
         {
+            "@type": "Property",
+            "name": "PowerOutput",
+            "comment": "The current power generated and provided to the electrical Network.",
+            "schema": "float",
+            "unit": "watt",
+            "writable": true
+        },
+        {
             "@type": "Relationship",
             "name": "PowerElectronicsConnection",
             "target": "dtmi:digitaltwins:ngsi_ld:cim:energy:PowerElectronicsConnection;1",

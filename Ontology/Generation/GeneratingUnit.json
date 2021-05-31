@@ -70,6 +70,14 @@
         },
         {
             "@type": "Property",
+            "name": "PowerOutput",
+            "comment": "The current power generated and provided to the electrical Network.",
+            "schema": "float",
+            "unit": "watt",
+            "writable": true
+        },
+        {
+            "@type": "Property",
             "name": "shortPF",
             "comment": "Generating unit short term economic participation factor.",
             "schema": "float",
