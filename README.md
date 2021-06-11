@@ -63,6 +63,6 @@ Use the [DTDL Validator tool](https://docs.microsoft.com/en-us/samples/azure-sam
 - [Digital Twins Definition Language specification](https://github.com/Azure/opendigitaltwins-dtdl)
 - [DTDL Ontologies](https://docs.microsoft.com/en-us/azure/digital-twins/concepts-ontologies)
 - [ADT Explorer](https://github.com/Azure-Samples/digital-twins-explorer)
-- [Azure Digital Twins Model Uploader](https://github.com/Azure/opendigitaltwins-tools/tree/master/ModelUploader)
+- [Azure Digital Twins Model Uploader](https://github.com/Azure/opendigitaltwins-tools/tree/master/ADTTools#uploadmodels)
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact opencode@microsoft.com with any additional questions or comments.
